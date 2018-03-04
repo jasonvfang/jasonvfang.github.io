@@ -6,9 +6,55 @@
     <description>Recent content in Tags on JASON FANG&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Fri, 02 Oct 2015 21:49:20 +0200</lastBuildDate>
     
 	<atom:link href="https://jasonfang.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang</title>
+      <link>https://jasonfang.cn/tags/golang/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      
+      <guid>https://jasonfang.cn/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://jasonfang.cn/tags/hugo/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      
+      <guid>https://jasonfang.cn/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://jasonfang.cn/tags/markdown/</link>
+      <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
+      
+      <guid>https://jasonfang.cn/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://jasonfang.cn/tags/programming/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      
+      <guid>https://jasonfang.cn/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme</title>
+      <link>https://jasonfang.cn/tags/theme/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      
+      <guid>https://jasonfang.cn/tags/theme/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

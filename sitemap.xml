@@ -13,7 +13,44 @@
   </url>
   
   <url>
+    <loc>https://jasonfang.cn/2017/05/20/markdown-cheat-sheet/</loc>
+    <lastmod>2017-05-20T12:10:51+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jasonfang.cn/2017/05/20/using-the-gallery-shortcode/</loc>
+    <lastmod>2017-05-20T12:00:23+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jasonfang.cn/2017/05/20/formulas-with-mathjax/</loc>
+    <lastmod>2017-05-20T11:58:06+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jasonfang.cn/about/</loc>
+    <lastmod>2017-05-19T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jasonfang.cn/2015/10/02/how-to-add-pages-to-the-menu/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jasonfang.cn/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jasonfang.cn/tags/golang/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jasonfang.cn/tags/hugo/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -24,13 +61,38 @@
   </url>
   
   <url>
+    <loc>https://jasonfang.cn/tags/markdown/</loc>
+    <lastmod>2017-05-20T12:10:51+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jasonfang.cn/post/</loc>
     <lastmod>2018-03-04T02:10:06-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://jasonfang.cn/tags/programming/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jasonfang.cn/categories/programming/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://jasonfang.cn/tags/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jasonfang.cn/tags/theme/</loc>
+    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
     <priority>0</priority>
   </url>
   
