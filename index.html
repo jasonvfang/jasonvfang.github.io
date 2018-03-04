@@ -87,8 +87,6 @@
           
           <a class="main-nav-link" href="/about/">About</a>
           
-          <a class="main-nav-link" href="/2015/10/02/how-to-add-pages-to-the-menu/">How to add pages to the menu</a>
-          
 
           
           
@@ -134,8 +132,6 @@
           
           <td><a class="main-nav-link" href="/about/">About</a></td>
           
-          <td><a class="main-nav-link" href="/2015/10/02/how-to-add-pages-to-the-menu/">How to add pages to the menu</a></td>
-          
 
           
           
@@ -180,12 +176,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        6
+        5
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          5
+          1
         
         <span>
             Tags
@@ -908,167 +904,6 @@
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        <a href="https://jasonfang.cn/2015/10/02/how-to-add-pages-to-the-menu/" itemprop="url">
-            <img src="https://jasonfang.cn/banners/placeholder.png" class="article-banner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://jasonfang.cn/2015/10/02/how-to-add-pages-to-the-menu/">
-    <h1 class="article-title" itemprop="name">
-        How to add pages to the menu
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2015-10-02 21:49:20 &#43;0200 &#43;0200" itemprop="datePublished">2015-10-02</time>
-            &middot;
-            23
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://jasonfang.cn/categories/programming">programming</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://jasonfang.cn/tags/golang">golang</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://jasonfang.cn/tags/programming">programming</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://jasonfang.cn/tags/theme">theme</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://jasonfang.cn/tags/hugo">hugo</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                I&rsquo;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:
-menu = &quot;main&quot;  
-            </p>
-            <p class="article-more-link">
-                <a href="https://jasonfang.cn/2015/10/02/how-to-add-pages-to-the-menu/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://jasonfang.cn/2015/10/02/how-to-add-pages-to-the-menu/" data-id="7b5009c52e7a9a5159b64169e0ddd8bd" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://jasonfang.cn/2015/10/02/how-to-add-pages-to-the-menu/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1186,23 +1021,6 @@ menu = &quot;main&quot;
     
 
 
-<div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-        <ul class="category-list">
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://jasonfang.cn/categories/programming">
-                    programming
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
 
 
 
@@ -1218,40 +1036,8 @@ menu = &quot;main&quot;
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://jasonfang.cn/tags/golang">
-                    golang
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://jasonfang.cn/tags/hugo">
-                    hugo
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
                 <a class="category-list-link" href="https://jasonfang.cn/tags/markdown">
                     markdown
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://jasonfang.cn/tags/programming">
-                    programming
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://jasonfang.cn/tags/theme">
-                    theme
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -1273,19 +1059,7 @@ menu = &quot;main&quot;
     <div class="widget tagcloud">
         
         
-        <a href="https://jasonfang.cn/tags/golang" style="font-size: 12px;">golang</a>
-        
-        
-        <a href="https://jasonfang.cn/tags/hugo" style="font-size: 12px;">hugo</a>
-        
-        
         <a href="https://jasonfang.cn/tags/markdown" style="font-size: 12px;">markdown</a>
-        
-        
-        <a href="https://jasonfang.cn/tags/programming" style="font-size: 12px;">programming</a>
-        
-        
-        <a href="https://jasonfang.cn/tags/theme" style="font-size: 12px;">theme</a>
         
     </div>
 </div>
@@ -1305,7 +1079,7 @@ menu = &quot;main&quot;
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018
-      <a href="//jasonfang.cn">JASON FANG</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+      <a href="//jasonfang.cn">JASON FANG</a>. Powered by <a href="https://gohugo.io/">hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
     </div>
   </div>
 </footer>
