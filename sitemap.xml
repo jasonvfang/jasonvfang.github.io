@@ -3,60 +3,65 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jasonfang.cn/2018/03/04/my-second/</loc>
+    <loc>http://jasonfang.cn/2018/03/07/my_third_test/</loc>
+    <lastmod>2018-03-07T01:54:04-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jasonfang.cn/2018/03/04/my-second/</loc>
     <lastmod>2018-03-04T02:10:06-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jasonfang.cn/2018/03/04/my-first/</loc>
+    <loc>http://jasonfang.cn/2018/03/04/my-first/</loc>
     <lastmod>2018-03-04T01:51:23-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jasonfang.cn/2017/05/20/markdown-cheat-sheet/</loc>
+    <loc>http://jasonfang.cn/2017/05/20/markdown-cheat-sheet/</loc>
     <lastmod>2017-05-20T12:10:51+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jasonfang.cn/2017/05/20/using-the-gallery-shortcode/</loc>
+    <loc>http://jasonfang.cn/2017/05/20/using-the-gallery-shortcode/</loc>
     <lastmod>2017-05-20T12:00:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jasonfang.cn/2017/05/20/formulas-with-mathjax/</loc>
+    <loc>http://jasonfang.cn/2017/05/20/formulas-with-mathjax/</loc>
     <lastmod>2017-05-20T11:58:06+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jasonfang.cn/about/</loc>
+    <loc>http://jasonfang.cn/about/</loc>
     <lastmod>2017-05-19T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jasonfang.cn/categories/</loc>
+    <loc>http://jasonfang.cn/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jasonfang.cn/</loc>
-    <lastmod>2018-03-04T02:10:06-08:00</lastmod>
+    <loc>http://jasonfang.cn/</loc>
+    <lastmod>2018-03-07T01:54:04-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jasonfang.cn/tags/markdown/</loc>
+    <loc>http://jasonfang.cn/tags/markdown/</loc>
     <lastmod>2017-05-20T12:10:51+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jasonfang.cn/post/</loc>
-    <lastmod>2018-03-04T02:10:06-08:00</lastmod>
+    <loc>http://jasonfang.cn/post/</loc>
+    <lastmod>2018-03-07T01:54:04-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jasonfang.cn/tags/</loc>
+    <loc>http://jasonfang.cn/tags/</loc>
     <lastmod>2017-05-20T12:10:51+02:00</lastmod>
     <priority>0</priority>
   </url>
