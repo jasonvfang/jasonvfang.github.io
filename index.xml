@@ -6,19 +6,10 @@
     <description>Recent content on JASON FANG&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 04 Mar 2018 02:10:06 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Mar 2018 01:51:23 -0800</lastBuildDate>
     
 	<atom:link href="http://jasonfang.cn/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>My Second</title>
-      <link>http://jasonfang.cn/2018/03/04/my-second/</link>
-      <pubDate>Sun, 04 Mar 2018 02:10:06 -0800</pubDate>
-      
-      <guid>http://jasonfang.cn/2018/03/04/my-second/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>My First</title>
@@ -49,17 +40,6 @@
       
       <guid>http://jasonfang.cn/2017/05/20/using-the-gallery-shortcode/</guid>
       <description>&lt;p&gt;This way you can easily include a gallery into your page. Copy the code below into your content file and enter the relative paths to your images.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Formulas with MathJax</title>
-      <link>http://jasonfang.cn/2017/05/20/formulas-with-mathjax/</link>
-      <pubDate>Sat, 20 May 2017 11:58:06 +0200</pubDate>
-      
-      <guid>http://jasonfang.cn/2017/05/20/formulas-with-mathjax/</guid>
-      <description>&lt;p&gt;Mathematical equations in form of LaTeX or MathML code can be rendered with the support of &lt;a href=&#34;https://www.mathjax.org&#34;&gt;MathJax&lt;/a&gt;. MathML works out of the box. If you&amp;rsquo;re using LaTeX you need to wrap your equation with &lt;code&gt;$$&lt;/code&gt; as shown in the following example:&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
