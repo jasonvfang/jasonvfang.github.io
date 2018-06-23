@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://jasonfang.cn/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2018-06-23T12:10:51+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jasonfang.cn/2018/03/04/my-first/</loc>
     <lastmod>2018-03-04T01:51:23-08:00</lastmod>
   </url>
@@ -29,7 +34,13 @@
   
   <url>
     <loc>http://jasonfang.cn/</loc>
-    <lastmod>2018-03-04T01:51:23-08:00</lastmod>
+    <lastmod>2018-06-23T12:10:51+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jasonfang.cn/tags/libcurl/</loc>
+    <lastmod>2018-06-23T12:10:51+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -41,13 +52,13 @@
   
   <url>
     <loc>http://jasonfang.cn/post/</loc>
-    <lastmod>2018-03-04T01:51:23-08:00</lastmod>
+    <lastmod>2018-06-23T12:10:51+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://jasonfang.cn/tags/</loc>
-    <lastmod>2017-05-20T12:10:51+02:00</lastmod>
+    <lastmod>2018-06-23T12:10:51+08:00</lastmod>
     <priority>0</priority>
   </url>
   
