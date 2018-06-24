@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Libcurl on Jason Fang&#39;s Blog</title>
-    <link>http://jasonfang.cn/tags/libcurl/</link>
+    <link>http://blog.jasonvfang.top/tags/libcurl/</link>
     <description>Recent content in Libcurl on Jason Fang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 23 Jun 2018 12:10:51 +0800</lastBuildDate>
     
-	<atom:link href="http://jasonfang.cn/tags/libcurl/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.jasonvfang.top/tags/libcurl/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Libcurl中的HTTP重定向问题</title>
-      <link>http://jasonfang.cn/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</link>
+      <link>http://blog.jasonvfang.top/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
       
-      <guid>http://jasonfang.cn/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://blog.jasonvfang.top/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Jason Fang&#39;s Blog</title>
-    <link>http://jasonfang.cn/post/</link>
+    <link>http://blog.jasonvfang.top/post/</link>
     <description>Recent content in Posts on Jason Fang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 24 Jun 2018 16:10:51 +0800</lastBuildDate>
     
-	<atom:link href="http://jasonfang.cn/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.jasonvfang.top/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo summary length 限制</title>
-      <link>http://jasonfang.cn/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/</link>
+      <link>http://blog.jasonvfang.top/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/</link>
       <pubDate>Sun, 24 Jun 2018 16:10:51 +0800</pubDate>
       
-      <guid>http://jasonfang.cn/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/</guid>
+      <guid>http://blog.jasonvfang.top/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/</guid>
       <description>&lt;p&gt;本文将说明如何在HUGO中对摘要进行长度限制。
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Libcurl中的HTTP重定向问题</title>
-      <link>http://jasonfang.cn/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</link>
+      <link>http://blog.jasonvfang.top/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
       
-      <guid>http://jasonfang.cn/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</guid>
+      <guid>http://blog.jasonvfang.top/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -34,19 +34,19 @@
     
     <item>
       <title>My First</title>
-      <link>http://jasonfang.cn/2018/03/04/my-first/</link>
+      <link>http://blog.jasonvfang.top/2018/03/04/my-first/</link>
       <pubDate>Sun, 04 Mar 2018 01:51:23 -0800</pubDate>
       
-      <guid>http://jasonfang.cn/2018/03/04/my-first/</guid>
+      <guid>http://blog.jasonvfang.top/2018/03/04/my-first/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Markdown Cheat Sheet</title>
-      <link>http://jasonfang.cn/2017/05/20/markdown-cheat-sheet/</link>
+      <link>http://blog.jasonvfang.top/2017/05/20/markdown-cheat-sheet/</link>
       <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
       
-      <guid>http://jasonfang.cn/2017/05/20/markdown-cheat-sheet/</guid>
+      <guid>http://blog.jasonvfang.top/2017/05/20/markdown-cheat-sheet/</guid>
       <description>&lt;p&gt;This note demonstrates some of what &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;Markdown&lt;/a&gt; is capable of doing.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note: Feel free to play with this page. Unlike regular notes, this doesn&amp;rsquo;t automatically save itself.&lt;/em&gt;&lt;/p&gt;
@@ -56,10 +56,10 @@
     
     <item>
       <title>Using the gallery shortcode</title>
-      <link>http://jasonfang.cn/2017/05/20/using-the-gallery-shortcode/</link>
+      <link>http://blog.jasonvfang.top/2017/05/20/using-the-gallery-shortcode/</link>
       <pubDate>Sat, 20 May 2017 12:00:23 +0200</pubDate>
       
-      <guid>http://jasonfang.cn/2017/05/20/using-the-gallery-shortcode/</guid>
+      <guid>http://blog.jasonvfang.top/2017/05/20/using-the-gallery-shortcode/</guid>
       <description>&lt;p&gt;This way you can easily include a gallery into your page. Copy the code below into your content file and enter the relative paths to your images.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
