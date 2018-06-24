@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-06-23T12:10:51&#43;08:00"/>
+<meta property="og:updated_time" content="2018-06-24T16:10:51&#43;08:00"/>
 
 
 
@@ -176,12 +176,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        4
+        5
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          2
+          3
         
         <span>
             Tags
@@ -263,6 +263,143 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="http://jasonfang.cn/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/">
+    <h1 class="article-title" itemprop="name">
+        Hugo summary length 限制
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-06-24 16:10:51 &#43;0800 &#43;0800" itemprop="datePublished">2018-06-24</time>
+            &middot;
+            7
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://jasonfang.cn/tags/hugo">hugo</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                <p>本文将说明如何在HUGO中对摘要进行长度限制。
+</p>
+            </p>
+            <p class="article-more-link">
+                <a href="http://jasonfang.cn/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://jasonfang.cn/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/" data-id="0f9de28447ab3e8b42f2add9d13e2c36" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="http://jasonfang.cn/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -822,6 +959,14 @@
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="http://jasonfang.cn/tags/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="http://jasonfang.cn/tags/libcurl">
                     libcurl
                 </a>
@@ -851,6 +996,9 @@
         Tag cloud
     </h3>
     <div class="widget tagcloud">
+        
+        
+        <a href="http://jasonfang.cn/tags/hugo" style="font-size: 12px;">hugo</a>
         
         
         <a href="http://jasonfang.cn/tags/libcurl" style="font-size: 12px;">libcurl</a>
