@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Libcurl on BLOG by Jason.Fang</title>
+    <title>Libcurl on Jason Fang&#39;s Blog</title>
     <link>http://jasonfang.cn/tags/libcurl/</link>
-    <description>Recent content in Libcurl on BLOG by Jason.Fang</description>
+    <description>Recent content in Libcurl on Jason Fang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 23 Jun 2018 12:10:51 +0800</lastBuildDate>
