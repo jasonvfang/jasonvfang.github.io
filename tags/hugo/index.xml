@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Jason Fang&#39;s Blog</title>
-    <link>http://blog.jasonvfang.top/tags/hugo/</link>
+    <link>https://blog.jasonvfang.top/tags/hugo/</link>
     <description>Recent content in Hugo on Jason Fang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 24 Jun 2018 16:10:51 +0800</lastBuildDate>
     
-	<atom:link href="http://blog.jasonvfang.top/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.jasonvfang.top/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo summary length 限制</title>
-      <link>http://blog.jasonvfang.top/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/</link>
+      <link>https://blog.jasonvfang.top/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/</link>
       <pubDate>Sun, 24 Jun 2018 16:10:51 +0800</pubDate>
       
-      <guid>http://blog.jasonvfang.top/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/</guid>
+      <guid>https://blog.jasonvfang.top/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/</guid>
       <description>&lt;p&gt;本文将说明如何在HUGO中对摘要进行长度限制。
 &lt;/p&gt;</description>
     </item>
