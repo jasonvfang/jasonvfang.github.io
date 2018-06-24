@@ -10,5 +10,32 @@
 	<atom:link href="http://jasonfang.cn/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Hugo</title>
+      <link>http://jasonfang.cn/categories/hugo/</link>
+      <pubDate>Sun, 24 Jun 2018 16:10:51 +0800</pubDate>
+      
+      <guid>http://jasonfang.cn/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Learning</title>
+      <link>http://jasonfang.cn/categories/learning/</link>
+      <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
+      
+      <guid>http://jasonfang.cn/categories/learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>http://jasonfang.cn/categories/programming/</link>
+      <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
+      
+      <guid>http://jasonfang.cn/categories/programming/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
