@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Libcurl on JASON FANG&#39;s BLOG</title>
+    <title>Libcurl on BLOG by Jason.Fang</title>
     <link>http://jasonfang.cn/tags/libcurl/</link>
-    <description>Recent content in Libcurl on JASON FANG&#39;s BLOG</description>
+    <description>Recent content in Libcurl on BLOG by Jason.Fang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 23 Jun 2018 12:10:51 +0800</lastBuildDate>
@@ -17,10 +17,9 @@
       <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
       
       <guid>http://jasonfang.cn/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</guid>
-      <description>最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：
-几个注意点  JSON的内存释放 HTTP请求RESP是否有重定向问题 在处理这个HTTP返回时就有遇到过重定向的坑，导致浪费太多的时间  CURL的HTTP选项 基本参考CURL的SAMPLE CODE就可以完成： 先上大致的code:
- curl_easy_setopt(g_curl_handle, CURLOPT_SSL_VERIFYPEER, 1L); curl_easy_setopt(g_curl_handle, CURLOPT_SSL_VERIFYHOST, 2L); curl_easy_setopt(g_curl_handle, CURLOPT_MAXCONNECTS, 10); curl_easy_setopt(g_curl_handle, CURLOPT_TIMEOUT, 15); curl_easy_setopt(g_curl_handle, CURLOPT_SERVER_RESPONSE_TIMEOUT, 15); curl_easy_setopt(g_curl_handle, CURLOPT_DEBUGFUNCTION, my_trace); curl_easy_setopt(g_curl_handle, CURLOPT_DEBUGDATA, &amp;amp;config); curl_easy_setopt(g_curl_handle, CURLOPT_WRITEFUNCTION, write_data); curl_easy_setopt(g_curl_handle, CURLOPT_WRITEDATA, result_buffer); curl_easy_setopt(g_curl_handle, CURLOPT_HEADERFUNCTION, header_callback); curl_easy_setopt(g_curl_handle, CURLOPT_WRITEHEADER, header_buffer); curl_easy_setopt(g_curl_handle, CURLOPT_USERAGENT, &amp;quot;libcurl-agent/1.0&amp;quot;); curl_easy_setopt(g_curl_handle, CURLOPT_NOSIGNAL, 1L);  在执行http request的时候一直得到的空数据，利用POSTMAN进行模拟都能够正确返回数据，后来通过命令行CURL模拟发现HTTP STATUS返回的是3XX，于是才恍然大悟，需要设置CURL的重定向跟踪功能：
-//follow redirect url curl_easy_setopt(g_curl_handle, CURLOPT_FOLLOWLOCATION, 1L);  加上这个设置后完美解决，建议后面实现HTTP请求的所有功能都应该加上这个设置，避免得到空数据。</description>
+      <description>&lt;p&gt;最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

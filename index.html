@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>JASON FANG&#39;s BLOG</title>
-    <meta name="generator" content="Hugo 0.37" />
+    <title>BLOG by Jason.Fang</title>
+    <meta name="generator" content="Hugo 0.42.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Jason Fang">
@@ -10,8 +10,8 @@
       <meta name="description" content="">
     
     
-      <link href="http://jasonfang.cn/index.xml" rel="alternate" type="application/rss+xml" title="JASON FANG&#39;s BLOG" />
-      <link href="http://jasonfang.cn/index.xml" rel="feed" type="application/rss+xml" title="JASON FANG&#39;s BLOG" />
+      <link href="http://jasonfang.cn/index.xml" rel="alternate" type="application/rss+xml" title="BLOG by Jason.Fang" />
+      <link href="http://jasonfang.cn/index.xml" rel="feed" type="application/rss+xml" title="BLOG by Jason.Fang" />
     
     <link rel="canonical" href="http://jasonfang.cn/"/>
     <link rel="icon" href="http://jasonfang.cn/favicon.ico">
@@ -23,7 +23,7 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="JASON FANG&#39;s BLOG" />
+    <meta property="og:title" content="BLOG by Jason.Fang" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://jasonfang.cn/" />
@@ -43,12 +43,12 @@
 
     
     
-<meta itemprop="name" content="JASON FANG&#39;s BLOG">
+<meta itemprop="name" content="BLOG by Jason.Fang">
 <meta itemprop="description" content="">
 
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="JASON FANG&#39;s BLOG"/>
+<meta name="twitter:title" content="BLOG by Jason.Fang"/>
 <meta name="twitter:description" content=""/>
 <meta name="twitter:site" content="@jasonvfang"/>
 
@@ -71,7 +71,7 @@
           
           <i class="logo" style="background-image: url('http://jasonfang.cn/css/images/logo.png')"></i>
           
-          <span class="site-title">JASON FANG&#39;s BLOG</span>
+          <span class="site-title">BLOG by Jason.Fang</span>
       </a>
       <nav id="main-nav">
           
@@ -312,10 +312,9 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：
-几个注意点  JSON的内存释放 HTTP请求RESP是否有重定向问题 在处理这个HTTP返回时就有遇到过重定向的坑，导致浪费太多的时间  CURL的HTTP选项 基本参考CURL的SAMPLE CODE就可以完成： 先上大致的code:
- curl_easy_setopt(g_curl_handle, CURLOPT_SSL_VERIFYPEER, 1L); curl_easy_setopt(g_curl_handle, CURLOPT_SSL_VERIFYHOST, 2L); curl_easy_setopt(g_curl_handle, CURLOPT_MAXCONNECTS, 10); curl_easy_setopt(g_curl_handle, CURLOPT_TIMEOUT, 15); curl_easy_setopt(g_curl_handle, CURLOPT_SERVER_RESPONSE_TIMEOUT, 15); curl_easy_setopt(g_curl_handle, CURLOPT_DEBUGFUNCTION, my_trace); curl_easy_setopt(g_curl_handle, CURLOPT_DEBUGDATA, &amp;config); curl_easy_setopt(g_curl_handle, CURLOPT_WRITEFUNCTION, write_data); curl_easy_setopt(g_curl_handle, CURLOPT_WRITEDATA, result_buffer); curl_easy_setopt(g_curl_handle, CURLOPT_HEADERFUNCTION, header_callback); curl_easy_setopt(g_curl_handle, CURLOPT_WRITEHEADER, header_buffer); curl_easy_setopt(g_curl_handle, CURLOPT_USERAGENT, &quot;libcurl-agent/1.0&quot;); curl_easy_setopt(g_curl_handle, CURLOPT_NOSIGNAL, 1L);  在执行http request的时候一直得到的空数据，利用POSTMAN进行模拟都能够正确返回数据，后来通过命令行CURL模拟发现HTTP STATUS返回的是3XX，于是才恍然大悟，需要设置CURL的重定向跟踪功能：
-//follow redirect url curl_easy_setopt(g_curl_handle, CURLOPT_FOLLOWLOCATION, 1L);  加上这个设置后完美解决，建议后面实现HTTP请求的所有功能都应该加上这个设置，避免得到空数据。
+                <p>最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：</p>
+
+<p></p>
             </p>
             <p class="article-more-link">
                 <a href="http://jasonfang.cn/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/">
@@ -804,91 +803,6 @@
    	
     	<aside id="sidebar">
     
-<div class="widget-wrap">
-    <h3 class="widget-title">
-        Recents
-    </h3>
-    <div class="widget">
-        <ul id="recent-post">
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://jasonfang.cn/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://jasonfang.cn/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/" class="title">Libcurl中的HTTP重定向问题</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-06-23 12:10:51 &#43;0800 &#43;0800" itemprop="datePublished">2018-06-23</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://jasonfang.cn/2018/03/04/my-first/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    <p class="item-title"><a href="http://jasonfang.cn/2018/03/04/my-first/" class="title">My First</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-03-04 01:51:23 -0800 PST" itemprop="datePublished">2018-03-04</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://jasonfang.cn/2017/05/20/markdown-cheat-sheet/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://jasonfang.cn/2017/05/20/markdown-cheat-sheet/" class="title">Markdown Cheat Sheet</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-05-20 12:10:51 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="http://jasonfang.cn/2017/05/20/using-the-gallery-shortcode/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    
-                    <p class="item-title"><a href="http://jasonfang.cn/2017/05/20/using-the-gallery-shortcode/" class="title">Using the gallery shortcode</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-05-20 12:00:23 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
-                    </p>
-                </div>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
 
     
 
@@ -962,7 +876,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018
-      <a href="//jasonfang.cn">JASON FANG</a>. Powered by <a href="https://gohugo.io/">hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+      <a href="//jasonfang.cn">JASON FANG</a>. Powered by <a href="https://gohugo.io/">hugo</a>.
     </div>
   </div>
 </footer>
