@@ -6,10 +6,24 @@
     <description>Recent content on Jason Fang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 24 Jun 2018 16:10:51 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jul 2018 23:10:51 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.jasonvfang.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cmake学习简要总结</title>
+      <link>https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 15 Jul 2018 23:10:51 +0800</pubDate>
+      
+      <guid>https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;今天有时间去研究一下cmake的使用，之前一直是想看一下的，只是时间没排出来，今天总算排上了，收获也挺多，感觉
+这样的编译工具确实比我们自己写Makefile管理起来要好的多，这也就是为什么在开源社区会有这么多的开源软件的编译都采用的cmake吧。&lt;/p&gt;
+
+&lt;p&gt;不废话了，今天按照官方文档把整个例子跑了一遍，基本上知道如何使用了。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo summary length 限制</title>
@@ -30,15 +44,6 @@
       <description>&lt;p&gt;最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>My First</title>
-      <link>https://blog.jasonvfang.top/2018/03/04/my-first/</link>
-      <pubDate>Sun, 04 Mar 2018 01:51:23 -0800</pubDate>
-      
-      <guid>https://blog.jasonvfang.top/2018/03/04/my-first/</guid>
-      <description></description>
     </item>
     
     <item>

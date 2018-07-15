@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-06-24T16:10:51&#43;08:00"/>
+<meta property="og:updated_time" content="2018-07-15T23:10:51&#43;08:00"/>
 
 
 
@@ -180,7 +180,7 @@
       </div>
       <div class="article-info-block">
         
-          3
+          4
         
         <span>
             Tags
@@ -258,6 +258,152 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/">
+    <h1 class="article-title" itemprop="name">
+        cmake学习简要总结
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-07-15 23:10:51 &#43;0800 &#43;0800" itemprop="datePublished">2018-07-15</time>
+            &middot;
+            135
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://blog.jasonvfang.top/categories/cmake">cmake</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://blog.jasonvfang.top/tags/cmake">cmake</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                <p>今天有时间去研究一下cmake的使用，之前一直是想看一下的，只是时间没排出来，今天总算排上了，收获也挺多，感觉
+这样的编译工具确实比我们自己写Makefile管理起来要好的多，这也就是为什么在开源社区会有这么多的开源软件的编译都采用的cmake吧。</p>
+
+<p>不废话了，今天按照官方文档把整个例子跑了一遍，基本上知道如何使用了。</p>
+
+<p></p>
+            </p>
+            <p class="article-more-link">
+                <a href="https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/" data-id="0c9e357004d099a1b448e570b07c8bc4" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -470,123 +616,6 @@
         </div>
         <footer class="article-footer">
     <a data-url="https://blog.jasonvfang.top/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/" data-id="6f9f055f65d0a25ee9c63e8ec25ec966" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://blog.jasonvfang.top/2018/03/04/my-first/">
-    <h1 class="article-title" itemprop="name">
-        My First
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2018-03-04 01:51:23 -0800 PST" itemprop="datePublished">2018-03-04</time>
-            &middot;
-            0
-            words
-            &middot;
-            0
-            minute read
-        </div>
-        
-        
-
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                
-            </p>
-            <p class="article-more-link">
-                <a href="https://blog.jasonvfang.top/2018/03/04/my-first/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://blog.jasonvfang.top/2018/03/04/my-first/" data-id="94e4a4d50a068075b39c7253cae2f3a2" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -953,6 +982,14 @@
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://blog.jasonvfang.top/categories/cmake">
+                    cmake
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://blog.jasonvfang.top/categories/hugo">
                     hugo
                 </a>
@@ -994,6 +1031,14 @@
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://blog.jasonvfang.top/tags/cmake">
+                    cmake
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://blog.jasonvfang.top/tags/hugo">
                     hugo
                 </a>
@@ -1031,6 +1076,9 @@
         Tag cloud
     </h3>
     <div class="widget tagcloud">
+        
+        
+        <a href="https://blog.jasonvfang.top/tags/cmake" style="font-size: 12px;">cmake</a>
         
         
         <a href="https://blog.jasonvfang.top/tags/hugo" style="font-size: 12px;">hugo</a>

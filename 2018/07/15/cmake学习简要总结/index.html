@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>Using the gallery shortcode &middot; Jason Fang&#39;s Blog</title>
+    <title>cmake学习简要总结 &middot; Jason Fang&#39;s Blog</title>
     <meta name="generator" content="Hugo 0.42.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="https://blog.jasonvfang.top/2017/05/20/using-the-gallery-shortcode/"/>
+    <link rel="canonical" href="https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/"/>
     <link rel="icon" href="https://blog.jasonvfang.top/favicon.ico">
     <link rel="apple-touch-icon" href="https://blog.jasonvfang.top/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://blog.jasonvfang.top/css/style.css">
@@ -20,18 +20,21 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Using the gallery shortcode" />
-<meta property="og:description" content="This way you can easily include a gallery into your page. Copy the code below into your content file and enter the relative paths to your images.
+    <meta property="og:title" content="cmake学习简要总结" />
+<meta property="og:description" content="今天有时间去研究一下cmake的使用，之前一直是想看一下的，只是时间没排出来，今天总算排上了，收获也挺多，感觉
+这样的编译工具确实比我们自己写Makefile管理起来要好的多，这也就是为什么在开源社区会有这么多的开源软件的编译都采用的cmake吧。
+
+不废话了，今天按照官方文档把整个例子跑了一遍，基本上知道如何使用了。
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.jasonvfang.top/2017/05/20/using-the-gallery-shortcode/" />
+<meta property="og:url" content="https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/" />
 
 
 
-<meta property="article:published_time" content="2017-05-20T12:00:23&#43;02:00"/>
+<meta property="article:published_time" content="2018-07-15T23:10:51&#43;08:00"/>
 
-<meta property="article:modified_time" content="2017-05-20T12:00:23&#43;02:00"/>
+<meta property="article:modified_time" content="2018-07-15T23:10:51&#43;08:00"/>
 
 
 
@@ -45,23 +48,29 @@
 
     
     
-<meta itemprop="name" content="Using the gallery shortcode">
-<meta itemprop="description" content="This way you can easily include a gallery into your page. Copy the code below into your content file and enter the relative paths to your images.
+<meta itemprop="name" content="cmake学习简要总结">
+<meta itemprop="description" content="今天有时间去研究一下cmake的使用，之前一直是想看一下的，只是时间没排出来，今天总算排上了，收获也挺多，感觉
+这样的编译工具确实比我们自己写Makefile管理起来要好的多，这也就是为什么在开源社区会有这么多的开源软件的编译都采用的cmake吧。
+
+不废话了，今天按照官方文档把整个例子跑了一遍，基本上知道如何使用了。
 
 ">
 
 
-<meta itemprop="datePublished" content="2017-05-20T12:00:23&#43;02:00" />
-<meta itemprop="dateModified" content="2017-05-20T12:00:23&#43;02:00" />
-<meta itemprop="wordCount" content="33">
+<meta itemprop="datePublished" content="2018-07-15T23:10:51&#43;08:00" />
+<meta itemprop="dateModified" content="2018-07-15T23:10:51&#43;08:00" />
+<meta itemprop="wordCount" content="135">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="cmake," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Using the gallery shortcode"/>
-<meta name="twitter:description" content="This way you can easily include a gallery into your page. Copy the code below into your content file and enter the relative paths to your images.
+<meta name="twitter:title" content="cmake学习简要总结"/>
+<meta name="twitter:description" content="今天有时间去研究一下cmake的使用，之前一直是想看一下的，只是时间没排出来，今天总算排上了，收获也挺多，感觉
+这样的编译工具确实比我们自己写Makefile管理起来要好的多，这也就是为什么在开源社区会有这么多的开源软件的编译都采用的cmake吧。
+
+不废话了，今天按照官方文档把整个例子跑了一遍，基本上知道如何使用了。
 
 "/>
 
@@ -276,9 +285,9 @@
         
 
         <header class="article-header">
-    <a href="https://blog.jasonvfang.top/2017/05/20/using-the-gallery-shortcode/">
+    <a href="https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/">
     <h1 class="article-title" itemprop="name">
-        Using the gallery shortcode
+        cmake学习简要总结
     </h1>
     </a>
     <div class="article-meta">
@@ -286,9 +295,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-20 12:00:23 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
+            <time datetime="2018-07-15 23:10:51 &#43;0800 &#43;0800" itemprop="datePublished">2018-07-15</time>
             &middot;
-            33
+            135
             words
             &middot;
             1
@@ -298,49 +307,110 @@
         
             
             
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://blog.jasonvfang.top/categories/cmake">cmake</a>
+                
+                
+            </div>
+            
         
 
         
             
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://blog.jasonvfang.top/tags/cmake">cmake</a>
+                
+                
+            </div>
             
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>This way you can easily include a gallery into your page. Copy the code below into your content file and enter the relative paths to your images.</p>
+            <p>今天有时间去研究一下cmake的使用，之前一直是想看一下的，只是时间没排出来，今天总算排上了，收获也挺多，感觉
+这样的编译工具确实比我们自己写Makefile管理起来要好的多，这也就是为什么在开源社区会有这么多的开源软件的编译都采用的cmake吧。</p>
+
+<p>不废话了，今天按照官方文档把整个例子跑了一遍，基本上知道如何使用了。</p>
 
 <p></p>
 
-<pre><code>{{&lt; gallery
-    &quot;/banners/placeholder.png&quot;
-    &quot;/banners/placeholder.png&quot;
-    &quot;/banners/placeholder.png&quot;
-&gt;}}
+<h4 id="大致总结一下吧">大致总结一下吧：</h4>
+
+<ul>
+<li><p>cmake根据CMakeLists.txt文件自动生成Makefile
+也就是cmake是可配置的，其次它有一个方便的GUI工具实现配置，这个我暂时没有研究到。</p></li>
+
+<li><p>cmake可指定宏编译选项、子目录、install、目标</p></li>
+</ul>
+
+<p>常用的也应该就这些，理解这些大致修改足够了：</p>
+
+<p>宏：option()
+子目录：
+头文件子目录：include_directories  编译子目录：add_subdirectory</p>
+
+<p>install: install()可指定FILES或者TARGETS</p>
+
+<p>add_executable():指定生成的target及需要的src文件</p>
+
+<p>target_link_libraries：指定链接的lib</p>
+
+<p>这里是官方文档中的一个例子，写的很清楚了：</p>
+
+<pre><code>cmake_minimum_required (VERSION 2.6)
+project (Tutorial)
+# The version number.
+set (Tutorial_VERSION_MAJOR 1)
+set (Tutorial_VERSION_MINOR 0)
+
+ # should we use our own math functions?
+option (USE_MYMATH 
+        &quot;Use tutorial provided math implementation&quot; ON) 
+        
+# configure a header file to pass some of the CMake settings
+# to the source code
+configure_file (
+  &quot;${PROJECT_SOURCE_DIR}/TutorialConfig.h.in&quot;
+  &quot;${PROJECT_BINARY_DIR}/TutorialConfig.h&quot;
+  )
+ 
+# add the binary tree to the search path for include files
+# so that we will find TutorialConfig.h
+include_directories(&quot;${PROJECT_BINARY_DIR}&quot;)
+ 
+# add the MathFunctions library?
+#
+if (USE_MYMATH)
+  include_directories (&quot;${PROJECT_SOURCE_DIR}/MathFunctions&quot;)
+  add_subdirectory (MathFunctions)
+  set (EXTRA_LIBS ${EXTRA_LIBS} MathFunctions)
+endif (USE_MYMATH)
+
+     
+# add the executable
+add_executable (Tutorial tutorial.cxx)
+target_link_libraries (Tutorial  ${EXTRA_LIBS})
+
+# add the install targets
+install (TARGETS Tutorial DESTINATION ~/bin)
+install (FILES &quot;${PROJECT_BINARY_DIR}/TutorialConfig.h&quot;        
+         DESTINATION ~/include)
 </code></pre>
 
-<p></p>
+<p>在github中已经把这些步骤的尝试都上传了，可见<a href="https://github.com/jasonvfang/cmake-examples">这里</a>.</p>
 
-<div class="article-gallery">
-    <div class="article-gallery-photos">
-        
-        <a class="article-gallery-img fancybox" href="/banners/placeholder.png" rel="group1">
-            <img src="https://blog.jasonvfang.top/banners/placeholder.png" itemprop="image">
-        </a>
-        
-        <a class="article-gallery-img fancybox" href="/banners/placeholder.png" rel="group1">
-            <img src="https://blog.jasonvfang.top/banners/placeholder.png" itemprop="image">
-        </a>
-        
-        <a class="article-gallery-img fancybox" href="/banners/placeholder.png" rel="group1">
-            <img src="https://blog.jasonvfang.top/banners/placeholder.png" itemprop="image">
-        </a>
-        
-    </div>
-</div>
+<p>参考详细教程：<a href="https://cmake.org/cmake-tutorial/">https://cmake.org/cmake-tutorial/</a></p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://blog.jasonvfang.top/2017/05/20/using-the-gallery-shortcode/" data-id="b5878041fdfd74bbf2f0b2b55108eb61" class="article-share-link">
+    <a data-url="https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/" data-id="0c9e357004d099a1b448e570b07c8bc4" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -417,14 +487,14 @@
     
 <nav id="article-nav">
     
-
-    
-    <a href="https://blog.jasonvfang.top/2017/05/20/markdown-cheat-sheet/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="https://blog.jasonvfang.top/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
-          Newer
+          Older
       </strong>
-      <div class="article-nav-title">Markdown Cheat Sheet</div>
+      <div class="article-nav-title">Hugo summary length 限制</div>
     </a>
+    
+
     
 </nav>
 

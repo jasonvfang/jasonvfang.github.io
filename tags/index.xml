@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Jason Fang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 24 Jun 2018 16:10:51 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jul 2018 23:10:51 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.jasonvfang.top/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cmake</title>
+      <link>https://blog.jasonvfang.top/tags/cmake/</link>
+      <pubDate>Sun, 15 Jul 2018 23:10:51 +0800</pubDate>
+      
+      <guid>https://blog.jasonvfang.top/tags/cmake/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hugo</title>
