@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-07-15T23:10:51&#43;08:00"/>
+<meta property="og:updated_time" content="2018-07-18T00:10:51&#43;08:00"/>
 
 
 
@@ -175,12 +175,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        5
+        6
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          4
+          5
         
         <span>
             Tags
@@ -258,6 +258,150 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://blog.jasonvfang.top/2018/07/18/linux-fd%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98/">
+    <h1 class="article-title" itemprop="name">
+        Linux FD操作问题
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-07-18 00:10:51 &#43;0800 &#43;0800" itemprop="datePublished">2018-07-18</time>
+            &middot;
+            12
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://blog.jasonvfang.top/categories/programming">Programming</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://blog.jasonvfang.top/tags/linux-c">linux c</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                 主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解， 后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试： 注意这里的模式是只写模式加非阻塞模式,运行结果是： MAN手册上的说明： 总结： 使用O_RDONLY或O_WRONLY设置打开FIFO时:
+ 如果设置了O_NONBLOCK，则open()用于读取时只会立即返回。如果当前没有任何进程打开文件进行读取，则以只写的方式写FD时会返回一个错误。 如果O_NONBLOCK没有指定，那么只读的open()将阻塞调用线程，直到线程打开文件进行写入。以只写方式open()调用将会阻塞调用线程，直到线程打开文件进行读取。  因此本例中的解决办法：
+ 1.可以设置open的方式为block方式
+ 2. 在write之前，其他进程一直在读fd  
+            </p>
+            <p class="article-more-link">
+                <a href="https://blog.jasonvfang.top/2018/07/18/linux-fd%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://blog.jasonvfang.top/2018/07/18/linux-fd%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98/" data-id="a236356b3d8875fac143ab61fdf766ba" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1009,7 +1153,7 @@
                 <a class="category-list-link" href="https://blog.jasonvfang.top/categories/programming">
                     programming
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
         </ul>
@@ -1055,6 +1199,14 @@
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://blog.jasonvfang.top/tags/linux-c">
+                    linux-c
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://blog.jasonvfang.top/tags/markdown">
                     markdown
                 </a>
@@ -1085,6 +1237,9 @@
         
         
         <a href="https://blog.jasonvfang.top/tags/libcurl" style="font-size: 12px;">libcurl</a>
+        
+        
+        <a href="https://blog.jasonvfang.top/tags/linux-c" style="font-size: 12px;">linux-c</a>
         
         
         <a href="https://blog.jasonvfang.top/tags/markdown" style="font-size: 12px;">markdown</a>

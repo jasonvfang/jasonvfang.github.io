@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Jason Fang&#39;s Blog</title>
-    <link>https://blog.jasonvfang.top/categories/programming/</link>
-    <description>Recent content in Programming on Jason Fang&#39;s Blog</description>
+    <title>Linux C on Jason Fang&#39;s Blog</title>
+    <link>https://blog.jasonvfang.top/tags/linux-c/</link>
+    <description>Recent content in Linux C on Jason Fang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 18 Jul 2018 00:10:51 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.jasonvfang.top/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.jasonvfang.top/tags/linux-c/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,17 +21,6 @@
  如果设置了O_NONBLOCK，则open()用于读取时只会立即返回。如果当前没有任何进程打开文件进行读取，则以只写的方式写FD时会返回一个错误。 如果O_NONBLOCK没有指定，那么只读的open()将阻塞调用线程，直到线程打开文件进行写入。以只写方式open()调用将会阻塞调用线程，直到线程打开文件进行读取。  因此本例中的解决办法：
  1.可以设置open的方式为block方式
  2. 在write之前，其他进程一直在读fd  </description>
-    </item>
-    
-    <item>
-      <title>Libcurl中的HTTP重定向问题</title>
-      <link>https://blog.jasonvfang.top/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
-      
-      <guid>https://blog.jasonvfang.top/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</guid>
-      <description>&lt;p&gt;最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

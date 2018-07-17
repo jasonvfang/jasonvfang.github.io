@@ -6,10 +6,22 @@
     <description>Recent content on Jason Fang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Jul 2018 23:10:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Jul 2018 00:10:51 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.jasonvfang.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux FD操作问题</title>
+      <link>https://blog.jasonvfang.top/2018/07/18/linux-fd%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 18 Jul 2018 00:10:51 +0800</pubDate>
+      
+      <guid>https://blog.jasonvfang.top/2018/07/18/linux-fd%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98/</guid>
+      <description> 主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解， 后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试： 注意这里的模式是只写模式加非阻塞模式,运行结果是： MAN手册上的说明： 总结： 使用O_RDONLY或O_WRONLY设置打开FIFO时:
+ 如果设置了O_NONBLOCK，则open()用于读取时只会立即返回。如果当前没有任何进程打开文件进行读取，则以只写的方式写FD时会返回一个错误。 如果O_NONBLOCK没有指定，那么只读的open()将阻塞调用线程，直到线程打开文件进行写入。以只写方式open()调用将会阻塞调用线程，直到线程打开文件进行读取。  因此本例中的解决办法：
+ 1.可以设置open的方式为block方式
+ 2. 在write之前，其他进程一直在读fd  </description>
+    </item>
     
     <item>
       <title>cmake学习简要总结</title>
