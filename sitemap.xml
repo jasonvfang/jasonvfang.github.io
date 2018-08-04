@@ -114,4 +114,18 @@
     <priority>0</priority>
   </url>
   
+  <url>
+    <loc>https://blog.jasonvfang.top/tags/thinking-notes/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jasonvfang.top/categories/thinking-notes/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jasonvfang.top/1/01/01/thinking-notes---20180804/</loc>
+  </url>
+  
 </urlset>
