@@ -6,10 +6,27 @@
     <description>Recent content in Programming on Jason Fang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 18 Jul 2018 00:10:51 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Aug 2018 13:32:51 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.jasonvfang.top/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux 命令行参数处理</title>
+      <link>https://blog.jasonvfang.top/2018/08/05/linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86/</link>
+      <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
+      
+      <guid>https://blog.jasonvfang.top/2018/08/05/linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86/</guid>
+      <description>&lt;p&gt;前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
+不好修改，于是想到Linux下有专门的getopt方法，好在不算改动特别大，对以前的做法作了兼容处理，好吧，这里还是对getopt作个简要的整理吧，方便日后回顾。&lt;/p&gt;
+
+&lt;h3 id=&#34;简要说明&#34;&gt;简要说明&lt;/h3&gt;
+
+&lt;p&gt;getopt/getopt_long都是linux平台下为应用程序提供处理命令行参数的接口，区别在于后者有参数名称长度较长的情况，一般在Linux下的命令行参数以横框“-”或者双横杠
+“&amp;ndash;”进行传递，比如我们经常用到的ls -l 或者 ls &amp;ndash;help ，其中的l和help为选项。&lt;/p&gt;
+
+&lt;h3 id=&#34;如何在程序中使用&#34;&gt;如何在程序中使用&lt;/h3&gt;</description>
+    </item>
     
     <item>
       <title>Linux FD操作问题</title>

@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-08-04T00:20:51&#43;08:00"/>
+<meta property="og:updated_time" content="2018-08-05T13:32:51&#43;08:00"/>
 
 
 
@@ -175,7 +175,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        7
+        8
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -258,6 +258,155 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://blog.jasonvfang.top/2018/08/05/linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86/">
+    <h1 class="article-title" itemprop="name">
+        Linux 命令行参数处理
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-08-05 13:32:51 &#43;0800 &#43;0800" itemprop="datePublished">2018-08-05</time>
+            &middot;
+            388
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://blog.jasonvfang.top/categories/programming">programming</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://blog.jasonvfang.top/tags/linux-c">linux-c</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                <p>前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
+不好修改，于是想到Linux下有专门的getopt方法，好在不算改动特别大，对以前的做法作了兼容处理，好吧，这里还是对getopt作个简要的整理吧，方便日后回顾。</p>
+
+<h3 id="简要说明">简要说明</h3>
+
+<p>getopt/getopt_long都是linux平台下为应用程序提供处理命令行参数的接口，区别在于后者有参数名称长度较长的情况，一般在Linux下的命令行参数以横框“-”或者双横杠
+“&ndash;”进行传递，比如我们经常用到的ls -l 或者 ls &ndash;help ，其中的l和help为选项。</p>
+
+<h3 id="如何在程序中使用">如何在程序中使用</h3>
+            </p>
+            <p class="article-more-link">
+                <a href="https://blog.jasonvfang.top/2018/08/05/linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://blog.jasonvfang.top/2018/08/05/linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86/" data-id="23603ba161e5eb7b75c10be2c6161379" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1298,7 +1447,7 @@
                 <a class="category-list-link" href="https://blog.jasonvfang.top/categories/programming">
                     programming
                 </a>
-                <span class="category-list-count">2</span>
+                <span class="category-list-count">3</span>
             </li>
             
             <li class="category-list-item">
@@ -1355,7 +1504,7 @@
                 <a class="category-list-link" href="https://blog.jasonvfang.top/tags/linux-c">
                     linux-c
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
