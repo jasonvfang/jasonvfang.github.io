@@ -33,18 +33,24 @@
   </url>
   
   <url>
-    <loc>https://blog.jasonvfang.top/2017/05/20/markdown-cheat-sheet/</loc>
-    <lastmod>2017-05-20T12:10:51+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.jasonvfang.top/2017/05/20/using-the-gallery-shortcode/</loc>
-    <lastmod>2017-05-20T12:00:23+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.jasonvfang.top/about/</loc>
     <lastmod>2017-05-19T21:49:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.jasonvfang.top/2016/11/21/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%8D%95%E9%93%BE%E8%A1%A8%E6%9C%89%E7%8E%AF/</loc>
+    <lastmod>2016-11-21T17:22:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.jasonvfang.top/2012/06/23/%E6%88%91%E5%B1%85%E7%84%B6%E7%9C%8B%E4%BA%86%E5%86%A0%E5%86%9B-2012-06/</loc>
+    <lastmod>2012-06-23T23:20:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.jasonvfang.top/tags/algorithm/</loc>
+    <lastmod>2016-11-21T17:22:51+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -83,12 +89,6 @@
   </url>
   
   <url>
-    <loc>https://blog.jasonvfang.top/categories/learning/</loc>
-    <lastmod>2017-05-20T12:10:51+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.jasonvfang.top/tags/libcurl/</loc>
     <lastmod>2018-06-23T12:10:51+08:00</lastmod>
     <priority>0</priority>
@@ -97,12 +97,6 @@
   <url>
     <loc>https://blog.jasonvfang.top/tags/linux-c/</loc>
     <lastmod>2018-08-05T13:32:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jasonvfang.top/tags/markdown/</loc>
-    <lastmod>2017-05-20T12:10:51+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -120,18 +114,18 @@
   
   <url>
     <loc>https://blog.jasonvfang.top/tags/</loc>
-    <lastmod>2018-07-15T23:10:51+08:00</lastmod>
+    <lastmod>2016-11-21T17:22:51+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.jasonvfang.top/tags/thinking-notes/</loc>
+    <loc>https://blog.jasonvfang.top/tags/thinking/</loc>
     <lastmod>2018-08-04T00:20:51+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.jasonvfang.top/categories/thinking-notes/</loc>
+    <loc>https://blog.jasonvfang.top/categories/thinkingnotes/</loc>
     <lastmod>2018-08-04T00:20:51+08:00</lastmod>
     <priority>0</priority>
   </url>

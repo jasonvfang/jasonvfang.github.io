@@ -440,7 +440,7 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="https://blog.jasonvfang.top/categories/thinking-notes">Thinking Notes</a>
+                <a class="article-category-link" href="https://blog.jasonvfang.top/categories/thinkingnotes">ThinkingNotes</a>
                 
                 
             </div>
@@ -454,7 +454,7 @@
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://blog.jasonvfang.top/tags/thinking-notes">thinking notes</a>
+                <a class="article-category-link" href="https://blog.jasonvfang.top/tags/thinking">thinking</a>
                 
                 
             </div>
@@ -1134,9 +1134,9 @@
         </a>
 
         <header class="article-header">
-    <a href="https://blog.jasonvfang.top/2017/05/20/markdown-cheat-sheet/">
+    <a href="https://blog.jasonvfang.top/2016/11/21/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%8D%95%E9%93%BE%E8%A1%A8%E6%9C%89%E7%8E%AF/">
     <h1 class="article-title" itemprop="name">
-        Markdown Cheat Sheet
+        如何判断单链表有环
     </h1>
     </a>
     <div class="article-meta">
@@ -1144,12 +1144,12 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-20 12:10:51 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
+            <time datetime="2016-11-21 17:22:51 &#43;0800 &#43;0800" itemprop="datePublished">2016-11-21</time>
             &middot;
-            420
+            120
             words
             &middot;
-            2
+            1
             minute read
         </div>
         
@@ -1160,7 +1160,7 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="https://blog.jasonvfang.top/categories/learning">Learning</a>
+                <a class="article-category-link" href="https://blog.jasonvfang.top/categories/programming">Programming</a>
                 
                 
             </div>
@@ -1174,7 +1174,7 @@
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://blog.jasonvfang.top/tags/markdown">markdown</a>
+                <a class="article-category-link" href="https://blog.jasonvfang.top/tags/algorithm">algorithm</a>
                 
                 
             </div>
@@ -1185,20 +1185,17 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                <p>This note demonstrates some of what <a href="http://daringfireball.net/projects/markdown/">Markdown</a> is capable of doing.</p>
-
-<p><em>Note: Feel free to play with this page. Unlike regular notes, this doesn&rsquo;t automatically save itself.</em></p>
-
-<p></p>
+                从自己的CSDN BLOG移过来的文章，作个BACKUP:
+1、对于单链表而言，只有通过从头到尾的遍历方式，如果发现尾指针指向头指针则说明有环： bool hasCycle(struct ListNode *head) { if(head == NULL || head-&gt;next == NULL){ return false; } struct ListNode *ptr = head-&gt;next; while(ptr) { if (ptr-&gt;next == head){ return true; } if (ptr-&gt;next == NULL) break; ptr = ptr-&gt;next; } return false; }  2、使用双指针，一个遍历的速度快，一个较慢，如果快的指针追上了慢的那个说明有环： /** * Definition for singly-linked list. * struct ListNode { * int val; * struct ListNode *next; * }; */ bool hasCycle(struct ListNode *head) { struct ListNode *faster = NULL; struct ListNode *slower = NULL; if(head == NULL || head-&gt;next == NULL){ return false; } slower = head; faster = head-&gt;next; while(faster !
             </p>
             <p class="article-more-link">
-                <a href="https://blog.jasonvfang.top/2017/05/20/markdown-cheat-sheet/">
+                <a href="https://blog.jasonvfang.top/2016/11/21/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%8D%95%E9%93%BE%E8%A1%A8%E6%9C%89%E7%8E%AF/">
                     Read more
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://blog.jasonvfang.top/2017/05/20/markdown-cheat-sheet/" data-id="74a465046a917f5d40c5e9a053394724" class="article-share-link">
+    <a data-url="https://blog.jasonvfang.top/2016/11/21/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%8D%95%E9%93%BE%E8%A1%A8%E6%9C%89%E7%8E%AF/" data-id="8ba80cc09f97647b90d9514ced8657c9" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -1279,9 +1276,9 @@
         </a>
 
         <header class="article-header">
-    <a href="https://blog.jasonvfang.top/2017/05/20/using-the-gallery-shortcode/">
+    <a href="https://blog.jasonvfang.top/2012/06/23/%E6%88%91%E5%B1%85%E7%84%B6%E7%9C%8B%E4%BA%86%E5%86%A0%E5%86%9B-2012-06/">
     <h1 class="article-title" itemprop="name">
-        Using the gallery shortcode
+        我居然看了《冠军》-2012-06
     </h1>
     </a>
     <div class="article-meta">
@@ -1289,9 +1286,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-20 12:00:23 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-20</time>
+            <time datetime="2012-06-23 23:20:51 &#43;0800 &#43;0800" itemprop="datePublished">2012-06-23</time>
             &middot;
-            33
+            4
             words
             &middot;
             1
@@ -1301,10 +1298,28 @@
         
             
             
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://blog.jasonvfang.top/categories/thinkingnotes">ThinkingNotes</a>
+                
+                
+            </div>
+            
         
 
         
             
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://blog.jasonvfang.top/tags/thinking">thinking</a>
+                
+                
+            </div>
             
         
     </div>
@@ -1312,18 +1327,17 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                <p>This way you can easily include a gallery into your page. Copy the code below into your content file and enter the relative paths to your images.</p>
-
-<p></p>
+                <p>一篇2012年的日记，想不到我也有这样的一面，觉得以前的自己比现在好，不知道为啥会这样想，也许现在在社会上混的比较久了的原因吧，BACKUP回来，回到2012的端午：
+</p>
             </p>
             <p class="article-more-link">
-                <a href="https://blog.jasonvfang.top/2017/05/20/using-the-gallery-shortcode/">
+                <a href="https://blog.jasonvfang.top/2012/06/23/%E6%88%91%E5%B1%85%E7%84%B6%E7%9C%8B%E4%BA%86%E5%86%A0%E5%86%9B-2012-06/">
                     Read more
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://blog.jasonvfang.top/2017/05/20/using-the-gallery-shortcode/" data-id="b5878041fdfd74bbf2f0b2b55108eb61" class="article-share-link">
+    <a data-url="https://blog.jasonvfang.top/2012/06/23/%E6%88%91%E5%B1%85%E7%84%B6%E7%9C%8B%E4%BA%86%E5%86%A0%E5%86%9B-2012-06/" data-id="2a93ae99dd977525068447adf69069b8" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -1436,26 +1450,18 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://blog.jasonvfang.top/categories/learning">
-                    learning
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
                 <a class="category-list-link" href="https://blog.jasonvfang.top/categories/programming">
                     programming
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">4</span>
             </li>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://blog.jasonvfang.top/categories/thinking-notes">
-                    thinking-notes
+                <a class="category-list-link" href="https://blog.jasonvfang.top/categories/thinkingnotes">
+                    thinkingnotes
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
         </ul>
@@ -1474,6 +1480,14 @@
     </h3>
     <div class="widget">
         <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://blog.jasonvfang.top/tags/algorithm">
+                    algorithm
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
             
             <li class="category-list-item">
                 
@@ -1509,18 +1523,10 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://blog.jasonvfang.top/tags/markdown">
-                    markdown
+                <a class="category-list-link" href="https://blog.jasonvfang.top/tags/thinking">
+                    thinking
                 </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://blog.jasonvfang.top/tags/thinking-notes">
-                    thinking-notes
-                </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
         </ul>
@@ -1540,6 +1546,9 @@
     <div class="widget tagcloud">
         
         
+        <a href="https://blog.jasonvfang.top/tags/algorithm" style="font-size: 12px;">algorithm</a>
+        
+        
         <a href="https://blog.jasonvfang.top/tags/cmake" style="font-size: 12px;">cmake</a>
         
         
@@ -1552,10 +1561,7 @@
         <a href="https://blog.jasonvfang.top/tags/linux-c" style="font-size: 12px;">linux-c</a>
         
         
-        <a href="https://blog.jasonvfang.top/tags/markdown" style="font-size: 12px;">markdown</a>
-        
-        
-        <a href="https://blog.jasonvfang.top/tags/thinking-notes" style="font-size: 12px;">thinking-notes</a>
+        <a href="https://blog.jasonvfang.top/tags/thinking" style="font-size: 12px;">thinking</a>
         
     </div>
 </div>
