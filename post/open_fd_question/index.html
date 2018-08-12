@@ -11,11 +11,8 @@
     <meta name="keywords" content="">
 
 
-    <title>Categories -- Jason Fang BLOG</title>
+    <title>Linux FD操作问题 -- Jason Fang BLOG</title>
 
-    
-    <link href="https://blog.jasonvfang.top/categories/index.xml" rel="alternate" type="application/rss+xml" title="Jason Fang BLOG" />
-    <link href="https://blog.jasonvfang.top/categories/index.xml" rel="feed" type="application/rss+xml" title="Jason Fang BLOG" />
     
 
     
@@ -85,39 +82,70 @@
 
 
     
-    <header class="intro-header" style="background-image: url('https://blog.jasonvfang.top/img/home-bg.jpg')">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-           <div class="site-heading">
-             <h1>Categories</h1>
-             <hr class="small">
-             <span class="subheading">Categories</span>
+    
+    <header class="intro-header" style="background-image: url('https://blog.jasonvfang.top/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Linux FD操作问题</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+Posted by <a href="#">Jason.Fang</a> on Wed, Jul 18, 2018
+<br />
+In <a href="https://blog.jasonvfang.top/categories/programming">Programming</a>
+
+<br />
+Tags <a href="https://blog.jasonvfang.top/tags/linux-c">linux c</a>
+
+               </span>
+             </div>
            </div>
-         </div>
-       </div>
-     </div>
+        </div>
+      </div>
     </header>
 
     
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <ul>
-            
-            
-            <li><a href="https://blog.jasonvfang.top/categories/programming">Programming</a> 4</li>
-            
-            <li><a href="https://blog.jasonvfang.top/categories/cmake">Cmake</a> 1</li>
-            
-            <li><a href="https://blog.jasonvfang.top/categories/hugo">Hugo</a> 1</li>
-            
-            <li><a href="https://blog.jasonvfang.top/categories/thinkingnotes">Thinkingnotes</a> 1</li>
-            
-          </ul>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解，
+后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试：
+<img src="https://blog.jasonvfang.top/images/open_demo_codes.png" alt="Demo 代码" /></p>
+
+<p>注意这里的模式是只写模式加非阻塞模式,运行结果是：
+<img src="https://blog.jasonvfang.top/images/open_error.png" alt="运行结果" /></p>
+
+<p>MAN手册上的说明：
+<img src="https://blog.jasonvfang.top/images/man_open_flag.png" alt="MAN解释" /></p>
+
+<h2 id="总结">总结：</h2>
+
+<p>使用O_RDONLY或O_WRONLY设置打开FIFO时:</p>
+
+<ul>
+<li>如果设置了O_NONBLOCK，则open()用于读取时只会立即返回。如果当前没有任何进程打开文件进行读取，则以只写的方式写FD时会返回一个错误。</li>
+<li>如果O_NONBLOCK没有指定，那么只读的open()将阻塞调用线程，直到线程打开文件进行写入。以只写方式open()调用将会阻塞调用线程，直到线程打开文件进行读取。</li>
+</ul>
+
+<p>因此本例中的解决办法：</p>
+
+<ul>
+<li>1.可以设置open的方式为block方式<br /></li>
+<li>2. 在write之前，其他进程一直在读fd</li>
+</ul>
+
+                  
+
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </article>
 
     <hr>
     

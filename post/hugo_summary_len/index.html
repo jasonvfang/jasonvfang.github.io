@@ -11,11 +11,8 @@
     <meta name="keywords" content="">
 
 
-    <title>Categories -- Jason Fang BLOG</title>
+    <title>Hugo summary length 限制 -- Jason Fang BLOG</title>
 
-    
-    <link href="https://blog.jasonvfang.top/categories/index.xml" rel="alternate" type="application/rss+xml" title="Jason Fang BLOG" />
-    <link href="https://blog.jasonvfang.top/categories/index.xml" rel="feed" type="application/rss+xml" title="Jason Fang BLOG" />
     
 
     
@@ -85,39 +82,51 @@
 
 
     
-    <header class="intro-header" style="background-image: url('https://blog.jasonvfang.top/img/home-bg.jpg')">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-           <div class="site-heading">
-             <h1>Categories</h1>
-             <hr class="small">
-             <span class="subheading">Categories</span>
+    
+    <header class="intro-header" style="background-image: url('https://blog.jasonvfang.top/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Hugo summary length 限制</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+Posted by <a href="#">Jason.Fang</a> on Sun, Jun 24, 2018
+<br />
+In <a href="https://blog.jasonvfang.top/categories/hugo">Hugo</a>
+
+<br />
+Tags <a href="https://blog.jasonvfang.top/tags/hugo">hugo</a>
+
+               </span>
+             </div>
            </div>
-         </div>
-       </div>
-     </div>
+        </div>
+      </div>
     </header>
 
     
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <ul>
-            
-            
-            <li><a href="https://blog.jasonvfang.top/categories/programming">Programming</a> 4</li>
-            
-            <li><a href="https://blog.jasonvfang.top/categories/cmake">Cmake</a> 1</li>
-            
-            <li><a href="https://blog.jasonvfang.top/categories/hugo">Hugo</a> 1</li>
-            
-            <li><a href="https://blog.jasonvfang.top/categories/thinkingnotes">Thinkingnotes</a> 1</li>
-            
-          </ul>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <p>本文将说明如何在HUGO中对摘要进行长度限制。
+</p>
+
+<p>体验了一下HUGO静态网站生成，的确很amazing！</p>
+
+<p>初次写文章时发现首页上的摘要有点显示过长了，GOOGLE了很久，有说配置summary length的属性，试过不行，
+其实在官方DOC中已经写明了，请参考<a href="https://gohugo.io/variables/page/">这里</a>。</p>
+
+<p>只需要在需要进行分隔的地方添加一个<code>&lt;!--more--&gt;</code>标签即可，这样标签后面的内容则需要点Read more才可完全显示。</p>
+                  
+
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </article>
 
     <hr>
     

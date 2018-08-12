@@ -11,11 +11,8 @@
     <meta name="keywords" content="">
 
 
-    <title>Categories -- Jason Fang BLOG</title>
+    <title>如何判断单链表有环 -- Jason Fang BLOG</title>
 
-    
-    <link href="https://blog.jasonvfang.top/categories/index.xml" rel="alternate" type="application/rss+xml" title="Jason Fang BLOG" />
-    <link href="https://blog.jasonvfang.top/categories/index.xml" rel="feed" type="application/rss+xml" title="Jason Fang BLOG" />
     
 
     
@@ -85,39 +82,106 @@
 
 
     
-    <header class="intro-header" style="background-image: url('https://blog.jasonvfang.top/img/home-bg.jpg')">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-           <div class="site-heading">
-             <h1>Categories</h1>
-             <hr class="small">
-             <span class="subheading">Categories</span>
+    
+    <header class="intro-header" style="background-image: url('https://blog.jasonvfang.top/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>如何判断单链表有环</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+Posted by <a href="#">Jason.Fang</a> on Mon, Nov 21, 2016
+<br />
+In <a href="https://blog.jasonvfang.top/categories/programming">Programming</a>
+
+<br />
+Tags <a href="https://blog.jasonvfang.top/tags/algorithm">algorithm</a>
+
+               </span>
+             </div>
            </div>
-         </div>
-       </div>
-     </div>
+        </div>
+      </div>
     </header>
 
     
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <ul>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>从自己的CSDN BLOG移过来的文章，作个BACKUP:</p>
+
+<h4 id="1-对于单链表而言-只有通过从头到尾的遍历方式-如果发现尾指针指向头指针则说明有环">1、对于单链表而言，只有通过从头到尾的遍历方式，如果发现尾指针指向头指针则说明有环：</h4>
+
+<pre><code>bool hasCycle(struct ListNode *head)
+{
+    if(head == NULL || head-&gt;next == NULL){
+        return false;
+    }
+    
+    struct ListNode *ptr = head-&gt;next;
+    
+    while(ptr)
+    {
+        if (ptr-&gt;next == head){
+            return true;
+        }   
+        
+        if (ptr-&gt;next == NULL)
+            break;
             
-            
-            <li><a href="https://blog.jasonvfang.top/categories/programming">Programming</a> 4</li>
-            
-            <li><a href="https://blog.jasonvfang.top/categories/cmake">Cmake</a> 1</li>
-            
-            <li><a href="https://blog.jasonvfang.top/categories/hugo">Hugo</a> 1</li>
-            
-            <li><a href="https://blog.jasonvfang.top/categories/thinkingnotes">Thinkingnotes</a> 1</li>
-            
-          </ul>
+        ptr = ptr-&gt;next;    
+    }
+    
+    return false;
+}
+</code></pre>
+
+<h4 id="2-使用双指针-一个遍历的速度快-一个较慢-如果快的指针追上了慢的那个说明有环">2、使用双指针，一个遍历的速度快，一个较慢，如果快的指针追上了慢的那个说明有环：</h4>
+
+<pre><code>/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+bool hasCycle(struct ListNode *head) 
+{
+    struct ListNode *faster = NULL;
+    struct ListNode *slower = NULL;
+    
+    if(head == NULL || head-&gt;next == NULL){
+        return false;
+    }
+    
+    slower = head;
+    faster = head-&gt;next;
+    while(faster != slower){
+        if(faster == NULL || faster-&gt;next == NULL)
+        {
+            return false;
+        }
+        
+        faster = faster-&gt;next-&gt;next;
+        slower = slower-&gt;next;
+    }
+    
+    return true;
+}
+</code></pre>
+
+                  
+
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </article>
 
     <hr>
     
