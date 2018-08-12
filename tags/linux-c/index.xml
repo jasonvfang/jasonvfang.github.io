@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux C on Jason Fang BLOG</title>
+    <link>https://blog.jasonvfang.top/tags/linux-c/</link>
+    <description>Recent content in Linux C on Jason Fang BLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Jason Fang@2017 Powered by hugo.</copyright>
+    <lastBuildDate>Sun, 05 Aug 2018 13:32:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.jasonvfang.top/tags/linux-c/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux 命令行参数处理</title>
+      <link>https://blog.jasonvfang.top/post/getopt_usage/</link>
+      <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
+      
+      <guid>https://blog.jasonvfang.top/post/getopt_usage/</guid>
+      <description>&lt;p&gt;前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
+不好修改，于是想到Linux下有专门的getopt方法，好在不算改动特别大，对以前的做法作了兼容处理，好吧，这里还是对getopt作个简要的整理吧，方便日后回顾。&lt;/p&gt;
+
+&lt;h3 id=&#34;简要说明&#34;&gt;简要说明&lt;/h3&gt;
+
+&lt;p&gt;getopt/getopt_long都是linux平台下为应用程序提供处理命令行参数的接口，区别在于后者有参数名称长度较长的情况，一般在Linux下的命令行参数以横框“-”或者双横杠
+“&amp;ndash;”进行传递，比如我们经常用到的ls -l 或者 ls &amp;ndash;help ，其中的l和help为选项。&lt;/p&gt;
+
+&lt;h3 id=&#34;如何在程序中使用&#34;&gt;如何在程序中使用&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux FD操作问题</title>
+      <link>https://blog.jasonvfang.top/post/open_fd_question/</link>
+      <pubDate>Wed, 18 Jul 2018 00:10:51 +0800</pubDate>
+      
+      <guid>https://blog.jasonvfang.top/post/open_fd_question/</guid>
+      <description> 主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解， 后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试： 注意这里的模式是只写模式加非阻塞模式,运行结果是： MAN手册上的说明： 总结： 使用O_RDONLY或O_WRONLY设置打开FIFO时:
+ 如果设置了O_NONBLOCK，则open()用于读取时只会立即返回。如果当前没有任何进程打开文件进行读取，则以只写的方式写FD时会返回一个错误。 如果O_NONBLOCK没有指定，那么只读的open()将阻塞调用线程，直到线程打开文件进行写入。以只写方式open()调用将会阻塞调用线程，直到线程打开文件进行读取。  因此本例中的解决办法：
+ 1.可以设置open的方式为block方式
+ 2. 在write之前，其他进程一直在读fd  </description>
+    </item>
+    
+  </channel>
+</rss>

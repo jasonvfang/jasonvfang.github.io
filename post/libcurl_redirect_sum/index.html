@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jason.Fang">
+    <meta name="keywords" content="">
+
+
+    <title>Libcurl中的HTTP重定向问题 -- Jason Fang BLOG</title>
+
+    
+
+    
+    <link href="https://blog.jasonvfang.top/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="https://blog.jasonvfang.top/css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://blog.jasonvfang.top">Jason Fang BLOG</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="https://blog.jasonvfang.top/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://blog.jasonvfang.top/post/">Archives</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://blog.jasonvfang.top/categories/">Categories</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://blog.jasonvfang.top/tags/">Tags</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://blog.jasonvfang.top/about/about/">About</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('https://blog.jasonvfang.top/img/post-bg.jpg')">
+    
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Libcurl中的HTTP重定向问题</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+Posted by <a href="#">Jason.Fang</a> on Sat, Jun 23, 2018
+<br />
+In <a href="https://blog.jasonvfang.top/categories/programming">Programming</a>
+
+<br />
+Tags <a href="https://blog.jasonvfang.top/tags/libcurl">libcurl</a>
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <p>最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：</p>
+
+<p></p>
+
+<h4 id="几个注意点">几个注意点</h4>
+
+<ul>
+<li>JSON的内存释放</li>
+<li>HTTP请求RESP是否有重定向问题
+在处理这个HTTP返回时就有遇到过重定向的坑，导致浪费太多的时间</li>
+</ul>
+
+<h5 id="curl的http选项">CURL的HTTP选项</h5>
+
+<p>基本参考CURL的SAMPLE CODE就可以完成：
+先上大致的code:</p>
+
+<pre><code>        curl_easy_setopt(g_curl_handle, CURLOPT_SSL_VERIFYPEER, 1L);
+        curl_easy_setopt(g_curl_handle, CURLOPT_SSL_VERIFYHOST, 2L);
+        curl_easy_setopt(g_curl_handle, CURLOPT_MAXCONNECTS, 10);
+        curl_easy_setopt(g_curl_handle, CURLOPT_TIMEOUT, 15);
+        curl_easy_setopt(g_curl_handle, CURLOPT_SERVER_RESPONSE_TIMEOUT, 15);
+        curl_easy_setopt(g_curl_handle, CURLOPT_DEBUGFUNCTION, my_trace);
+        curl_easy_setopt(g_curl_handle, CURLOPT_DEBUGDATA, &amp;config);
+        curl_easy_setopt(g_curl_handle, CURLOPT_WRITEFUNCTION, write_data);
+        curl_easy_setopt(g_curl_handle, CURLOPT_WRITEDATA, result_buffer);
+        curl_easy_setopt(g_curl_handle, CURLOPT_HEADERFUNCTION, header_callback);
+        curl_easy_setopt(g_curl_handle, CURLOPT_WRITEHEADER, header_buffer);
+        curl_easy_setopt(g_curl_handle, CURLOPT_USERAGENT, &quot;libcurl-agent/1.0&quot;);
+        curl_easy_setopt(g_curl_handle, CURLOPT_NOSIGNAL, 1L); 
+</code></pre>
+
+<p>在执行http request的时候一直得到的空数据，利用POSTMAN进行模拟都能够正确返回数据，后来通过命令行CURL模拟发现HTTP STATUS返回的是3XX，于是才恍然大悟，需要设置CURL的重定向跟踪功能：</p>
+
+<pre><code>//follow redirect url
+curl_easy_setopt(g_curl_handle, CURLOPT_FOLLOWLOCATION, 1L);
+</code></pre>
+
+<p>加上这个设置后完美解决，建议后面实现HTTP请求的所有功能都应该加上这个设置，避免得到空数据。</p>
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                      <li>
+                        <a href="mailto:jasonvfang@gmail.com">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    
+                    
+                    
+                    <li>
+                      <a href="https://twitter.com/jasonvfang">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="https://github.com/jasonvfang">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                    
+                  </ul>
+                  <p class="copyright text-muted">Jason Fang@2017 Powered by hugo.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://blog.jasonvfang.top/js/jquery.min.js"></script>
+
+    
+    <script src="https://blog.jasonvfang.top/js/bootstrap.min.js"></script>
+
+    
+    <script src="https://blog.jasonvfang.top/js/clean-blog.js"></script>
+
+    
+
+</body>
+
+</html>
+

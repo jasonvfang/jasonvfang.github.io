@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Jason Fang BLOG</title>
+    <link>https://blog.jasonvfang.top/about/</link>
+    <description>Recent content in Abouts on Jason Fang BLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Jason Fang@2017 Powered by hugo.</copyright>
+    <lastBuildDate>Fri, 19 May 2017 21:49:20 +0200</lastBuildDate>
+    
+	<atom:link href="https://blog.jasonvfang.top/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://blog.jasonvfang.top/about/about/</link>
+      <pubDate>Fri, 19 May 2017 21:49:20 +0200</pubDate>
+      
+      <guid>https://blog.jasonvfang.top/about/about/</guid>
+      <description>Jobs: Senior Software Engineer
+Mainly concentrate on Linux/Embed and IOT. But also great passion on researching other skills(Server end developing &amp;amp; Web etc).
+Full stack developing.
+Languages: C/C++ mainly, go/python/web etc. Love opensource and github.
+Location: ShangHai,China
+Contact: jasonvfang@gmail.com</description>
+    </item>
+    
+  </channel>
+</rss>
