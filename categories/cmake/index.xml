@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cmake on Jason Fang&#39;s Blog</title>
+    <title>Cmake on Jason Fang BLOG</title>
     <link>https://blog.jasonvfang.top/categories/cmake/</link>
-    <description>Recent content in Cmake on Jason Fang&#39;s Blog</description>
+    <description>Recent content in Cmake on Jason Fang BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en-us</language>
+    <copyright>Jason Fang@2017 Powered by hugo.</copyright>
     <lastBuildDate>Sun, 15 Jul 2018 23:10:51 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.jasonvfang.top/categories/cmake/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +14,10 @@
     
     <item>
       <title>cmake学习简要总结</title>
-      <link>https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/</link>
+      <link>https://blog.jasonvfang.top/post/cmake_summary/</link>
       <pubDate>Sun, 15 Jul 2018 23:10:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://blog.jasonvfang.top/post/cmake_summary/</guid>
       <description>&lt;p&gt;今天有时间去研究一下cmake的使用，之前一直是想看一下的，只是时间没排出来，今天总算排上了，收获也挺多，感觉
 这样的编译工具确实比我们自己写Makefile管理起来要好的多，这也就是为什么在开源社区会有这么多的开源软件的编译都采用的cmake吧。&lt;/p&gt;
 
