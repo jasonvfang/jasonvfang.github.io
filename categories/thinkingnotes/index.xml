@@ -1,19 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ThinkingNotes on Blog.Haoyi.DEV</title>
+    <title>Thinkingnotes on Jason Fang BLOG</title>
     <link>https://blog.haoyi.dev/categories/thinkingnotes/</link>
-    <description>Recent content in ThinkingNotes on Blog.Haoyi.DEV</description>
+    <description>Recent content in Thinkingnotes on Jason Fang BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sat, 23 Jun 2012 23:20:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/categories/thinkingnotes/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>Jason Fang@2017 Powered by hugo.</copyright>
+    <lastBuildDate>Sat, 23 Jun 2012 23:20:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.haoyi.dev/categories/thinkingnotes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>我居然看了《冠军》-2012-06</title>
-      <link>https://blog.haoyi.dev/2012/06/23/%E6%88%91%E5%B1%85%E7%84%B6%E7%9C%8B%E4%BA%86%E5%86%A0%E5%86%9B-2012-06/</link>
+      <link>https://blog.haoyi.dev/post/thinknotes_0623_2012/</link>
       <pubDate>Sat, 23 Jun 2012 23:20:51 +0800</pubDate>
       
-      <guid>https://blog.haoyi.dev/2012/06/23/%E6%88%91%E5%B1%85%E7%84%B6%E7%9C%8B%E4%BA%86%E5%86%A0%E5%86%9B-2012-06/</guid>
-      <description>&lt;p&gt;一篇2012年的日记，想不到我也有这样的一面，觉得以前的自己比现在好，不知道为啥会这样想，也许现在在社会上混的比较久了的原因吧，BACKUP回来，回到2012的端午：&lt;/p&gt;</description>
+      <guid>https://blog.haoyi.dev/post/thinknotes_0623_2012/</guid>
+      <description>&lt;p&gt;一篇2012年的日记，想不到我也有这样的一面，觉得以前的自己比现在好，不知道为啥会这样想，也许现在在社会上混的比较久了的原因吧，BACKUP回来，回到2012的端午：
+&lt;/p&gt;</description>
     </item>
     
   </channel>

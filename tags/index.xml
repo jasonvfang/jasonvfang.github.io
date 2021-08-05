@@ -1,50 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Blog.Haoyi.DEV</title>
+    <title>Tags on Jason Fang BLOG</title>
     <link>https://blog.haoyi.dev/tags/</link>
-    <description>Recent content in Tags on Blog.Haoyi.DEV</description>
+    <description>Recent content in Tags on Jason Fang BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sun, 05 Aug 2018 13:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>linux-c</title>
-      <link>https://blog.haoyi.dev/tags/linux-c/</link>
-      <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
-      
-      <guid>https://blog.haoyi.dev/tags/linux-c/</guid>
-      <description></description>
-    </item>
+    <language>en-us</language>
+    <copyright>Jason Fang@2017 Powered by hugo.</copyright>
+    <lastBuildDate>Mon, 21 Nov 2016 17:22:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.haoyi.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>cmake</title>
-      <link>https://blog.haoyi.dev/tags/cmake/</link>
-      <pubDate>Sun, 15 Jul 2018 23:10:51 +0800</pubDate>
-      
-      <guid>https://blog.haoyi.dev/tags/cmake/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://blog.haoyi.dev/tags/hugo/</link>
-      <pubDate>Sun, 24 Jun 2018 16:10:51 +0800</pubDate>
-      
-      <guid>https://blog.haoyi.dev/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>libcurl</title>
-      <link>https://blog.haoyi.dev/tags/libcurl/</link>
-      <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
-      
-      <guid>https://blog.haoyi.dev/tags/libcurl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithm</title>
+      <title>Algorithm</title>
       <link>https://blog.haoyi.dev/tags/algorithm/</link>
       <pubDate>Mon, 21 Nov 2016 17:22:51 +0800</pubDate>
       
@@ -53,7 +22,43 @@
     </item>
     
     <item>
-      <title>thinking</title>
+      <title>Cmake</title>
+      <link>https://blog.haoyi.dev/tags/cmake/</link>
+      <pubDate>Sun, 15 Jul 2018 23:10:51 +0800</pubDate>
+      
+      <guid>https://blog.haoyi.dev/tags/cmake/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://blog.haoyi.dev/tags/hugo/</link>
+      <pubDate>Sun, 24 Jun 2018 16:10:51 +0800</pubDate>
+      
+      <guid>https://blog.haoyi.dev/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Libcurl</title>
+      <link>https://blog.haoyi.dev/tags/libcurl/</link>
+      <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
+      
+      <guid>https://blog.haoyi.dev/tags/libcurl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux C</title>
+      <link>https://blog.haoyi.dev/tags/linux-c/</link>
+      <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
+      
+      <guid>https://blog.haoyi.dev/tags/linux-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thinking</title>
       <link>https://blog.haoyi.dev/tags/thinking/</link>
       <pubDate>Sat, 23 Jun 2012 23:20:51 +0800</pubDate>
       
