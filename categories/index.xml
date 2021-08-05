@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Jason Fang BLOG</title>
-    <link>https://blog.jasonvfang.top/categories/</link>
+    <link>https://blog.haoyi.dev/categories/</link>
     <description>Recent content in Categories on Jason Fang BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Jason Fang@2017 Powered by hugo.</copyright>
     
-	<atom:link href="https://blog.jasonvfang.top/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.haoyi.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cmake</title>
-      <link>https://blog.jasonvfang.top/categories/cmake/</link>
+      <link>https://blog.haoyi.dev/categories/cmake/</link>
       <pubDate>Sun, 15 Jul 2018 23:10:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/categories/cmake/</guid>
+      <guid>https://blog.haoyi.dev/categories/cmake/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://blog.jasonvfang.top/categories/hugo/</link>
+      <link>https://blog.haoyi.dev/categories/hugo/</link>
       <pubDate>Sun, 24 Jun 2018 16:10:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/categories/hugo/</guid>
+      <guid>https://blog.haoyi.dev/categories/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming</title>
-      <link>https://blog.jasonvfang.top/categories/programming/</link>
+      <link>https://blog.haoyi.dev/categories/programming/</link>
       <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/categories/programming/</guid>
+      <guid>https://blog.haoyi.dev/categories/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Thinkingnotes</title>
-      <link>https://blog.jasonvfang.top/categories/thinkingnotes/</link>
+      <link>https://blog.haoyi.dev/categories/thinkingnotes/</link>
       <pubDate>Sat, 23 Jun 2012 23:20:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/categories/thinkingnotes/</guid>
+      <guid>https://blog.haoyi.dev/categories/thinkingnotes/</guid>
       <description></description>
     </item>
     

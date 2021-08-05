@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jason Fang BLOG</title>
-    <link>https://blog.jasonvfang.top/</link>
+    <link>https://blog.haoyi.dev/</link>
     <description>Recent content on Jason Fang BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Jason Fang@2017 Powered by hugo.</copyright>
     <lastBuildDate>Sun, 05 Aug 2018 13:32:51 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.jasonvfang.top/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.haoyi.dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linux 命令行参数处理</title>
-      <link>https://blog.jasonvfang.top/post/getopt_usage/</link>
+      <link>https://blog.haoyi.dev/post/getopt_usage/</link>
       <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/post/getopt_usage/</guid>
+      <guid>https://blog.haoyi.dev/post/getopt_usage/</guid>
       <description>&lt;p&gt;前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
 不好修改，于是想到Linux下有专门的getopt方法，好在不算改动特别大，对以前的做法作了兼容处理，好吧，这里还是对getopt作个简要的整理吧，方便日后回顾。&lt;/p&gt;
 
@@ -31,10 +31,10 @@
     
     <item>
       <title>Linux FD操作问题</title>
-      <link>https://blog.jasonvfang.top/post/open_fd_question/</link>
+      <link>https://blog.haoyi.dev/post/open_fd_question/</link>
       <pubDate>Wed, 18 Jul 2018 00:10:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/post/open_fd_question/</guid>
+      <guid>https://blog.haoyi.dev/post/open_fd_question/</guid>
       <description> 主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解， 后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试： 注意这里的模式是只写模式加非阻塞模式,运行结果是： MAN手册上的说明： 总结： 使用O_RDONLY或O_WRONLY设置打开FIFO时:
  如果设置了O_NONBLOCK，则open()用于读取时只会立即返回。如果当前没有任何进程打开文件进行读取，则以只写的方式写FD时会返回一个错误。 如果O_NONBLOCK没有指定，那么只读的open()将阻塞调用线程，直到线程打开文件进行写入。以只写方式open()调用将会阻塞调用线程，直到线程打开文件进行读取。  因此本例中的解决办法：
  1.可以设置open的方式为block方式
@@ -43,10 +43,10 @@
     
     <item>
       <title>cmake学习简要总结</title>
-      <link>https://blog.jasonvfang.top/post/cmake_summary/</link>
+      <link>https://blog.haoyi.dev/post/cmake_summary/</link>
       <pubDate>Sun, 15 Jul 2018 23:10:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/post/cmake_summary/</guid>
+      <guid>https://blog.haoyi.dev/post/cmake_summary/</guid>
       <description>&lt;p&gt;今天有时间去研究一下cmake的使用，之前一直是想看一下的，只是时间没排出来，今天总算排上了，收获也挺多，感觉
 这样的编译工具确实比我们自己写Makefile管理起来要好的多，这也就是为什么在开源社区会有这么多的开源软件的编译都采用的cmake吧。&lt;/p&gt;
 
@@ -57,20 +57,20 @@
     
     <item>
       <title>Hugo summary length 限制</title>
-      <link>https://blog.jasonvfang.top/post/hugo_summary_len/</link>
+      <link>https://blog.haoyi.dev/post/hugo_summary_len/</link>
       <pubDate>Sun, 24 Jun 2018 16:10:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/post/hugo_summary_len/</guid>
+      <guid>https://blog.haoyi.dev/post/hugo_summary_len/</guid>
       <description>&lt;p&gt;本文将说明如何在HUGO中对摘要进行长度限制。
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Libcurl中的HTTP重定向问题</title>
-      <link>https://blog.jasonvfang.top/post/libcurl_redirect_sum/</link>
+      <link>https://blog.haoyi.dev/post/libcurl_redirect_sum/</link>
       <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/post/libcurl_redirect_sum/</guid>
+      <guid>https://blog.haoyi.dev/post/libcurl_redirect_sum/</guid>
       <description>&lt;p&gt;最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -78,10 +78,10 @@
     
     <item>
       <title>About</title>
-      <link>https://blog.jasonvfang.top/about/about/</link>
+      <link>https://blog.haoyi.dev/about/about/</link>
       <pubDate>Fri, 19 May 2017 21:49:20 +0200</pubDate>
       
-      <guid>https://blog.jasonvfang.top/about/about/</guid>
+      <guid>https://blog.haoyi.dev/about/about/</guid>
       <description>Jobs: Senior Software Engineer
 Mainly concentrate on Linux/Embed and IOT. But also great passion on researching other skills(Server end developing &amp;amp; Web etc).
 Full stack developing.
@@ -92,20 +92,20 @@ Contact: jasonvfang@gmail.com</description>
     
     <item>
       <title>如何判断单链表有环</title>
-      <link>https://blog.jasonvfang.top/post/howto_judge_linklist_cycle/</link>
+      <link>https://blog.haoyi.dev/post/howto_judge_linklist_cycle/</link>
       <pubDate>Mon, 21 Nov 2016 17:22:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/post/howto_judge_linklist_cycle/</guid>
+      <guid>https://blog.haoyi.dev/post/howto_judge_linklist_cycle/</guid>
       <description>从自己的CSDN BLOG移过来的文章，作个BACKUP:
 1、对于单链表而言，只有通过从头到尾的遍历方式，如果发现尾指针指向头指针则说明有环： bool hasCycle(struct ListNode *head) { if(head == NULL || head-&amp;gt;next == NULL){ return false; } struct ListNode *ptr = head-&amp;gt;next; while(ptr) { if (ptr-&amp;gt;next == head){ return true; } if (ptr-&amp;gt;next == NULL) break; ptr = ptr-&amp;gt;next; } return false; }  2、使用双指针，一个遍历的速度快，一个较慢，如果快的指针追上了慢的那个说明有环： /** * Definition for singly-linked list. * struct ListNode { * int val; * struct ListNode *next; * }; */ bool hasCycle(struct ListNode *head) { struct ListNode *faster = NULL; struct ListNode *slower = NULL; if(head == NULL || head-&amp;gt;next == NULL){ return false; } slower = head; faster = head-&amp;gt;next; while(faster !</description>
     </item>
     
     <item>
       <title>我居然看了《冠军》-2012-06</title>
-      <link>https://blog.jasonvfang.top/post/thinknotes_0623_2012/</link>
+      <link>https://blog.haoyi.dev/post/thinknotes_0623_2012/</link>
       <pubDate>Sat, 23 Jun 2012 23:20:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/post/thinknotes_0623_2012/</guid>
+      <guid>https://blog.haoyi.dev/post/thinknotes_0623_2012/</guid>
       <description>&lt;p&gt;一篇2012年的日记，想不到我也有这样的一面，觉得以前的自己比现在好，不知道为啥会这样想，也许现在在社会上混的比较久了的原因吧，BACKUP回来，回到2012的端午：
 &lt;/p&gt;</description>
     </item>
