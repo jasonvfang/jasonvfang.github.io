@@ -1,18 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Jason Fang BLOG</title>
+    <title>Categories on Blog.Haoyi.DEV</title>
     <link>https://blog.haoyi.dev/categories/</link>
-    <description>Recent content in Categories on Jason Fang BLOG</description>
+    <description>Recent content in Categories on Blog.Haoyi.DEV</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Jason Fang@2017 Powered by hugo.</copyright>
-    
-	<atom:link href="https://blog.haoyi.dev/categories/index.xml" rel="self" type="application/rss+xml" />
-    
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 05 Aug 2018 13:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>programming</title>
+      <link>https://blog.haoyi.dev/categories/programming/</link>
+      <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
+      
+      <guid>https://blog.haoyi.dev/categories/programming/</guid>
+      <description></description>
+    </item>
     
     <item>
-      <title>Cmake</title>
+      <title>cmake</title>
       <link>https://blog.haoyi.dev/categories/cmake/</link>
       <pubDate>Sun, 15 Jul 2018 23:10:51 +0800</pubDate>
       
@@ -30,16 +35,7 @@
     </item>
     
     <item>
-      <title>Programming</title>
-      <link>https://blog.haoyi.dev/categories/programming/</link>
-      <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
-      
-      <guid>https://blog.haoyi.dev/categories/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Thinkingnotes</title>
+      <title>ThinkingNotes</title>
       <link>https://blog.haoyi.dev/categories/thinkingnotes/</link>
       <pubDate>Sat, 23 Jun 2012 23:20:51 +0800</pubDate>
       

@@ -1,26 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Libcurl on Jason Fang BLOG</title>
+    <title>libcurl on Blog.Haoyi.DEV</title>
     <link>https://blog.haoyi.dev/tags/libcurl/</link>
-    <description>Recent content in Libcurl on Jason Fang BLOG</description>
+    <description>Recent content in libcurl on Blog.Haoyi.DEV</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Jason Fang@2017 Powered by hugo.</copyright>
-    <lastBuildDate>Sat, 23 Jun 2018 12:10:51 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.haoyi.dev/tags/libcurl/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 23 Jun 2018 12:10:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/tags/libcurl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Libcurl中的HTTP重定向问题</title>
-      <link>https://blog.haoyi.dev/post/libcurl_redirect_sum/</link>
+      <link>https://blog.haoyi.dev/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
       
-      <guid>https://blog.haoyi.dev/post/libcurl_redirect_sum/</guid>
-      <description>&lt;p&gt;最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://blog.haoyi.dev/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：&lt;/p&gt;</description>
     </item>
     
   </channel>

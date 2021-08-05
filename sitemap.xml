@@ -1,134 +1,71 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://blog.haoyi.dev/post/getopt_usage/</loc>
-    <lastmod>2018-08-05T13:32:51+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/post/open_fd_question/</loc>
-    <lastmod>2018-07-18T00:10:51+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/post/cmake_summary/</loc>
-    <lastmod>2018-07-15T23:10:51+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/post/hugo_summary_len/</loc>
-    <lastmod>2018-06-24T16:10:51+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/post/libcurl_redirect_sum/</loc>
-    <lastmod>2018-06-23T12:10:51+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/about/about/</loc>
-    <lastmod>2017-05-19T21:49:20+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/post/howto_judge_linklist_cycle/</loc>
-    <lastmod>2016-11-21T17:22:51+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/post/thinknotes_0623_2012/</loc>
-    <lastmod>2012-06-23T23:20:51+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/about/</loc>
-    <lastmod>2017-05-19T21:49:20+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/tags/algorithm/</loc>
-    <lastmod>2016-11-21T17:22:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/tags/cmake/</loc>
-    <lastmod>2018-07-15T23:10:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/categories/cmake/</loc>
-    <lastmod>2018-07-15T23:10:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/tags/hugo/</loc>
-    <lastmod>2018-06-24T16:10:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/categories/hugo/</loc>
-    <lastmod>2018-06-24T16:10:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
   <url>
     <loc>https://blog.haoyi.dev/</loc>
     <lastmod>2018-08-05T13:32:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.haoyi.dev/tags/libcurl/</loc>
-    <lastmod>2018-06-23T12:10:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://blog.haoyi.dev/categories/</loc>
+    <lastmod>2018-08-05T13:32:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/2018/08/05/linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2018-08-05T13:32:51+08:00</lastmod>
+  </url><url>
     <loc>https://blog.haoyi.dev/tags/linux-c/</loc>
     <lastmod>2018-08-05T13:32:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.haoyi.dev/post/</loc>
     <lastmod>2018-08-05T13:32:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.haoyi.dev/categories/programming/</loc>
     <lastmod>2018-08-05T13:32:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.haoyi.dev/tags/</loc>
+    <lastmod>2018-08-05T13:32:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/2018/07/18/linux-fd%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2018-07-18T00:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/tags/cmake/</loc>
+    <lastmod>2018-07-15T23:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/categories/cmake/</loc>
+    <lastmod>2018-07-15T23:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/2018/07/15/cmake%E5%AD%A6%E4%B9%A0%E7%AE%80%E8%A6%81%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2018-07-15T23:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/categories/hugo/</loc>
+    <lastmod>2018-06-24T16:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/tags/hugo/</loc>
+    <lastmod>2018-06-24T16:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/2018/06/24/hugo-summary-length-%E9%99%90%E5%88%B6/</loc>
+    <lastmod>2018-06-24T16:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/tags/libcurl/</loc>
+    <lastmod>2018-06-23T12:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2018-06-23T12:10:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/about/</loc>
+    <lastmod>2017-05-19T21:49:20+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/tags/algorithm/</loc>
     <lastmod>2016-11-21T17:22:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://blog.haoyi.dev/2016/11/21/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%8D%95%E9%93%BE%E8%A1%A8%E6%9C%89%E7%8E%AF/</loc>
+    <lastmod>2016-11-21T17:22:51+08:00</lastmod>
+  </url><url>
     <loc>https://blog.haoyi.dev/tags/thinking/</loc>
     <lastmod>2012-06-23T23:20:51+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.haoyi.dev/categories/thinkingnotes/</loc>
     <lastmod>2012-06-23T23:20:51+08:00</lastmod>
-    <priority>0</priority>
+  </url><url>
+    <loc>https://blog.haoyi.dev/2012/06/23/%E6%88%91%E5%B1%85%E7%84%B6%E7%9C%8B%E4%BA%86%E5%86%A0%E5%86%9B-2012-06/</loc>
+    <lastmod>2012-06-23T23:20:51+08:00</lastmod>
   </url>
-  
 </urlset>
