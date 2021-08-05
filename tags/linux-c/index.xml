@@ -1,44 +1,256 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux C on Jason Fang BLOG</title>
-    <link>https://blog.jasonvfang.top/tags/linux-c/</link>
-    <description>Recent content in Linux C on Jason Fang BLOG</description>
+    <title>Linux C on Blog.Haoyi.DEV</title>
+    <link>https://blog.haoyi.dev/tags/linux-c/</link>
+    <description>Recent content in Linux C on Blog.Haoyi.DEV</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Jason Fang@2017 Powered by hugo.</copyright>
+    <language>zh-CN</language>
     <lastBuildDate>Sun, 05 Aug 2018 13:32:51 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.jasonvfang.top/tags/linux-c/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://blog.haoyi.dev/tags/linux-c/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Linux 命令行参数处理</title>
-      <link>https://blog.jasonvfang.top/post/getopt_usage/</link>
+      <link>https://blog.haoyi.dev/2018/08/05/linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86</link>
       <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/post/getopt_usage/</guid>
-      <description>&lt;p&gt;前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
+      <guid>https://blog.haoyi.dev/2018/08/05/linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86</guid>
+      <description>
+
+&lt;p&gt;前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
 不好修改，于是想到Linux下有专门的getopt方法，好在不算改动特别大，对以前的做法作了兼容处理，好吧，这里还是对getopt作个简要的整理吧，方便日后回顾。&lt;/p&gt;
 
-&lt;h3 id=&#34;简要说明&#34;&gt;简要说明&lt;/h3&gt;
+&lt;h3 id=&#34;简要说明:9284131cc5c0199dcf069c5d40516616&#34;&gt;简要说明&lt;/h3&gt;
 
 &lt;p&gt;getopt/getopt_long都是linux平台下为应用程序提供处理命令行参数的接口，区别在于后者有参数名称长度较长的情况，一般在Linux下的命令行参数以横框“-”或者双横杠
 “&amp;ndash;”进行传递，比如我们经常用到的ls -l 或者 ls &amp;ndash;help ，其中的l和help为选项。&lt;/p&gt;
 
-&lt;h3 id=&#34;如何在程序中使用&#34;&gt;如何在程序中使用&lt;/h3&gt;</description>
+&lt;h3 id=&#34;如何在程序中使用:9284131cc5c0199dcf069c5d40516616&#34;&gt;如何在程序中使用&lt;/h3&gt;
+
+&lt;p&gt;在man手册上的定义如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;unistd.h&amp;gt;
+
+int getopt(int argc, char * const argv[], const char *optstring);
+
+extern char *optarg;
+extern int optind, opterr, optopt;
+
+#include &amp;lt;getopt.h&amp;gt;
+
+int getopt_long(int argc, char * const argv[], const char *optstring,
+            const struct option *longopts, int *longindex);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这两个API的参数不用多说了，需要注意的是getopt/getopt_long需要循环调用处理命令行参数，也就是一般在while循环中调用。&lt;/p&gt;
+
+&lt;p&gt;一般参数选项有需要接值的类型和不需指定参数值以及可选指定值三种情况，不同的情况有特定的写法，&lt;/p&gt;
+
+&lt;p&gt;对于getopt来讲：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;需要指定参数值要在选项后面接一个冒号&lt;/li&gt;
+&lt;li&gt;不需要指定参数值则选项后面不接任何符号&lt;/li&gt;
+&lt;li&gt;可选参数值则在选项后接两个冒号&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;对于getopt_long来说，在option结构体中
+struct option {
+               const char *name;
+               int         has_arg;
+               int        *flag;
+               int         val;
+           };
+的has_arg变量有三个值可以指定：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;no_argument&lt;/li&gt;
+&lt;li&gt;required_argument&lt;/li&gt;
+&lt;li&gt;optional_argument&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;返回值:9284131cc5c0199dcf069c5d40516616&#34;&gt;返回值&lt;/h3&gt;
+
+&lt;p&gt;对于短的选项：
+如果getopt/getopt_log在命令行参数中找到相应字符，则会返回该选项的字符，如果所有的命令参数选项都解析完成，则返回-1，
+如果发现命令行参数选项中的字符不在指定的optstring中出现，则返回特殊的问号字符？。如果遇到该参数选项需要指定值而命令行中未指定时，
+返回值取决于optstring中的第一个冒号字符：，如果它是冒号，则返回：，否则返回？。&lt;/p&gt;
+
+&lt;p&gt;对于长选项：
+正常情况下，如果flag为NULL，则返回option结构体中的val值，否则返回0。其他出错，未匹配以及-1的情况同短选项是一样的。&lt;/p&gt;
+
+&lt;h3 id=&#34;两个示例:9284131cc5c0199dcf069c5d40516616&#34;&gt;两个示例&lt;/h3&gt;
+
+&lt;p&gt;官网给出的两个示例非常实用：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;getopt&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;       #include &amp;lt;unistd.h&amp;gt;
+       #include &amp;lt;stdlib.h&amp;gt;
+       #include &amp;lt;stdio.h&amp;gt;
+
+       int
+       main(int argc, char *argv[])
+       {
+           int flags, opt;
+           int nsecs, tfnd;
+
+           nsecs = 0;
+           tfnd = 0;
+           flags = 0;
+           while ((opt = getopt(argc, argv, &amp;quot;nt:&amp;quot;)) != -1) {
+               switch (opt) {
+               case &#39;n&#39;:
+                   flags = 1;
+                   break;
+               case &#39;t&#39;:
+                   nsecs = atoi(optarg);
+                   tfnd = 1;
+                   break;
+               default: /* &#39;?&#39; */
+                   fprintf(stderr, &amp;quot;Usage: %s [-t nsecs] [-n] name\n&amp;quot;,
+                           argv[0]);
+                   exit(EXIT_FAILURE);
+               }
+           }
+
+           printf(&amp;quot;flags=%d; tfnd=%d; nsecs=%d; optind=%d\n&amp;quot;,
+                   flags, tfnd, nsecs, optind);
+
+           if (optind &amp;gt;= argc) {
+               fprintf(stderr, &amp;quot;Expected argument after options\n&amp;quot;);
+               exit(EXIT_FAILURE);
+           }
+
+           printf(&amp;quot;name argument = %s\n&amp;quot;, argv[optind]);
+
+           /* Other code omitted */
+
+           exit(EXIT_SUCCESS);
+       }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;getopt_long&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;        #include &amp;lt;stdio.h&amp;gt;     /* for printf */ 
+        #include &amp;lt;stdlib.h&amp;gt;    /* for exit */ 
+        #include &amp;lt;getopt.h&amp;gt;
+
+        int main(int argc, char **argv) {
+           int c;
+           int digit_optind = 0;
+
+           while (1) {
+               int this_option_optind = optind ? optind : 1;
+               int option_index = 0;
+               static struct option long_options[] = {
+                   {&amp;quot;add&amp;quot;,     required_argument, 0,  0 },
+                   {&amp;quot;append&amp;quot;,  no_argument,       0,  0 },
+                   {&amp;quot;delete&amp;quot;,  required_argument, 0,  0 },
+                   {&amp;quot;verbose&amp;quot;, no_argument,       0,  0 },
+                   {&amp;quot;create&amp;quot;,  required_argument, 0, &#39;c&#39;},
+                   {&amp;quot;file&amp;quot;,    required_argument, 0,  0 },
+                   {0,         0,                 0,  0 }
+               };
+
+               c = getopt_long(argc, argv, &amp;quot;abc:d:012&amp;quot;,
+                        long_options, &amp;amp;option_index);
+               if (c == -1)
+                   break;
+
+               switch (c) {
+               case 0:
+                   printf(&amp;quot;option %s&amp;quot;, long_options[option_index].name);
+                   if (optarg)
+                       printf(&amp;quot; with arg %s&amp;quot;, optarg);
+                   printf(&amp;quot;\n&amp;quot;);
+                   break;
+
+               case &#39;0&#39;:
+               case &#39;1&#39;:
+               case &#39;2&#39;:
+                   if (digit_optind != 0 &amp;amp;&amp;amp; digit_optind != this_option_optind)
+                   printf(&amp;quot;digits occur in two different argv elements.\n&amp;quot;);
+                   digit_optind = this_option_optind;
+                   printf(&amp;quot;option %c\n&amp;quot;, c);
+                   break;
+
+               case &#39;a&#39;:
+                   printf(&amp;quot;option a\n&amp;quot;);
+                   break;
+
+               case &#39;b&#39;:
+                   printf(&amp;quot;option b\n&amp;quot;);
+                   break;
+
+               case &#39;c&#39;:
+                   printf(&amp;quot;option c with value &#39;%s&#39;\n&amp;quot;, optarg);
+                   break;
+
+               case &#39;d&#39;:
+                   printf(&amp;quot;option d with value &#39;%s&#39;\n&amp;quot;, optarg);
+                   break;
+
+               case &#39;?&#39;:
+                   break;
+
+               default:
+                   printf(&amp;quot;?? getopt returned character code 0%o ??\n&amp;quot;, c);
+               }
+           }
+
+           if (optind &amp;lt; argc) {
+               printf(&amp;quot;non-option ARGV-elements: &amp;quot;);
+               while (optind &amp;lt; argc)
+                   printf(&amp;quot;%s &amp;quot;, argv[optind++]);
+               printf(&amp;quot;\n&amp;quot;);
+           }
+
+           exit(EXIT_SUCCESS); }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;超详细参考资料在&lt;a href=&#34;http://man7.org/linux/man-pages/man3/getopt.3.html&#34;&gt;这里&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Linux FD操作问题</title>
-      <link>https://blog.jasonvfang.top/post/open_fd_question/</link>
+      <link>https://blog.haoyi.dev/2018/07/18/linux-fd%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98</link>
       <pubDate>Wed, 18 Jul 2018 00:10:51 +0800</pubDate>
       
-      <guid>https://blog.jasonvfang.top/post/open_fd_question/</guid>
-      <description> 主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解， 后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试： 注意这里的模式是只写模式加非阻塞模式,运行结果是： MAN手册上的说明： 总结： 使用O_RDONLY或O_WRONLY设置打开FIFO时:
- 如果设置了O_NONBLOCK，则open()用于读取时只会立即返回。如果当前没有任何进程打开文件进行读取，则以只写的方式写FD时会返回一个错误。 如果O_NONBLOCK没有指定，那么只读的open()将阻塞调用线程，直到线程打开文件进行写入。以只写方式open()调用将会阻塞调用线程，直到线程打开文件进行读取。  因此本例中的解决办法：
- 1.可以设置open的方式为block方式
- 2. 在write之前，其他进程一直在读fd  </description>
+      <guid>https://blog.haoyi.dev/2018/07/18/linux-fd%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98</guid>
+      <description>
+
+&lt;p&gt;主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解，
+后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试：
+&lt;img src=&#34;https://blog.haoyi.dev/images/open_demo_codes.png&#34; alt=&#34;Demo 代码&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;注意这里的模式是只写模式加非阻塞模式,运行结果是：
+&lt;img src=&#34;https://blog.haoyi.dev/images/open_error.png&#34; alt=&#34;运行结果&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;MAN手册上的说明：
+&lt;img src=&#34;https://blog.haoyi.dev/images/man_open_flag.png&#34; alt=&#34;MAN解释&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;总结:a351240390739a29de3a0ddadb1844ae&#34;&gt;总结：&lt;/h2&gt;
+
+&lt;p&gt;使用O_RDONLY或O_WRONLY设置打开FIFO时:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;如果设置了O_NONBLOCK，则open()用于读取时只会立即返回。如果当前没有任何进程打开文件进行读取，则以只写的方式写FD时会返回一个错误。&lt;/li&gt;
+&lt;li&gt;如果O_NONBLOCK没有指定，那么只读的open()将阻塞调用线程，直到线程打开文件进行写入。以只写方式open()调用将会阻塞调用线程，直到线程打开文件进行读取。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;因此本例中的解决办法：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1.可以设置open的方式为block方式&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;2. 在write之前，其他进程一直在读fd&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>
