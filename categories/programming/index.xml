@@ -1,65 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Jason Fang BLOG</title>
+    <title>programming on Blog.Haoyi</title>
     <link>https://blog.haoyi.dev/categories/programming/</link>
-    <description>Recent content in Programming on Jason Fang BLOG</description>
+    <description>Recent content in programming on Blog.Haoyi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Jason Fang@2017 Powered by hugo.</copyright>
-    <lastBuildDate>Sun, 05 Aug 2018 13:32:51 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.haoyi.dev/categories/programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 05 Aug 2018 13:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux 命令行参数处理</title>
-      <link>https://blog.haoyi.dev/post/getopt_usage/</link>
+      <link>https://blog.haoyi.dev/2018/08/05/linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86/</link>
       <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
       
-      <guid>https://blog.haoyi.dev/post/getopt_usage/</guid>
+      <guid>https://blog.haoyi.dev/2018/08/05/linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0%E5%A4%84%E7%90%86/</guid>
       <description>&lt;p&gt;前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
 不好修改，于是想到Linux下有专门的getopt方法，好在不算改动特别大，对以前的做法作了兼容处理，好吧，这里还是对getopt作个简要的整理吧，方便日后回顾。&lt;/p&gt;
-
 &lt;h3 id=&#34;简要说明&#34;&gt;简要说明&lt;/h3&gt;
-
 &lt;p&gt;getopt/getopt_long都是linux平台下为应用程序提供处理命令行参数的接口，区别在于后者有参数名称长度较长的情况，一般在Linux下的命令行参数以横框“-”或者双横杠
 “&amp;ndash;”进行传递，比如我们经常用到的ls -l 或者 ls &amp;ndash;help ，其中的l和help为选项。&lt;/p&gt;
-
 &lt;h3 id=&#34;如何在程序中使用&#34;&gt;如何在程序中使用&lt;/h3&gt;</description>
     </item>
     
     <item>
       <title>Linux FD操作问题</title>
-      <link>https://blog.haoyi.dev/post/open_fd_question/</link>
+      <link>https://blog.haoyi.dev/2018/07/18/linux-fd%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98/</link>
       <pubDate>Wed, 18 Jul 2018 00:10:51 +0800</pubDate>
       
-      <guid>https://blog.haoyi.dev/post/open_fd_question/</guid>
-      <description> 主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解， 后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试： 注意这里的模式是只写模式加非阻塞模式,运行结果是： MAN手册上的说明： 总结： 使用O_RDONLY或O_WRONLY设置打开FIFO时:
+      <guid>https://blog.haoyi.dev/2018/07/18/linux-fd%E6%93%8D%E4%BD%9C%E9%97%AE%E9%A2%98/</guid>
+      <description>主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解， 后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试： 注意这里的模式是只写模式加非阻塞模式,运行结果是： MAN手册上的说明： 总结： 使用O_RDONLY或O_WRONLY设置打开FIFO时:
  如果设置了O_NONBLOCK，则open()用于读取时只会立即返回。如果当前没有任何进程打开文件进行读取，则以只写的方式写FD时会返回一个错误。 如果O_NONBLOCK没有指定，那么只读的open()将阻塞调用线程，直到线程打开文件进行写入。以只写方式open()调用将会阻塞调用线程，直到线程打开文件进行读取。  因此本例中的解决办法：
- 1.可以设置open的方式为block方式
- 2. 在write之前，其他进程一直在读fd  </description>
+ 1.可以设置open的方式为block方式  在write之前，其他进程一直在读fd    </description>
     </item>
     
     <item>
       <title>Libcurl中的HTTP重定向问题</title>
-      <link>https://blog.haoyi.dev/post/libcurl_redirect_sum/</link>
+      <link>https://blog.haoyi.dev/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</link>
       <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
       
-      <guid>https://blog.haoyi.dev/post/libcurl_redirect_sum/</guid>
-      <description>&lt;p&gt;最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://blog.haoyi.dev/2018/06/23/libcurl%E4%B8%AD%E7%9A%84http%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;最近一调试AMAZON的Prime Music音源接口，主要是HTTP POST/GET这种方法获取的JSON结果进行解析，工作内容相对比较简单，但是需要注意的地方比较多：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>如何判断单链表有环</title>
-      <link>https://blog.haoyi.dev/post/howto_judge_linklist_cycle/</link>
+      <link>https://blog.haoyi.dev/2016/11/21/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%8D%95%E9%93%BE%E8%A1%A8%E6%9C%89%E7%8E%AF/</link>
       <pubDate>Mon, 21 Nov 2016 17:22:51 +0800</pubDate>
       
-      <guid>https://blog.haoyi.dev/post/howto_judge_linklist_cycle/</guid>
+      <guid>https://blog.haoyi.dev/2016/11/21/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%8D%95%E9%93%BE%E8%A1%A8%E6%9C%89%E7%8E%AF/</guid>
       <description>从自己的CSDN BLOG移过来的文章，作个BACKUP:
-1、对于单链表而言，只有通过从头到尾的遍历方式，如果发现尾指针指向头指针则说明有环： bool hasCycle(struct ListNode *head) { if(head == NULL || head-&amp;gt;next == NULL){ return false; } struct ListNode *ptr = head-&amp;gt;next; while(ptr) { if (ptr-&amp;gt;next == head){ return true; } if (ptr-&amp;gt;next == NULL) break; ptr = ptr-&amp;gt;next; } return false; }  2、使用双指针，一个遍历的速度快，一个较慢，如果快的指针追上了慢的那个说明有环： /** * Definition for singly-linked list. * struct ListNode { * int val; * struct ListNode *next; * }; */ bool hasCycle(struct ListNode *head) { struct ListNode *faster = NULL; struct ListNode *slower = NULL; if(head == NULL || head-&amp;gt;next == NULL){ return false; } slower = head; faster = head-&amp;gt;next; while(faster !</description>
+1、对于单链表而言，只有通过从头到尾的遍历方式，如果发现尾指针指向头指针则说明有环： bool hasCycle(struct ListNode *head){if(head == NULL || head-&amp;gt;next == NULL){return false;}struct ListNode *ptr = head-&amp;gt;next;while(ptr){if (ptr-&amp;gt;next == head){return true;}	if (ptr-&amp;gt;next == NULL)break;ptr = ptr-&amp;gt;next;	}return false;}2、使用双指针，一个遍历的速度快，一个较慢，如果快的指针追上了慢的那个说明有环： /*** Definition for singly-linked list.* struct ListNode {* int val;* struct ListNode *next;* };*/bool hasCycle(struct ListNode *head) {struct ListNode *faster = NULL;struct ListNode *slower = NULL;if(head == NULL || head-&amp;gt;next == NULL){return false;}slower = head;faster = head-&amp;gt;next;while(faster !</description>
     </item>
     
   </channel>
