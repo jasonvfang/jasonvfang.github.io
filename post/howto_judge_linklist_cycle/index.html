@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    
+    <title>如何判断单链表有环 | Indigo Theme</title>
+    <meta name="description" content="Description of website for head meta tag">
+    <meta name="author" content="">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href=https://example.com/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=https://example.com/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=https://example.com/favicon-16x16.png>
+    <link rel="manifest" href=https://example.com/site.webmanifest>
+    <link rel="mask-icon" href=https://example.com/safari-pinned-tab.svg color="#00416a">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="me" href="mailto:email.address@example.com">
+    <link rel="me" href="https://github.com/GitHubUserName">
+    <link rel="me" href="https://twitter.com/TwitterUserName">
+    <link rel="me" href="https://micro.blog/MicroBlogUserName">
+    
+    <link rel="authorization_endpoint" href=https://indieauth.com/auth />
+    <link rel="token_endpoint" href=https://tokens.indieauth.com/token />
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href=https://example.com/css/fonts.css />
+    <link rel="stylesheet" href=https://example.com/css/style.css />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="sitelogo">
+        <a class="glyph" alt="Home" href="https://example.com/"><img src=https://example.com/images/site-logo.svg alt="Site Logo" height="64px" width="64px"></a>
+    </div>
+    <header>
+        <nav>
+    
+    <div id="page-nav">
+        <div class="page-nav-item">
+            <a href="https://example.com/">Home</a>
+        </div>
+        
+            <div class="page-nav-item">
+                <a href="/about/">
+                    
+                    <span>About</span>
+                </a>
+            </div>
+        
+    </div>
+</nav>
+        
+    </header>
+
+
+
+
+<div id="content">
+    <article class="h-entry">
+        <header>
+            <h1 class="post-title p-name">如何判断单链表有环</h1>
+            
+            <p class="post-date">Posted on
+                <time class="dt-published" datetime="2016-11-21T17:22:51&#43;08:00">
+                    21 November, 2016 at 17:22 CST
+                </time>  by <a href="https://example.com/" class="p-author h-card"
+                    rel="author">Author Name</a>
+            </p>
+            
+            
+            <p class="post-tag">Category:
+                
+                <a href="https://example.com/categories/programming" class="post-tag p-category">Programming</a>
+                
+            </p>
+            <hr class="post-underline">
+            
+        </header>
+        <section class="content e-content">
+            <p>从自己的CSDN BLOG移过来的文章，作个BACKUP:</p>
+<h4 id="1对于单链表而言只有通过从头到尾的遍历方式如果发现尾指针指向头指针则说明有环">1、对于单链表而言，只有通过从头到尾的遍历方式，如果发现尾指针指向头指针则说明有环：</h4>
+<pre><code>bool hasCycle(struct ListNode *head)
+{
+	if(head == NULL || head-&gt;next == NULL){
+		return false;
+	}
+	
+	struct ListNode *ptr = head-&gt;next;
+	
+	while(ptr)
+	{
+		if (ptr-&gt;next == head){
+			return true;
+		}	
+		
+		if (ptr-&gt;next == NULL)
+			break;
+			
+		ptr = ptr-&gt;next;	
+	}
+	
+	return false;
+}
+</code></pre><h4 id="2使用双指针一个遍历的速度快一个较慢如果快的指针追上了慢的那个说明有环">2、使用双指针，一个遍历的速度快，一个较慢，如果快的指针追上了慢的那个说明有环：</h4>
+<pre><code>/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+bool hasCycle(struct ListNode *head) 
+{
+	struct ListNode *faster = NULL;
+	struct ListNode *slower = NULL;
+	
+	if(head == NULL || head-&gt;next == NULL){
+		return false;
+	}
+	
+	slower = head;
+	faster = head-&gt;next;
+	while(faster != slower){
+		if(faster == NULL || faster-&gt;next == NULL)
+		{
+			return false;
+		}
+		
+		faster = faster-&gt;next-&gt;next;
+		slower = slower-&gt;next;
+	}
+	
+	return true;
+}
+</code></pre>
+        </section>
+        <footer>
+            <a class="permalink u-url" href="https://example.com/post/howto_judge_linklist_cycle/">🔗</a>
+            
+            <hr class="post-underline">
+            <p class="post-tag">Tags for this post:
+                
+                <a href="https://example.com/tags/algorithm" class="post-tag p-category">algorithm</a>
+                
+            </p>
+            
+        </footer>
+    </article>
+</div>
+
+    
+    <div class="h-card">
+      <img class="u-photo" src="https://example.com/images/site-logo.svg" />
+      <div class="card-content">
+        <h2 class="card-name"><a class="p-name u-url" href="https://example.com/" rel="me">Author Name</a></h2>
+        <p class="card-subhead">
+          <span class="p-locality">CityName</span>,
+          <span class="p-country-name">CountryName</span><br />
+          <a class="u-email" href="mailto:email.address@example.com">Email me</a>
+        </p>
+      </div>
+      <p class="p-note">A short description, a few sentences describing the author. Set the &#39;ShowBio&#39; parameter to false to hide this.</p>
+    </div>
+    
+    <div id="footer">
+      
+      <nav id="article-skip">
+        <div class="next">
+          
+          <a alt="Newer article" href="https://example.com/post/libcurl_redirect_sum/">&larr; Newer</a>
+          
+        </div>
+        <div class="top">
+          <a alt="Top of page" href="#">Top</a>
+        </div>
+        <div class="prev">
+          
+          <p>&nbsp;</p>
+          
+        </div>
+      </nav>
+      
+      <aside id="social">
+  <div id="social-icons">
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Email me" href="mailto:email.address@example.com"><img src=https://example.com/icons/envelope.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Facebook profile" href="https://facebook.com/FacebookUserName"><img src=https://example.com/icons/facebook.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Flickr profile" href="https://flickr.com/people/FlickrUserName"><img src=https://example.com/icons/flickr.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="GitHub profile" href="https://github.com/GitHubUserName"><img src=https://example.com/icons/github.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="GitLab profile" href="https://gitlab.com/GitLabUserName"><img src=https://example.com/icons/gitlab.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Glitch profile" href="https://glitch.com/@GlitchUserName"><img src=https://example.com/icons/glitch.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Keybase profile" href="https://keybase.io/KeybaseUserName"><img src=https://example.com/icons/keybase.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="LinkedIn profile" href="https://www.linkedin.com/in/LinkedInUserName"><img src=https://example.com/icons/linkedin.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Medium profile" href="https://medium.com/MediumUserName"><img src=https://example.com/icons/medium.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Micro.Blog profile" href="https://micro.blog/MicroBlogUserName"><img src=https://example.com/icons/microblog.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Reddit profile" href="https://www.reddit.com/user/RedditUserName"><img src=https://example.com/icons/reddit-alien.svg height="24px" width="24px" /></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Stack Overflow profile" href="https://stackoverflow.com/users/StackOverflowUserName"><img src=https://example.com/icons/stack-overflow.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Tumblr profile" href="https://TumblrUserName.tumblr.com/"><img src=https://example.com/icons/tumblr.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Twitter profile" href="https://twitter.com/TwitterUserName"><img src=https://example.com/icons/twitter.svg height="24px" width="24px"></a>
+     </div>
+     
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Instagram profile" href="https://instagram.com/TwitterUserName"><img
+          src=https://example.com/icons/instagram.svg height="24px" width="24px"></a>
+    </div>
+    
+  </div>
+</aside>
+
+      
+      <p class="copyright">
+          Copyright © 2018, Author Name
+      </p>
+      
+    </div>
+
+
+</body>
+</html>

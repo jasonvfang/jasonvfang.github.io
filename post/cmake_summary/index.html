@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    
+    <title>cmake学习简要总结 | Indigo Theme</title>
+    <meta name="description" content="Description of website for head meta tag">
+    <meta name="author" content="">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href=https://example.com/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=https://example.com/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=https://example.com/favicon-16x16.png>
+    <link rel="manifest" href=https://example.com/site.webmanifest>
+    <link rel="mask-icon" href=https://example.com/safari-pinned-tab.svg color="#00416a">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="me" href="mailto:email.address@example.com">
+    <link rel="me" href="https://github.com/GitHubUserName">
+    <link rel="me" href="https://twitter.com/TwitterUserName">
+    <link rel="me" href="https://micro.blog/MicroBlogUserName">
+    
+    <link rel="authorization_endpoint" href=https://indieauth.com/auth />
+    <link rel="token_endpoint" href=https://tokens.indieauth.com/token />
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href=https://example.com/css/fonts.css />
+    <link rel="stylesheet" href=https://example.com/css/style.css />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="sitelogo">
+        <a class="glyph" alt="Home" href="https://example.com/"><img src=https://example.com/images/site-logo.svg alt="Site Logo" height="64px" width="64px"></a>
+    </div>
+    <header>
+        <nav>
+    
+    <div id="page-nav">
+        <div class="page-nav-item">
+            <a href="https://example.com/">Home</a>
+        </div>
+        
+            <div class="page-nav-item">
+                <a href="/about/">
+                    
+                    <span>About</span>
+                </a>
+            </div>
+        
+    </div>
+</nav>
+        
+    </header>
+
+
+
+
+<div id="content">
+    <article class="h-entry">
+        <header>
+            <h1 class="post-title p-name">cmake学习简要总结</h1>
+            
+            <p class="post-date">Posted on
+                <time class="dt-published" datetime="2018-07-15T23:10:51&#43;08:00">
+                    15 July, 2018 at 23:10 CST
+                </time>  by <a href="https://example.com/" class="p-author h-card"
+                    rel="author">Author Name</a>
+            </p>
+            
+            
+            <p class="post-tag">Category:
+                
+                <a href="https://example.com/categories/cmake" class="post-tag p-category">cmake</a>
+                
+            </p>
+            <hr class="post-underline">
+            
+        </header>
+        <section class="content e-content">
+            <p>今天有时间去研究一下cmake的使用，之前一直是想看一下的，只是时间没排出来，今天总算排上了，收获也挺多，感觉
+这样的编译工具确实比我们自己写Makefile管理起来要好的多，这也就是为什么在开源社区会有这么多的开源软件的编译都采用的cmake吧。</p>
+<p>不废话了，今天按照官方文档把整个例子跑了一遍，基本上知道如何使用了。</p>
+<h4 id="大致总结一下吧">大致总结一下吧：</h4>
+<ul>
+<li>
+<p>cmake根据CMakeLists.txt文件自动生成Makefile
+也就是cmake是可配置的，其次它有一个方便的GUI工具实现配置，这个我暂时没有研究到。</p>
+</li>
+<li>
+<p>cmake可指定宏编译选项、子目录、install、目标</p>
+</li>
+</ul>
+<p>常用的也应该就这些，理解这些大致修改足够了：</p>
+<p>宏：option()
+子目录：
+头文件子目录：include_directories  编译子目录：add_subdirectory</p>
+<p>install: install()可指定FILES或者TARGETS</p>
+<p>add_executable():指定生成的target及需要的src文件</p>
+<p>target_link_libraries：指定链接的lib</p>
+<p>这里是官方文档中的一个例子，写的很清楚了：</p>
+<pre><code>cmake_minimum_required (VERSION 2.6)
+project (Tutorial)
+# The version number.
+set (Tutorial_VERSION_MAJOR 1)
+set (Tutorial_VERSION_MINOR 0)
+
+ # should we use our own math functions?
+option (USE_MYMATH 
+        &quot;Use tutorial provided math implementation&quot; ON) 
+		
+# configure a header file to pass some of the CMake settings
+# to the source code
+configure_file (
+  &quot;${PROJECT_SOURCE_DIR}/TutorialConfig.h.in&quot;
+  &quot;${PROJECT_BINARY_DIR}/TutorialConfig.h&quot;
+  )
+ 
+# add the binary tree to the search path for include files
+# so that we will find TutorialConfig.h
+include_directories(&quot;${PROJECT_BINARY_DIR}&quot;)
+ 
+# add the MathFunctions library?
+#
+if (USE_MYMATH)
+  include_directories (&quot;${PROJECT_SOURCE_DIR}/MathFunctions&quot;)
+  add_subdirectory (MathFunctions)
+  set (EXTRA_LIBS ${EXTRA_LIBS} MathFunctions)
+endif (USE_MYMATH)
+
+ 	 
+# add the executable
+add_executable (Tutorial tutorial.cxx)
+target_link_libraries (Tutorial  ${EXTRA_LIBS})
+
+# add the install targets
+install (TARGETS Tutorial DESTINATION ~/bin)
+install (FILES &quot;${PROJECT_BINARY_DIR}/TutorialConfig.h&quot;        
+         DESTINATION ~/include)
+</code></pre><p>在github中已经把这些步骤的尝试都上传了，可见<a href="https://github.com/jasonvfang/cmake-examples">这里</a>.</p>
+<p>参考详细教程：https://cmake.org/cmake-tutorial/</p>
+        </section>
+        <footer>
+            <a class="permalink u-url" href="https://example.com/post/cmake_summary/">🔗</a>
+            
+            <hr class="post-underline">
+            <p class="post-tag">Tags for this post:
+                
+                <a href="https://example.com/tags/cmake" class="post-tag p-category">cmake</a>
+                
+            </p>
+            
+        </footer>
+    </article>
+</div>
+
+    
+    <div class="h-card">
+      <img class="u-photo" src="https://example.com/images/site-logo.svg" />
+      <div class="card-content">
+        <h2 class="card-name"><a class="p-name u-url" href="https://example.com/" rel="me">Author Name</a></h2>
+        <p class="card-subhead">
+          <span class="p-locality">CityName</span>,
+          <span class="p-country-name">CountryName</span><br />
+          <a class="u-email" href="mailto:email.address@example.com">Email me</a>
+        </p>
+      </div>
+      <p class="p-note">A short description, a few sentences describing the author. Set the &#39;ShowBio&#39; parameter to false to hide this.</p>
+    </div>
+    
+    <div id="footer">
+      
+      <nav id="article-skip">
+        <div class="next">
+          
+          <a alt="Newer article" href="https://example.com/post/open_fd_question/">&larr; Newer</a>
+          
+        </div>
+        <div class="top">
+          <a alt="Top of page" href="#">Top</a>
+        </div>
+        <div class="prev">
+          
+          <a alt="Older article" href="https://example.com/post/hugo_summary_len/">Older &rarr;</a>
+          
+        </div>
+      </nav>
+      
+      <aside id="social">
+  <div id="social-icons">
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Email me" href="mailto:email.address@example.com"><img src=https://example.com/icons/envelope.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Facebook profile" href="https://facebook.com/FacebookUserName"><img src=https://example.com/icons/facebook.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Flickr profile" href="https://flickr.com/people/FlickrUserName"><img src=https://example.com/icons/flickr.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="GitHub profile" href="https://github.com/GitHubUserName"><img src=https://example.com/icons/github.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="GitLab profile" href="https://gitlab.com/GitLabUserName"><img src=https://example.com/icons/gitlab.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Glitch profile" href="https://glitch.com/@GlitchUserName"><img src=https://example.com/icons/glitch.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Keybase profile" href="https://keybase.io/KeybaseUserName"><img src=https://example.com/icons/keybase.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="LinkedIn profile" href="https://www.linkedin.com/in/LinkedInUserName"><img src=https://example.com/icons/linkedin.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Medium profile" href="https://medium.com/MediumUserName"><img src=https://example.com/icons/medium.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Micro.Blog profile" href="https://micro.blog/MicroBlogUserName"><img src=https://example.com/icons/microblog.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Reddit profile" href="https://www.reddit.com/user/RedditUserName"><img src=https://example.com/icons/reddit-alien.svg height="24px" width="24px" /></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Stack Overflow profile" href="https://stackoverflow.com/users/StackOverflowUserName"><img src=https://example.com/icons/stack-overflow.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Tumblr profile" href="https://TumblrUserName.tumblr.com/"><img src=https://example.com/icons/tumblr.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Twitter profile" href="https://twitter.com/TwitterUserName"><img src=https://example.com/icons/twitter.svg height="24px" width="24px"></a>
+     </div>
+     
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Instagram profile" href="https://instagram.com/TwitterUserName"><img
+          src=https://example.com/icons/instagram.svg height="24px" width="24px"></a>
+    </div>
+    
+  </div>
+</aside>
+
+      
+      <p class="copyright">
+          Copyright © 2018, Author Name
+      </p>
+      
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Linux 命令行参数处理 | Indigo Theme</title>
+    <meta name="description" content="Description of website for head meta tag">
+    <meta name="author" content="">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href=https://example.com/apple-touch-icon.png>
+    <link rel="icon" type="image/png" sizes="32x32" href=https://example.com/favicon-32x32.png>
+    <link rel="icon" type="image/png" sizes="16x16" href=https://example.com/favicon-16x16.png>
+    <link rel="manifest" href=https://example.com/site.webmanifest>
+    <link rel="mask-icon" href=https://example.com/safari-pinned-tab.svg color="#00416a">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="me" href="mailto:email.address@example.com">
+    <link rel="me" href="https://github.com/GitHubUserName">
+    <link rel="me" href="https://twitter.com/TwitterUserName">
+    <link rel="me" href="https://micro.blog/MicroBlogUserName">
+    
+    <link rel="authorization_endpoint" href=https://indieauth.com/auth />
+    <link rel="token_endpoint" href=https://tokens.indieauth.com/token />
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href=https://example.com/css/fonts.css />
+    <link rel="stylesheet" href=https://example.com/css/style.css />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="sitelogo">
+        <a class="glyph" alt="Home" href="https://example.com/"><img src=https://example.com/images/site-logo.svg alt="Site Logo" height="64px" width="64px"></a>
+    </div>
+    <header>
+        <nav>
+    
+    <div id="page-nav">
+        <div class="page-nav-item">
+            <a href="https://example.com/">Home</a>
+        </div>
+        
+            <div class="page-nav-item">
+                <a href="/about/">
+                    
+                    <span>About</span>
+                </a>
+            </div>
+        
+    </div>
+</nav>
+        
+    </header>
+
+
+
+
+<div id="content">
+    <article class="h-entry">
+        <header>
+            <h1 class="post-title p-name">Linux 命令行参数处理</h1>
+            
+            <p class="post-date">Posted on
+                <time class="dt-published" datetime="2018-08-05T13:32:51&#43;08:00">
+                    5 August, 2018 at 13:32 CST
+                </time>  by <a href="https://example.com/" class="p-author h-card"
+                    rel="author">Author Name</a>
+            </p>
+            
+            
+            <p class="post-tag">Category:
+                
+                <a href="https://example.com/categories/programming" class="post-tag p-category">programming</a>
+                
+            </p>
+            <hr class="post-underline">
+            
+        </header>
+        <section class="content e-content">
+            <p>前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
+不好修改，于是想到Linux下有专门的getopt方法，好在不算改动特别大，对以前的做法作了兼容处理，好吧，这里还是对getopt作个简要的整理吧，方便日后回顾。</p>
+<h3 id="简要说明">简要说明</h3>
+<p>getopt/getopt_long都是linux平台下为应用程序提供处理命令行参数的接口，区别在于后者有参数名称长度较长的情况，一般在Linux下的命令行参数以横框“-”或者双横杠
+“&ndash;”进行传递，比如我们经常用到的ls -l 或者 ls &ndash;help ，其中的l和help为选项。</p>
+<h3 id="如何在程序中使用">如何在程序中使用</h3>
+<p>在man手册上的定义如下：</p>
+<pre><code>#include &lt;unistd.h&gt;
+
+int getopt(int argc, char * const argv[], const char *optstring);
+
+extern char *optarg;
+extern int optind, opterr, optopt;
+
+#include &lt;getopt.h&gt;
+
+int getopt_long(int argc, char * const argv[], const char *optstring,
+			const struct option *longopts, int *longindex);
+</code></pre><p>这两个API的参数不用多说了，需要注意的是getopt/getopt_long需要循环调用处理命令行参数，也就是一般在while循环中调用。</p>
+<p>一般参数选项有需要接值的类型和不需指定参数值以及可选指定值三种情况，不同的情况有特定的写法，</p>
+<p>对于getopt来讲：</p>
+<ul>
+<li>需要指定参数值要在选项后面接一个冒号</li>
+<li>不需要指定参数值则选项后面不接任何符号</li>
+<li>可选参数值则在选项后接两个冒号</li>
+</ul>
+<p>对于getopt_long来说，在option结构体中
+struct option {
+const char *name;
+int         has_arg;
+int        *flag;
+int         val;
+};
+的has_arg变量有三个值可以指定：</p>
+<ul>
+<li>no_argument</li>
+<li>required_argument</li>
+<li>optional_argument</li>
+</ul>
+<h3 id="返回值">返回值</h3>
+<p>对于短的选项：
+如果getopt/getopt_log在命令行参数中找到相应字符，则会返回该选项的字符，如果所有的命令参数选项都解析完成，则返回-1，
+如果发现命令行参数选项中的字符不在指定的optstring中出现，则返回特殊的问号字符？。如果遇到该参数选项需要指定值而命令行中未指定时，
+返回值取决于optstring中的第一个冒号字符：，如果它是冒号，则返回：，否则返回？。</p>
+<p>对于长选项：
+正常情况下，如果flag为NULL，则返回option结构体中的val值，否则返回0。其他出错，未匹配以及-1的情况同短选项是一样的。</p>
+<h3 id="两个示例">两个示例</h3>
+<p>官网给出的两个示例非常实用：</p>
+<ol>
+<li>getopt</li>
+</ol>
+<pre><code>       #include &lt;unistd.h&gt;
+       #include &lt;stdlib.h&gt;
+       #include &lt;stdio.h&gt;
+
+       int
+       main(int argc, char *argv[])
+       {
+           int flags, opt;
+           int nsecs, tfnd;
+
+           nsecs = 0;
+           tfnd = 0;
+           flags = 0;
+           while ((opt = getopt(argc, argv, &quot;nt:&quot;)) != -1) {
+               switch (opt) {
+               case 'n':
+                   flags = 1;
+                   break;
+               case 't':
+                   nsecs = atoi(optarg);
+                   tfnd = 1;
+                   break;
+               default: /* '?' */
+                   fprintf(stderr, &quot;Usage: %s [-t nsecs] [-n] name\n&quot;,
+                           argv[0]);
+                   exit(EXIT_FAILURE);
+               }
+           }
+
+           printf(&quot;flags=%d; tfnd=%d; nsecs=%d; optind=%d\n&quot;,
+                   flags, tfnd, nsecs, optind);
+
+           if (optind &gt;= argc) {
+               fprintf(stderr, &quot;Expected argument after options\n&quot;);
+               exit(EXIT_FAILURE);
+           }
+
+           printf(&quot;name argument = %s\n&quot;, argv[optind]);
+
+           /* Other code omitted */
+
+           exit(EXIT_SUCCESS);
+       }
+</code></pre><ol start="2">
+<li>getopt_long</li>
+</ol>
+<pre><code>		#include &lt;stdio.h&gt;     /* for printf */ 
+		#include &lt;stdlib.h&gt;    /* for exit */ 
+		#include &lt;getopt.h&gt;
+
+        int main(int argc, char **argv) {
+           int c;
+           int digit_optind = 0;
+
+           while (1) {
+               int this_option_optind = optind ? optind : 1;
+               int option_index = 0;
+               static struct option long_options[] = {
+                   {&quot;add&quot;,     required_argument, 0,  0 },
+                   {&quot;append&quot;,  no_argument,       0,  0 },
+                   {&quot;delete&quot;,  required_argument, 0,  0 },
+                   {&quot;verbose&quot;, no_argument,       0,  0 },
+                   {&quot;create&quot;,  required_argument, 0, 'c'},
+                   {&quot;file&quot;,    required_argument, 0,  0 },
+                   {0,         0,                 0,  0 }
+               };
+
+               c = getopt_long(argc, argv, &quot;abc:d:012&quot;,
+                        long_options, &amp;option_index);
+               if (c == -1)
+                   break;
+
+               switch (c) {
+               case 0:
+                   printf(&quot;option %s&quot;, long_options[option_index].name);
+                   if (optarg)
+                       printf(&quot; with arg %s&quot;, optarg);
+                   printf(&quot;\n&quot;);
+                   break;
+
+               case '0':
+               case '1':
+               case '2':
+                   if (digit_optind != 0 &amp;&amp; digit_optind != this_option_optind)
+                   printf(&quot;digits occur in two different argv elements.\n&quot;);
+                   digit_optind = this_option_optind;
+                   printf(&quot;option %c\n&quot;, c);
+                   break;
+
+               case 'a':
+                   printf(&quot;option a\n&quot;);
+                   break;
+
+               case 'b':
+                   printf(&quot;option b\n&quot;);
+                   break;
+
+               case 'c':
+                   printf(&quot;option c with value '%s'\n&quot;, optarg);
+                   break;
+
+               case 'd':
+                   printf(&quot;option d with value '%s'\n&quot;, optarg);
+                   break;
+
+               case '?':
+                   break;
+
+               default:
+                   printf(&quot;?? getopt returned character code 0%o ??\n&quot;, c);
+               }
+           }
+
+           if (optind &lt; argc) {
+               printf(&quot;non-option ARGV-elements: &quot;);
+               while (optind &lt; argc)
+                   printf(&quot;%s &quot;, argv[optind++]);
+               printf(&quot;\n&quot;);
+           }
+
+           exit(EXIT_SUCCESS); }
+</code></pre><p>超详细参考资料在<a href="http://man7.org/linux/man-pages/man3/getopt.3.html">这里</a>.</p>
+        </section>
+        <footer>
+            <a class="permalink u-url" href="https://example.com/post/getopt_usage/">🔗</a>
+            
+            <hr class="post-underline">
+            <p class="post-tag">Tags for this post:
+                
+                <a href="https://example.com/tags/linux-c" class="post-tag p-category">linux-c</a>
+                
+            </p>
+            
+        </footer>
+    </article>
+</div>
+
+    
+    <div class="h-card">
+      <img class="u-photo" src="https://example.com/images/site-logo.svg" />
+      <div class="card-content">
+        <h2 class="card-name"><a class="p-name u-url" href="https://example.com/" rel="me">Author Name</a></h2>
+        <p class="card-subhead">
+          <span class="p-locality">CityName</span>,
+          <span class="p-country-name">CountryName</span><br />
+          <a class="u-email" href="mailto:email.address@example.com">Email me</a>
+        </p>
+      </div>
+      <p class="p-note">A short description, a few sentences describing the author. Set the &#39;ShowBio&#39; parameter to false to hide this.</p>
+    </div>
+    
+    <div id="footer">
+      
+      <nav id="article-skip">
+        <div class="next">
+          
+          <a alt="Newer article" href="https://example.com/post/start_server_with_ip/">&larr; Newer</a>
+          
+        </div>
+        <div class="top">
+          <a alt="Top of page" href="#">Top</a>
+        </div>
+        <div class="prev">
+          
+          <a alt="Older article" href="https://example.com/post/open_fd_question/">Older &rarr;</a>
+          
+        </div>
+      </nav>
+      
+      <aside id="social">
+  <div id="social-icons">
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Email me" href="mailto:email.address@example.com"><img src=https://example.com/icons/envelope.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Facebook profile" href="https://facebook.com/FacebookUserName"><img src=https://example.com/icons/facebook.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Flickr profile" href="https://flickr.com/people/FlickrUserName"><img src=https://example.com/icons/flickr.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="GitHub profile" href="https://github.com/GitHubUserName"><img src=https://example.com/icons/github.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="GitLab profile" href="https://gitlab.com/GitLabUserName"><img src=https://example.com/icons/gitlab.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Glitch profile" href="https://glitch.com/@GlitchUserName"><img src=https://example.com/icons/glitch.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Keybase profile" href="https://keybase.io/KeybaseUserName"><img src=https://example.com/icons/keybase.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="LinkedIn profile" href="https://www.linkedin.com/in/LinkedInUserName"><img src=https://example.com/icons/linkedin.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Medium profile" href="https://medium.com/MediumUserName"><img src=https://example.com/icons/medium.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Micro.Blog profile" href="https://micro.blog/MicroBlogUserName"><img src=https://example.com/icons/microblog.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Reddit profile" href="https://www.reddit.com/user/RedditUserName"><img src=https://example.com/icons/reddit-alien.svg height="24px" width="24px" /></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Stack Overflow profile" href="https://stackoverflow.com/users/StackOverflowUserName"><img src=https://example.com/icons/stack-overflow.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Tumblr profile" href="https://TumblrUserName.tumblr.com/"><img src=https://example.com/icons/tumblr.svg height="24px" width="24px"></a>
+    </div>
+    
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Twitter profile" href="https://twitter.com/TwitterUserName"><img src=https://example.com/icons/twitter.svg height="24px" width="24px"></a>
+     </div>
+     
+    
+    <div class="icon-24x24">
+      <a class="glyph" alt="Instagram profile" href="https://instagram.com/TwitterUserName"><img
+          src=https://example.com/icons/instagram.svg height="24px" width="24px"></a>
+    </div>
+    
+  </div>
+</aside>
+
+      
+      <p class="copyright">
+          Copyright © 2018, Author Name
+      </p>
+      
+    </div>
+
+
+</body>
+</html>
