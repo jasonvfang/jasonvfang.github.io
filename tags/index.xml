@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Blog.HaoYI</title>
+    <title>Tags on HaoYI</title>
     <link>https://blog.haoyi.dev/tags/</link>
-    <description>Recent content in Tags on Blog.HaoYI</description>
+    <description>Recent content in Tags on HaoYI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Aug 2021 13:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/tags/index.xml" rel="self" type="application/rss+xml" />

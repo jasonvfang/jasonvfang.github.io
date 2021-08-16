@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog.HaoYI</title>
+    <title>HaoYI</title>
     <link>https://blog.haoyi.dev/</link>
-    <description>Recent content on Blog.HaoYI</description>
+    <description>Recent content on HaoYI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Aug 2021 13:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/index.xml" rel="self" type="application/rss+xml" />

@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="dark">
-    <title>Tags | HaoYI</title>
+    <title>Articles | HaoYI</title>
 
     
     
     
     <meta property="og:site_name" content="Blog.HaoYI" />
-    <meta property="og:title" content="Tags | HaoYI"/>
-    <meta itemprop="name" content="Tags | HaoYI" />
-    <meta name="twitter:title" content="Tags | HaoYI" />
-    <meta name="application-name" content="Tags | HaoYI" />
+    <meta property="og:title" content="Articles | HaoYI"/>
+    <meta itemprop="name" content="Articles | HaoYI" />
+    <meta name="twitter:title" content="Articles | HaoYI" />
+    <meta name="application-name" content="Articles | HaoYI" />
 
 
     <meta name="description" content="A coder&#39;s BLOG" />
@@ -66,7 +66,7 @@
                 
                 <a href="/about/">About</a>
                 
-                <a href="/articles/">Articles</a>
+                <a href="/articles/" aria-current="page">Articles</a>
                 
                 <button id="dark-mode-button">
                   <svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
@@ -79,32 +79,127 @@
         <main>
             
 
-
-
-
 <header>
     <div class="container">
-        <h1>Tags</h1>
+        <h1>Articles</h1>
+        <p class="subtitle">Posts, tutorials, snippets, musings, and everything else.</p>
     </div>
 </header>
 
+
+
 <section>
     <div class="container">
-        <div class="terms">
-            
-            <a href="/tags/algorithm/">algorithm <span class="bg-number">1</span></a>
-            
-            <a href="/tags/cmake/">cmake <span class="bg-number">1</span></a>
-            
-            <a href="/tags/hugo/">hugo <span class="bg-number">2</span></a>
-            
-            <a href="/tags/libcurl/">libcurl <span class="bg-number">1</span></a>
-            
-            <a href="/tags/linux-c/">linux-c <span class="bg-number">2</span></a>
-            
+        <div class="filter-container">
+          
+          
+            <div class="filter-item" data-value="cmake" data-type="categories">
+              cmake<sup>1</sup>
+            </div>
+          
+            <div class="filter-item" data-value="Hugo" data-type="categories">
+              Hugo<sup>1</sup>
+            </div>
+          
+            <div class="filter-item" data-value="programming" data-type="categories">
+              programming<sup>5</sup>
+            </div>
+          
         </div>
+        <input id="search-query" type="search" placeholder="Search for anything...">
+        
+        <div id="search-results">
+        </div>
+        <section id="articles-list">
+            
+            <section>
+                <h2>2021</h2>
+                <div class="posts">
+                    
+                    <div class="post">
+                        <a href="/post/start_server_with_ip/">
+                            <div class="post-row">
+                                <time>Aug 12</time>
+                                <h3>Hugo启用自定义IP绑定</h3>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section>
+                <h2>2018</h2>
+                <div class="posts">
+                    
+                    <div class="post">
+                        <a href="/post/getopt_usage/">
+                            <div class="post-row">
+                                <time>Aug 05</time>
+                                <h3>Linux 命令行参数处理</h3>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="post">
+                        <a href="/post/open_fd_question/">
+                            <div class="post-row">
+                                <time>Jul 18</time>
+                                <h3>Linux FD操作问题</h3>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="post">
+                        <a href="/post/cmake_summary/">
+                            <div class="post-row">
+                                <time>Jul 15</time>
+                                <h3>cmake学习简要总结</h3>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="post">
+                        <a href="/post/hugo_summary_len/">
+                            <div class="post-row">
+                                <time>Jun 24</time>
+                                <h3>Hugo summary length 限制</h3>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="post">
+                        <a href="/post/libcurl_redirect_sum/">
+                            <div class="post-row">
+                                <time>Jun 23</time>
+                                <h3>Libcurl中的HTTP重定向问题</h3>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section>
+                <h2>2016</h2>
+                <div class="posts">
+                    
+                    <div class="post">
+                        <a href="/post/howto_judge_linklist_cycle/">
+                            <div class="post-row">
+                                <time>Nov 21</time>
+                                <h3>如何判断单链表有环</h3>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+            
+        </section>
     </div>
 </section>
+<script async src="/ts/search.4fa103b17f943aca4e225b2ddc276a97740dff4899d95ec939d2e56b38c8f344.js"></script>
 
 
         </main>
