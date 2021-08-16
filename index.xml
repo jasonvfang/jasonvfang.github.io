@@ -23,9 +23,9 @@
     &lt;/a&gt;
     如何使用VS Code编辑Markdown以及Preview
 &lt;/h4&gt;
-&lt;p&gt;打开VSCode，按快捷键CTRL+SHIFT+P，在弹出的窗口中输出Markdown，此时会出现Preview选项：&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; 
-    src=&#34;//images/mkdown_preview.png&#34; 
+&lt;p&gt;打开VSCode，按快捷键CTRL+SHIFT+P，在弹出的窗口中输出Markdown，此时会出现Preview选项：
+&lt;img loading=&#34;lazy&#34; 
+    src=&#34;https://blog.haoyi.dev/images/mkdown_preview.png&#34; 
     alt=&#34;MarkDown Preview&#34; 
      
     width=576 
@@ -314,21 +314,21 @@ int         val;
         &lt;p&gt;主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解，
 后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试：
 &lt;img loading=&#34;lazy&#34; 
-    src=&#34;//images/open_demo_codes.png&#34; 
+    src=&#34;https://blog.haoyi.dev/images/open_demo_codes.png&#34; 
     alt=&#34;Demo 代码&#34; 
      
     width=578 
     height=&#34;340&#34;  /&gt;&lt;/p&gt;
 &lt;p&gt;注意这里的模式是只写模式加非阻塞模式,运行结果是：
 &lt;img loading=&#34;lazy&#34; 
-    src=&#34;//images/open_error.png&#34; 
+    src=&#34;https://blog.haoyi.dev/images/open_error.png&#34; 
     alt=&#34;运行结果&#34; 
      
     width=424 
     height=&#34;110&#34;  /&gt;&lt;/p&gt;
 &lt;p&gt;MAN手册上的说明：
 &lt;img loading=&#34;lazy&#34; 
-    src=&#34;//images/man_open_flag.png&#34; 
+    src=&#34;https://blog.haoyi.dev/images/man_open_flag.png&#34; 
     alt=&#34;MAN解释&#34; 
      
     width=905 
