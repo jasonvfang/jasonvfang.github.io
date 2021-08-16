@@ -1,11 +1,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HaoYI</title>
+    <title>Blog.HAOYI - A coder&#39;s blog</title>
     <link>https://blog.haoyi.dev/</link>
-    <description>Recent content on HaoYI</description>
+    <description>Recent content on Blog.HAOYI - A coder&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Aug 2021 13:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Aug 2021 00:07:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>网站配置总结</title>
+    <link>https://blog.haoyi.dev/post/how_the_site_setup/</link>
+    <pubDate>Mon, 16 Aug 2021 00:07:51 +0800</pubDate>
+    
+    <guid>https://blog.haoyi.dev/post/how_the_site_setup/</guid>
+    <description>
+        &lt;h4 id=&#34;如何使用vs-code编辑markdown以及preview&#34;&gt;
+    &lt;a href=&#34;#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8vs-code%e7%bc%96%e8%be%91markdown%e4%bb%a5%e5%8f%8apreview&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    如何使用VS Code编辑Markdown以及Preview
+&lt;/h4&gt;
+&lt;p&gt;打开VSCode，按快捷键CTRL+SHIFT+P，在弹出的窗口中输出Markdown，此时会出现Preview选项：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; 
+    src=&#34;//images/mkdown_preview.png&#34; 
+    alt=&#34;MarkDown Preview&#34; 
+     
+    width=576 
+    height=&#34;241&#34;  /&gt;&lt;/p&gt;
+&lt;p&gt;由此，后续blog文档的输出均采用VSCode编写。&lt;/p&gt;
+&lt;h4 id=&#34;hugo生成器版本&#34;&gt;
+    &lt;a href=&#34;#hugo%e7%94%9f%e6%88%90%e5%99%a8%e7%89%88%e6%9c%ac&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    Hugo生成器版本
+&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;~$ hugo version
+hugo v0.87.0-B0C541E4+extended linux/amd64 BuildDate=2021-08-03T10:57:28Z VendorInfo=gohugoio
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;主题&#34;&gt;
+    &lt;a href=&#34;#%e4%b8%bb%e9%a2%98&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    主题
+&lt;/h4&gt;
+&lt;p&gt;来回尝试了多个主题，发现hugo-tania这个很简洁，并且默认支持了评论功能，非常方便，另外，很非常喜欢它这种清爽的风格，果断采用。&lt;/p&gt;
+&lt;h4 id=&#34;配置文件&#34;&gt;
+    &lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    配置文件
+&lt;/h4&gt;
+&lt;p&gt;采用config.toml的方式进行配置，主要配置参考&lt;a href=&#34;https://themes.gohugo.io/themes/hugo-tania/#menu&#34;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>Hugo启用自定义IP绑定</title>
     <link>https://blog.haoyi.dev/post/start_server_with_ip/</link>

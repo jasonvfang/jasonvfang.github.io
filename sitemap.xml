@@ -2,25 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.haoyi.dev/categories/</loc>
-    <lastmod>2021-08-12T13:32:51+08:00</lastmod>
-  </url><url>
     <loc>https://blog.haoyi.dev/</loc>
-    <lastmod>2021-08-12T13:32:51+08:00</lastmod>
+    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/categories/</loc>
+    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.haoyi.dev/tags/hugo/</loc>
-    <lastmod>2021-08-12T13:32:51+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.haoyi.dev/post/start_server_with_ip/</loc>
-    <lastmod>2021-08-12T13:32:51+08:00</lastmod>
+    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.haoyi.dev/post/</loc>
-    <lastmod>2021-08-12T13:32:51+08:00</lastmod>
+    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.haoyi.dev/categories/programming/</loc>
-    <lastmod>2021-08-12T13:32:51+08:00</lastmod>
+    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.haoyi.dev/tags/</loc>
+    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/post/how_the_site_setup/</loc>
+    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/post/start_server_with_ip/</loc>
     <lastmod>2021-08-12T13:32:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.haoyi.dev/articles/</loc>
