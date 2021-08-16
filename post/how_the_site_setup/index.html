@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="dark">
-    <title>网站配置总结 | Blog.HAOYI - A coder&#39;s blog</title>
+    <title>WebSite配置笔记 | Blog.HAOYI - A coder&#39;s blog</title>
 
     
     
     
     <meta property="og:site_name" content="Blog.HaoYI" />
-    <meta property="og:title" content="网站配置总结 | Blog.HAOYI - A coder&#39;s blog"/>
-    <meta itemprop="name" content="网站配置总结 | Blog.HAOYI - A coder&#39;s blog" />
-    <meta name="twitter:title" content="网站配置总结 | Blog.HAOYI - A coder&#39;s blog" />
-    <meta name="application-name" content="网站配置总结 | Blog.HAOYI - A coder&#39;s blog" />
+    <meta property="og:title" content="WebSite配置笔记 | Blog.HAOYI - A coder&#39;s blog"/>
+    <meta itemprop="name" content="WebSite配置笔记 | Blog.HAOYI - A coder&#39;s blog" />
+    <meta name="twitter:title" content="WebSite配置笔记 | Blog.HAOYI - A coder&#39;s blog" />
+    <meta name="application-name" content="WebSite配置笔记 | Blog.HAOYI - A coder&#39;s blog" />
 
 
     <meta name="description" content="A coder&#39;s blog" />
@@ -38,14 +38,14 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "网站配置总结",
+    "headline": "WebSite配置笔记",
     "author": {
       "@type": "Person",
       "name": "Jason.Fang"
     },
     "datePublished": "2021-08-16",
     "description": "",
-    "wordCount":  17 ,
+    "wordCount":  36 ,
     "mainEntityOfPage": "True",
     "dateModified": "2021-08-16",
     "publisher": {
@@ -118,7 +118,7 @@
         <header class="article-header">
             <div class="thumb">
                 <div>
-                    <h1>网站配置总结</h1>
+                    <h1>WebSite配置笔记</h1>
                     <div class="post-meta">
                         <div>
                             
@@ -192,6 +192,32 @@ hugo v0.87.0-B0C541E4+extended linux/amd64 BuildDate=2021-08-03T10:57:28Z Vendor
     配置文件
 </h4>
 <p>采用config.toml的方式进行配置，主要配置参考<a href="https://themes.gohugo.io/themes/hugo-tania/#menu">这里</a>。</p>
+<h4 id="修改评论功能">
+    <a href="#%e4%bf%ae%e6%94%b9%e8%af%84%e8%ae%ba%e5%8a%9f%e8%83%bd" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    修改评论功能
+</h4>
+<p>tania主题默认是采用Discuz，不太简洁，因而改用轻量级的utterances，这是由github官方支持的开源、免费评论插件，如何使用？主要有以下三点：</p>
+<ul>
+<li>一是要安装这个功能（需要登录github然后按指导安装即可）</li>
+<li>其次是配置utterances， repo针对的是你要使用的github repo，一般填网站的github repo就行，注意要带用户前缀：xxxx/xxxx</li>
+<li>三是针对具体的主题进行修改，这里的tania需要放到layouts/partials/comments/provider/utterances.html，utterances.html的内容就是utterances配置完后生成的脚本，例如：</li>
+</ul>
+<pre><code>&lt;script src=&quot;https://utteranc.es/client.js&quot;
+        repo=&quot;jasonvfang.github.io&quot;
+        issue-term=&quot;pathname&quot;
+        theme=&quot;boxy-light&quot;
+        crossorigin=&quot;anonymous&quot;
+        async&gt;
+&lt;/script&gt;
+</code></pre><ul>
+<li>最后一步，修改config.toml，将provider = &ldquo;utterances&quot;置上即可</li>
+</ul>
 
     </div>
 </div>
