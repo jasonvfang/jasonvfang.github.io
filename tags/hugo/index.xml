@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo on Indigo Theme</title>
-    <link>https://example.com/tags/hugo/</link>
-    <description>Recent content in hugo on Indigo Theme</description>
+    <title>hugo on Blog.HaoYI</title>
+    <link>https://blog.haoyi.dev/tags/hugo/</link>
+    <description>Recent content in hugo on Blog.HaoYI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright © 2018, Author Name</copyright>
-    <lastBuildDate>Thu, 12 Aug 2021 13:32:51 +0800</lastBuildDate><atom:link href="https://example.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Aug 2021 13:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo启用自定义IP绑定</title>
-      <link>https://example.com/post/start_server_with_ip/</link>
+      <link>https://blog.haoyi.dev/post/start_server_with_ip/</link>
       <pubDate>Thu, 12 Aug 2021 13:32:51 +0800</pubDate>
       
-      <guid>https://example.com/post/start_server_with_ip/</guid>
+      <guid>https://blog.haoyi.dev/post/start_server_with_ip/</guid>
       <description>默认hugo启用server时会绑定在localhost(127.0.0.1)上，在外网上无法通过IP访问，只能通过本机输入localhost访问， 那么如何启用Server可用于IP访问：
  hugo server -b http://10.240.218.181 --bind=&amp;quot;0.0.0.0&amp;quot; -D </description>
     </item>
     
     <item>
       <title>Hugo summary length 限制</title>
-      <link>https://example.com/post/hugo_summary_len/</link>
+      <link>https://blog.haoyi.dev/post/hugo_summary_len/</link>
       <pubDate>Sun, 24 Jun 2018 16:10:51 +0800</pubDate>
       
-      <guid>https://example.com/post/hugo_summary_len/</guid>
+      <guid>https://blog.haoyi.dev/post/hugo_summary_len/</guid>
       <description>&lt;p&gt;本文将说明如何在HUGO中对摘要进行长度限制。&lt;/p&gt;</description>
     </item>
     

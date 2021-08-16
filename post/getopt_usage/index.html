@@ -1,93 +1,167 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-us">
+    
 <head>
-    <meta charset="utf-8">
-    
-    <title>Linux 命令行参数处理 | Indigo Theme</title>
-    <meta name="description" content="Description of website for head meta tag">
-    <meta name="author" content="">
-    
-    <link rel="apple-touch-icon" sizes="180x180" href=https://example.com/apple-touch-icon.png>
-    <link rel="icon" type="image/png" sizes="32x32" href=https://example.com/favicon-32x32.png>
-    <link rel="icon" type="image/png" sizes="16x16" href=https://example.com/favicon-16x16.png>
-    <link rel="manifest" href=https://example.com/site.webmanifest>
-    <link rel="mask-icon" href=https://example.com/safari-pinned-tab.svg color="#00416a">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="theme-color" content="#ffffff">
-    
-    <link rel="me" href="mailto:email.address@example.com">
-    <link rel="me" href="https://github.com/GitHubUserName">
-    <link rel="me" href="https://twitter.com/TwitterUserName">
-    <link rel="me" href="https://micro.blog/MicroBlogUserName">
-    
-    <link rel="authorization_endpoint" href=https://indieauth.com/auth />
-    <link rel="token_endpoint" href=https://tokens.indieauth.com/token />
-    
-    
-    
-    
-    
-    <link rel="stylesheet" href=https://example.com/css/fonts.css />
-    <link rel="stylesheet" href=https://example.com/css/style.css />
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title>Linux 命令行参数处理 | Blog.HaoYI</title>
 
-<body>
-    <div id="sitelogo">
-        <a class="glyph" alt="Home" href="https://example.com/"><img src=https://example.com/images/site-logo.svg alt="Site Logo" height="64px" width="64px"></a>
-    </div>
-    <header>
-        <nav>
     
-    <div id="page-nav">
-        <div class="page-nav-item">
-            <a href="https://example.com/">Home</a>
-        </div>
-        
-            <div class="page-nav-item">
-                <a href="/about/">
+    
+    
+    <meta property="og:site_name" content="Blog.HaoYI" />
+    <meta property="og:title" content="Linux 命令行参数处理 | Blog.HaoYI"/>
+    <meta itemprop="name" content="Linux 命令行参数处理 | Blog.HaoYI" />
+    <meta name="twitter:title" content="Linux 命令行参数处理 | Blog.HaoYI" />
+    <meta name="application-name" content="Linux 命令行参数处理 | Blog.HaoYI" />
+
+
+    <meta name="description" content="A coder&#39;s BLOG" />
+    <meta name="twitter:description" content="A coder&#39;s BLOG"/>
+    <meta itemprop="description" content="A coder&#39;s BLOG"/>
+    <meta property="og:description" content="A coder&#39;s BLOG" />
+
+    
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="Jason.Fang" />
+<meta property="og:article:published_time" content=2018-08-05T13:32:51&#43;0800 />
+<meta property="article:published_time" content=2018-08-05T13:32:51&#43;0800 />
+
+
+
+
+
+<script defer type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Linux 命令行参数处理",
+    "author": {
+      "@type": "Person",
+      "name": "Jason.Fang"
+    },
+    "datePublished": "2018-08-05",
+    "description": "",
+    "wordCount":  388 ,
+    "mainEntityOfPage": "True",
+    "dateModified": "2018-08-05",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jason.Fang",
+      "logo": {
+        "@type": "imageObject",
+        "url": "https:\/\/blog.haoyi.dev\/favicon.ico"
+      }
+    }
+  }
+</script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href="/sass/main.min.3b60735c96f5faa623d75aceae8ee0a0c7d19f76a3eed0574c61f7253a4eeb3d.css">
+    
+</head>
+    <script>
+    (function() {
+        const colorSchemeKey = 'ThemeColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.userColorScheme = 'dark';
+        } else {
+            document.documentElement.dataset.userColorScheme = 'light';
+        }
+    })();
+</script>
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
                     
-                    <span>About</span>
-                </a>
+                    <span class="emoji">
+                        ??
+                    </span>
+                    
+                    
+                    Blog.HaoYI
+                    </a>
             </div>
-        
+            <div class="flex">
+                
+                <a href="/articles/">Articles</a>
+                
+                <button id="dark-mode-button">
+                  <svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                  <svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="#FFD983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                </button>
+            </div>
+            </div>
     </div>
 </nav>
-        
-    </header>
-
-
-
-
-<div id="content">
-    <article class="h-entry">
-        <header>
-            <h1 class="post-title p-name">Linux 命令行参数处理</h1>
+        <main>
             
-            <p class="post-date">Posted on
-                <time class="dt-published" datetime="2018-08-05T13:32:51&#43;08:00">
-                    5 August, 2018 at 13:32 CST
-                </time>  by <a href="https://example.com/" class="p-author h-card"
-                    rel="author">Author Name</a>
-            </p>
-            
-            
-            <p class="post-tag">Category:
-                
-                <a href="https://example.com/categories/programming" class="post-tag p-category">programming</a>
-                
-            </p>
-            <hr class="post-underline">
-            
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>Linux 命令行参数处理</h1>
+                    <div class="post-meta">
+                        <div>
+                            
+                            
+                              
+                            
+                            By Jason.Fang | <time>August 05, 2018</time>
+                            | 2 minutes
+                        </div>
+                        <div class="tags">
+                            
+                            <a href="/tags/linux-c/">linux-c</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
-        <section class="content e-content">
-            <p>前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
+    </article>
+
+    <div class="article-post">
+    <p>前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
 不好修改，于是想到Linux下有专门的getopt方法，好在不算改动特别大，对以前的做法作了兼容处理，好吧，这里还是对getopt作个简要的整理吧，方便日后回顾。</p>
-<h3 id="简要说明">简要说明</h3>
+<h3 id="简要说明">
+    <a href="#%e7%ae%80%e8%a6%81%e8%af%b4%e6%98%8e" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    简要说明
+</h3>
 <p>getopt/getopt_long都是linux平台下为应用程序提供处理命令行参数的接口，区别在于后者有参数名称长度较长的情况，一般在Linux下的命令行参数以横框“-”或者双横杠
 “&ndash;”进行传递，比如我们经常用到的ls -l 或者 ls &ndash;help ，其中的l和help为选项。</p>
-<h3 id="如何在程序中使用">如何在程序中使用</h3>
+<h3 id="如何在程序中使用">
+    <a href="#%e5%a6%82%e4%bd%95%e5%9c%a8%e7%a8%8b%e5%ba%8f%e4%b8%ad%e4%bd%bf%e7%94%a8" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    如何在程序中使用
+</h3>
 <p>在man手册上的定义如下：</p>
 <pre><code>#include &lt;unistd.h&gt;
 
@@ -121,14 +195,32 @@ int         val;
 <li>required_argument</li>
 <li>optional_argument</li>
 </ul>
-<h3 id="返回值">返回值</h3>
+<h3 id="返回值">
+    <a href="#%e8%bf%94%e5%9b%9e%e5%80%bc" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    返回值
+</h3>
 <p>对于短的选项：
 如果getopt/getopt_log在命令行参数中找到相应字符，则会返回该选项的字符，如果所有的命令参数选项都解析完成，则返回-1，
 如果发现命令行参数选项中的字符不在指定的optstring中出现，则返回特殊的问号字符？。如果遇到该参数选项需要指定值而命令行中未指定时，
 返回值取决于optstring中的第一个冒号字符：，如果它是冒号，则返回：，否则返回？。</p>
 <p>对于长选项：
 正常情况下，如果flag为NULL，则返回option结构体中的val值，否则返回0。其他出错，未匹配以及-1的情况同短选项是一样的。</p>
-<h3 id="两个示例">两个示例</h3>
+<h3 id="两个示例">
+    <a href="#%e4%b8%a4%e4%b8%aa%e7%a4%ba%e4%be%8b" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    两个示例
+</h3>
 <p>官网给出的两个示例非常实用：</p>
 <ol>
 <li>getopt</li>
@@ -255,141 +347,79 @@ int         val;
 
            exit(EXIT_SUCCESS); }
 </code></pre><p>超详细参考资料在<a href="http://man7.org/linux/man-pages/man3/getopt.3.html">这里</a>.</p>
-        </section>
-        <footer>
-            <a class="permalink u-url" href="https://example.com/post/getopt_usage/">🔗</a>
-            
-            <hr class="post-underline">
-            <p class="post-tag">Tags for this post:
-                
-                <a href="https://example.com/tags/linux-c" class="post-tag p-category">linux-c</a>
-                
-            </p>
-            
-        </footer>
-    </article>
+    </div>
 </div>
 
+<div class="container">
     
-    <div class="h-card">
-      <img class="u-photo" src="https://example.com/images/site-logo.svg" />
-      <div class="card-content">
-        <h2 class="card-name"><a class="p-name u-url" href="https://example.com/" rel="me">Author Name</a></h2>
-        <p class="card-subhead">
-          <span class="p-locality">CityName</span>,
-          <span class="p-country-name">CountryName</span><br />
-          <a class="u-email" href="mailto:email.address@example.com">Email me</a>
-        </p>
-      </div>
-      <p class="p-note">A short description, a few sentences describing the author. Set the &#39;ShowBio&#39; parameter to false to hide this.</p>
-    </div>
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/post/open_fd_question/" title="Previous post (older)">
+            <span>Previous</span>
+            Linux FD操作问题
+            </a>
+        
+        
+        
+        <a rel="next" href="/post/start_server_with_ip/" title="Next post (newer)">
+            <span>Next</span>
+            Hugo启用自定义IP绑定
+            </a> 
+        
+    </nav>
     
-    <div id="footer">
-      
-      <nav id="article-skip">
-        <div class="next">
-          
-          <a alt="Newer article" href="https://example.com/post/start_server_with_ip/">&larr; Newer</a>
-          
-        </div>
-        <div class="top">
-          <a alt="Top of page" href="#">Top</a>
-        </div>
-        <div class="prev">
-          
-          <a alt="Older article" href="https://example.com/post/open_fd_question/">Older &rarr;</a>
-          
-        </div>
-      </nav>
-      
-      <aside id="social">
-  <div id="social-icons">
+</div>
+ 
+<div class="container">
     
-    <div class="icon-24x24">
-      <a class="glyph" alt="Email me" href="mailto:email.address@example.com"><img src=https://example.com/icons/envelope.svg height="24px" width="24px"></a>
-    </div>
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
     
     
-    <div class="icon-24x24">
-      <a class="glyph" alt="Facebook profile" href="https://facebook.com/FacebookUserName"><img src=https://example.com/icons/facebook.svg height="24px" width="24px"></a>
-    </div>
     
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="Flickr profile" href="https://flickr.com/people/FlickrUserName"><img src=https://example.com/icons/flickr.svg height="24px" width="24px"></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="GitHub profile" href="https://github.com/GitHubUserName"><img src=https://example.com/icons/github.svg height="24px" width="24px"></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="GitLab profile" href="https://gitlab.com/GitLabUserName"><img src=https://example.com/icons/gitlab.svg height="24px" width="24px"></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="Glitch profile" href="https://glitch.com/@GlitchUserName"><img src=https://example.com/icons/glitch.svg height="24px" width="24px"></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="Keybase profile" href="https://keybase.io/KeybaseUserName"><img src=https://example.com/icons/keybase.svg height="24px" width="24px"></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="LinkedIn profile" href="https://www.linkedin.com/in/LinkedInUserName"><img src=https://example.com/icons/linkedin.svg height="24px" width="24px"></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="Medium profile" href="https://medium.com/MediumUserName"><img src=https://example.com/icons/medium.svg height="24px" width="24px"></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="Micro.Blog profile" href="https://micro.blog/MicroBlogUserName"><img src=https://example.com/icons/microblog.svg height="24px" width="24px"></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="Reddit profile" href="https://www.reddit.com/user/RedditUserName"><img src=https://example.com/icons/reddit-alien.svg height="24px" width="24px" /></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="Stack Overflow profile" href="https://stackoverflow.com/users/StackOverflowUserName"><img src=https://example.com/icons/stack-overflow.svg height="24px" width="24px"></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="Tumblr profile" href="https://TumblrUserName.tumblr.com/"><img src=https://example.com/icons/tumblr.svg height="24px" width="24px"></a>
-    </div>
-    
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="Twitter profile" href="https://twitter.com/TwitterUserName"><img src=https://example.com/icons/twitter.svg height="24px" width="24px"></a>
-     </div>
-     
-    
-    <div class="icon-24x24">
-      <a class="glyph" alt="Instagram profile" href="https://instagram.com/TwitterUserName"><img
-          src=https://example.com/icons/instagram.svg height="24px" width="24px"></a>
-    </div>
-    
-  </div>
-</aside>
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-hugo-tania-netlify-app" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
 
-      
-      <p class="copyright">
-          Copyright © 2018, Author Name
-      </p>
-      
-    </div>
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            })
+        }
+    })
+</script>
+
+</div>
+
+</main>
 
 
-</body>
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+            <a href="/index.xml">RSS</a>
+            
+        </nav>
+    </section>
+    <script defer src="/ts/features.39c567b3af1363f8abe74bfd650f3d58cb963716b7ad4b3b53f801d3ca585599.js" data-enable-footnotes="true"></script>
+</footer>
+    </body>
 </html>

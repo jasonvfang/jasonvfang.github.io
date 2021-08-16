@@ -1,34 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux-c on Indigo Theme</title>
-    <link>https://example.com/tags/linux-c/</link>
-    <description>Recent content in linux-c on Indigo Theme</description>
+    <title>linux-c on Blog.HaoYI</title>
+    <link>https://blog.haoyi.dev/tags/linux-c/</link>
+    <description>Recent content in linux-c on Blog.HaoYI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright © 2018, Author Name</copyright>
-    <lastBuildDate>Sun, 05 Aug 2018 13:32:51 +0800</lastBuildDate><atom:link href="https://example.com/tags/linux-c/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Aug 2018 13:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/tags/linux-c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux 命令行参数处理</title>
-      <link>https://example.com/post/getopt_usage/</link>
+      <link>https://blog.haoyi.dev/post/getopt_usage/</link>
       <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
       
-      <guid>https://example.com/post/getopt_usage/</guid>
+      <guid>https://blog.haoyi.dev/post/getopt_usage/</guid>
       <description>&lt;p&gt;前几天遇到对不同情况下，有个命令的处理条件需要区别的任务，看了下原始的代码，发现难以改动，太多的HARD CODE了，直接使用argv[i]的方式获取参数值显得特别
 不好修改，于是想到Linux下有专门的getopt方法，好在不算改动特别大，对以前的做法作了兼容处理，好吧，这里还是对getopt作个简要的整理吧，方便日后回顾。&lt;/p&gt;
-&lt;h3 id=&#34;简要说明&#34;&gt;简要说明&lt;/h3&gt;
+&lt;h3 id=&#34;简要说明&#34;&gt;
+    &lt;a href=&#34;#%e7%ae%80%e8%a6%81%e8%af%b4%e6%98%8e&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    简要说明
+&lt;/h3&gt;
 &lt;p&gt;getopt/getopt_long都是linux平台下为应用程序提供处理命令行参数的接口，区别在于后者有参数名称长度较长的情况，一般在Linux下的命令行参数以横框“-”或者双横杠
 “&amp;ndash;”进行传递，比如我们经常用到的ls -l 或者 ls &amp;ndash;help ，其中的l和help为选项。&lt;/p&gt;
-&lt;h3 id=&#34;如何在程序中使用&#34;&gt;如何在程序中使用&lt;/h3&gt;</description>
+&lt;h3 id=&#34;如何在程序中使用&#34;&gt;
+    &lt;a href=&#34;#%e5%a6%82%e4%bd%95%e5%9c%a8%e7%a8%8b%e5%ba%8f%e4%b8%ad%e4%bd%bf%e7%94%a8&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    如何在程序中使用
+&lt;/h3&gt;</description>
     </item>
     
     <item>
       <title>Linux FD操作问题</title>
-      <link>https://example.com/post/open_fd_question/</link>
+      <link>https://blog.haoyi.dev/post/open_fd_question/</link>
       <pubDate>Wed, 18 Jul 2018 00:10:51 +0800</pubDate>
       
-      <guid>https://example.com/post/open_fd_question/</guid>
-      <description>主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解， 后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试： 注意这里的模式是只写模式加非阻塞模式,运行结果是： MAN手册上的说明： 总结： 使用O_RDONLY或O_WRONLY设置打开FIFO时:
+      <guid>https://blog.haoyi.dev/post/open_fd_question/</guid>
+      <description>主要总结一之前工作中遇到的问题，在对一个fifo进行操作的时候出现无法open的情况，但是fifo文件是一直存在的，百思不得解， 后面还是同事的提醒，才想起看到man手册中的说明，先上代码吧，自己写的一个小程序测试： 注意这里的模式是只写模式加非阻塞模式,运行结果是： MAN手册上的说明：    总结：  使用O_RDONLY或O_WRONLY设置打开FIFO时:
  如果设置了O_NONBLOCK，则open()用于读取时只会立即返回。如果当前没有任何进程打开文件进行读取，则以只写的方式写FD时会返回一个错误。 如果O_NONBLOCK没有指定，那么只读的open()将阻塞调用线程，直到线程打开文件进行写入。以只写方式open()调用将会阻塞调用线程，直到线程打开文件进行读取。  因此本例中的解决办法：
  1.可以设置open的方式为block方式  在write之前，其他进程一直在读fd    </description>
     </item>

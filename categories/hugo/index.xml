@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Indigo Theme</title>
-    <link>https://example.com/categories/hugo/</link>
-    <description>Recent content in Hugo on Indigo Theme</description>
+    <title>Hugo on Blog.HaoYI</title>
+    <link>https://blog.haoyi.dev/categories/hugo/</link>
+    <description>Recent content in Hugo on Blog.HaoYI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright © 2018, Author Name</copyright>
-    <lastBuildDate>Sun, 24 Jun 2018 16:10:51 +0800</lastBuildDate><atom:link href="https://example.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Jun 2018 16:10:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo summary length 限制</title>
-      <link>https://example.com/post/hugo_summary_len/</link>
+      <link>https://blog.haoyi.dev/post/hugo_summary_len/</link>
       <pubDate>Sun, 24 Jun 2018 16:10:51 +0800</pubDate>
       
-      <guid>https://example.com/post/hugo_summary_len/</guid>
+      <guid>https://blog.haoyi.dev/post/hugo_summary_len/</guid>
       <description>&lt;p&gt;本文将说明如何在HUGO中对摘要进行长度限制。&lt;/p&gt;</description>
     </item>
     

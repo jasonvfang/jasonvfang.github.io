@@ -1,55 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Indigo Theme</title>
-    <link>https://example.com/tags/</link>
-    <description>Recent content in Tags on Indigo Theme</description>
+    <title>Tags on Blog.HaoYI</title>
+    <link>https://blog.haoyi.dev/tags/</link>
+    <description>Recent content in Tags on Blog.HaoYI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>Copyright © 2018, Author Name</copyright>
-    <lastBuildDate>Thu, 12 Aug 2021 13:32:51 +0800</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Aug 2021 13:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo</title>
-      <link>https://example.com/tags/hugo/</link>
+      <link>https://blog.haoyi.dev/tags/hugo/</link>
       <pubDate>Thu, 12 Aug 2021 13:32:51 +0800</pubDate>
       
-      <guid>https://example.com/tags/hugo/</guid>
+      <guid>https://blog.haoyi.dev/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux-c</title>
-      <link>https://example.com/tags/linux-c/</link>
+      <link>https://blog.haoyi.dev/tags/linux-c/</link>
       <pubDate>Sun, 05 Aug 2018 13:32:51 +0800</pubDate>
       
-      <guid>https://example.com/tags/linux-c/</guid>
+      <guid>https://blog.haoyi.dev/tags/linux-c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cmake</title>
-      <link>https://example.com/tags/cmake/</link>
+      <link>https://blog.haoyi.dev/tags/cmake/</link>
       <pubDate>Sun, 15 Jul 2018 23:10:51 +0800</pubDate>
       
-      <guid>https://example.com/tags/cmake/</guid>
+      <guid>https://blog.haoyi.dev/tags/cmake/</guid>
       <description></description>
     </item>
     
     <item>
       <title>libcurl</title>
-      <link>https://example.com/tags/libcurl/</link>
+      <link>https://blog.haoyi.dev/tags/libcurl/</link>
       <pubDate>Sat, 23 Jun 2018 12:10:51 +0800</pubDate>
       
-      <guid>https://example.com/tags/libcurl/</guid>
+      <guid>https://blog.haoyi.dev/tags/libcurl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>algorithm</title>
-      <link>https://example.com/tags/algorithm/</link>
+      <link>https://blog.haoyi.dev/tags/algorithm/</link>
       <pubDate>Mon, 21 Nov 2016 17:22:51 +0800</pubDate>
       
-      <guid>https://example.com/tags/algorithm/</guid>
+      <guid>https://blog.haoyi.dev/tags/algorithm/</guid>
       <description></description>
     </item>
     
