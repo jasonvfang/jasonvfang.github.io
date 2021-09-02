@@ -5,7 +5,50 @@
     <description>Recent content on Blog.HAOYI - A coder&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 00:07:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Sep 2021 00:07:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>Markdown转换为PDF文件</title>
+    <link>https://blog.haoyi.dev/post/md_to_pdf/</link>
+    <pubDate>Thu, 02 Sep 2021 00:07:51 +0800</pubDate>
+    
+    <guid>https://blog.haoyi.dev/post/md_to_pdf/</guid>
+    <description>
+        &lt;h4 id=&#34;在vs-code中安装markdown-pdf插件&#34;&gt;
+    &lt;a href=&#34;#%e5%9c%a8vs-code%e4%b8%ad%e5%ae%89%e8%a3%85markdown-pdf%e6%8f%92%e4%bb%b6&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    在VS Code中安装Markdown PDF插件：
+&lt;/h4&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; 
+    src=&#34;https://blog.haoyi.dev/images/md_pdf_plugin.jpg&#34; 
+    alt=&#34;&#34; 
+     
+    width=504 
+    height=&#34;189&#34;  /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;通过vs-code打开md文件并右键选择markdown-export-to-pdf&#34;&gt;
+    &lt;a href=&#34;#%e9%80%9a%e8%bf%87vs-code%e6%89%93%e5%bc%80md%e6%96%87%e4%bb%b6%e5%b9%b6%e5%8f%b3%e9%94%ae%e9%80%89%e6%8b%a9markdown-export-to-pdf&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    通过VS code打开MD文件，并右键选择Markdown export to PDF
+&lt;/h4&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; 
+    src=&#34;https://blog.haoyi.dev/images/md2pdf.jpg&#34; 
+    alt=&#34;&#34; 
+     
+    width=327 
+    height=&#34;307&#34;  /&gt;&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>WebSite配置笔记</title>
     <link>https://blog.haoyi.dev/post/how_the_site_setup/</link>

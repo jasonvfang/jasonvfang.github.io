@@ -3,21 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.haoyi.dev/</loc>
-    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
+    <lastmod>2021-09-02T00:07:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.haoyi.dev/categories/</loc>
-    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
+    <lastmod>2021-09-02T00:07:51+08:00</lastmod>
   </url><url>
-    <loc>https://blog.haoyi.dev/tags/hugo/</loc>
-    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
+    <loc>https://blog.haoyi.dev/tags/markdown/</loc>
+    <lastmod>2021-09-02T00:07:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/post/md_to_pdf/</loc>
+    <lastmod>2021-09-02T00:07:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.haoyi.dev/post/</loc>
-    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
+    <lastmod>2021-09-02T00:07:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.haoyi.dev/categories/programming/</loc>
-    <lastmod>2021-08-16T00:07:51+08:00</lastmod>
+    <lastmod>2021-09-02T00:07:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.haoyi.dev/tags/</loc>
+    <lastmod>2021-09-02T00:07:51+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.haoyi.dev/tags/hugo/</loc>
     <lastmod>2021-08-16T00:07:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.haoyi.dev/post/how_the_site_setup/</loc>

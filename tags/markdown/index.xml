@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>markdown on Blog.HAOYI - A coder&#39;s blog</title>
+    <link>https://blog.haoyi.dev/tags/markdown/</link>
+    <description>Recent content in markdown on Blog.HAOYI - A coder&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Sep 2021 00:07:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown转换为PDF文件</title>
+      <link>https://blog.haoyi.dev/post/md_to_pdf/</link>
+      <pubDate>Thu, 02 Sep 2021 00:07:51 +0800</pubDate>
+      
+      <guid>https://blog.haoyi.dev/post/md_to_pdf/</guid>
+      <description>   在VS Code中安装Markdown PDF插件：     通过VS code打开MD文件，并右键选择Markdown export to PDF  </description>
+    </item>
+    
+  </channel>
+</rss>
