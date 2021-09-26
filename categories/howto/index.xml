@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>howto on Blog.HAOYI - A coder&#39;s blog</title>
+    <link>https://blog.haoyi.dev/categories/howto/</link>
+    <description>Recent content in howto on Blog.HAOYI - A coder&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Sep 2021 17:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/categories/howto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upgrade gcc on Ubuntu 16.04</title>
+      <link>https://blog.haoyi.dev/post/fix_ubuntu_gcc_upgrade_err/</link>
+      <pubDate>Sun, 26 Sep 2021 17:32:51 +0800</pubDate>
+      
+      <guid>https://blog.haoyi.dev/post/fix_ubuntu_gcc_upgrade_err/</guid>
+      <description>Setup apt source  sudo add-apt-repository ppa:ubuntu-toolchain-r/test sudo apt-get update sudo apt-get install gcc-snapshot sudo apt-get install gcc-7 g++-7    Change default gcc symbol link  get into /usr/bin/ and recreate symbol links to gcc-7.
+   The issue you may get during apt source setup  Traceback (most recent call last): File &amp;quot;/usr/bin/apt-listchanges&amp;quot;, line 28, in &amp;lt;module&amp;gt; import apt_pkg ImportError: No module named apt_pkg If you see an error like above, Then you may need workaround this:</description>
+    </item>
+    
+  </channel>
+</rss>
