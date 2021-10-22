@@ -5,7 +5,125 @@
     <description>Recent content on Blog.HAOYI - A coder&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Sep 2021 17:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Oct 2021 17:18:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+    <title>SnmpTrap</title>
+    <link>https://blog.haoyi.dev/post/snmp_trap/</link>
+    <pubDate>Fri, 22 Oct 2021 17:18:51 +0800</pubDate>
+    
+    <guid>https://blog.haoyi.dev/post/snmp_trap/</guid>
+    <description>
+        &lt;p&gt;snmp网管协议较为古老，但是在服务运维界却用的比较多，这里总结snmptrap的测试步骤。&lt;/p&gt;
+&lt;h3 id=&#34;测试主要依赖的工具&#34;&gt;
+    &lt;a href=&#34;#%e6%b5%8b%e8%af%95%e4%b8%bb%e8%a6%81%e4%be%9d%e8%b5%96%e7%9a%84%e5%b7%a5%e5%85%b7&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    测试主要依赖的工具
+&lt;/h3&gt;
+&lt;p&gt;ubuntu 16.04, dnsmasq，snmptrapd&lt;/p&gt;
+&lt;h3 id=&#34;操作步骤&#34;&gt;
+    &lt;a href=&#34;#%e6%93%8d%e4%bd%9c%e6%ad%a5%e9%aa%a4&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    操作步骤
+&lt;/h3&gt;
+&lt;p&gt;首先在ubuntu上搭建snmptrapd接收Server应用，用于trap消息的接收，直接通过apt install的方式即可。&lt;/p&gt;
+&lt;p&gt;其次，修改配置文件/etc/snmp/snmptrapd.conf：
+&lt;img loading=&#34;lazy&#34; 
+    src=&#34;https://blog.haoyi.dev/images/snmp_cfg.jpg&#34; 
+    alt=&#34;snmp configuration file&#34; 
+     
+    width=743 
+    height=&#34;345&#34;  /&gt;&lt;/p&gt;
+&lt;p&gt;配置好后可以在命令行上启用：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo snmptrapd -C -c /etc/snmp/snmptrapd.conf -f -Lo
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;关于snmp应用&#34;&gt;
+    &lt;a href=&#34;#%e5%85%b3%e4%ba%8esnmp%e5%ba%94%e7%94%a8&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    关于snmp应用
+&lt;/h4&gt;
+&lt;p&gt;目前大部分用的是net-snmp，基于此应用程序作的二次开发，加入自定义的MIB，如何移植资料很丰富，本文不讨论。&lt;/p&gt;
+&lt;p&gt;正常接收到的IPv4 Trap消息，如下图示：
+&lt;img loading=&#34;lazy&#34; 
+    src=&#34;https://blog.haoyi.dev/images/snmp_trap_test.jpg&#34; 
+    alt=&#34;snmp trap test msg&#34; 
+     
+    width=913 
+    height=&#34;218&#34;  /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;使用dns域名作为trap地址&#34;&gt;
+    &lt;a href=&#34;#%e4%bd%bf%e7%94%a8dns%e5%9f%9f%e5%90%8d%e4%bd%9c%e4%b8%batrap%e5%9c%b0%e5%9d%80&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    使用dns域名作为Trap地址
+&lt;/h4&gt;
+&lt;p&gt;可参考dnsmasq的设置，开启自定义DNS域名：
+&lt;img loading=&#34;lazy&#34; 
+    src=&#34;https://blog.haoyi.dev/images/snmp_dns_cust.jpg&#34; 
+    alt=&#34;snmp trap dns&#34; 
+     
+    width=770 
+    height=&#34;277&#34;  /&gt;
+可以看到图上配置了两个不同的域名，一个是IPv4地址，另一个是IPv6地址。&lt;/p&gt;
+&lt;h4 id=&#34;ipv6-trap消息的接收问题&#34;&gt;
+    &lt;a href=&#34;#ipv6-trap%e6%b6%88%e6%81%af%e7%9a%84%e6%8e%a5%e6%94%b6%e9%97%ae%e9%a2%98&#34; class=&#34;anchor&#34;&gt;
+        &lt;svg class=&#34;icon&#34; aria-hidden=&#34;true&#34; focusable=&#34;false&#34; height=&#34;16&#34; version=&#34;1.1&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34;&gt;
+            &lt;path fill-rule=&#34;evenodd&#34;
+                d=&#34;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&#34;&gt;
+            &lt;/path&gt;
+        &lt;/svg&gt;
+    &lt;/a&gt;
+    IPv6 Trap消息的接收问题
+&lt;/h4&gt;
+&lt;p&gt;测试发现发送的Trap没有被Snmptrap端收到，而网络又是互通的，如下图示：
+&lt;img loading=&#34;lazy&#34; 
+    src=&#34;https://blog.haoyi.dev/images/snmp_trap6_port_unreachable.jpg&#34; 
+    alt=&#34;snmp trap6 unreachable&#34; 
+     
+    width=1033 
+    height=&#34;328&#34;  /&gt;
+上图可以看出发送snmptrap后，目的地址响应的Port Unreachable，说明snmptrapd没有开启UDP6的端口监听，需要在目的服务器上将snmptrapd开启IPv6监听，方法如下：
+修改/etc/snmp/snmptrapd.conf，加入一行：snmpTrapdAddr    udp:162,udp6:162，保存退出并重启snmptrapd服务：
+&lt;img loading=&#34;lazy&#34; 
+    src=&#34;https://blog.haoyi.dev/images/snmp_cfg_add_ipv6.jpg&#34; 
+    alt=&#34;snmp trap dns&#34; 
+     
+    width=675 
+    height=&#34;252&#34;  /&gt;
+进一步确认snmptrapd正常监听IPv6的协议端口162，如下图示：
+&lt;img loading=&#34;lazy&#34; 
+    src=&#34;https://blog.haoyi.dev/images/snmp_trap6_port_listen_ok.jpg&#34; 
+    alt=&#34;snmp trap dns&#34; 
+     
+    width=768 
+    height=&#34;157&#34;  /&gt;&lt;/p&gt;
+&lt;p&gt;重新测试可以看到，在snmptrapd这边有正常的UDP6消息输出：
+&lt;img loading=&#34;lazy&#34; 
+    src=&#34;https://blog.haoyi.dev/images/snmp_trap6_pkt_ok.jpg&#34; 
+    alt=&#34;snmp trap dns&#34; 
+     
+    width=1095 
+    height=&#34;135&#34;  /&gt;&lt;/p&gt;
+
+    </description>
+    </item>
+    
     <item>
     <title>Upgrade gcc on Ubuntu 16.04</title>
     <link>https://blog.haoyi.dev/post/fix_ubuntu_gcc_upgrade_err/</link>

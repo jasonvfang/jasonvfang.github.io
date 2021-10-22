@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="dark">
-    <title>Upgrade gcc on Ubuntu 16.04 | Blog.HAOYI - A coder&#39;s blog</title>
+    <title>SnmpTrap | Blog.HAOYI - A coder&#39;s blog</title>
 
     
     
     
     <meta property="og:site_name" content="Blog.HaoYI" />
-    <meta property="og:title" content="Upgrade gcc on Ubuntu 16.04 | Blog.HAOYI - A coder&#39;s blog"/>
-    <meta itemprop="name" content="Upgrade gcc on Ubuntu 16.04 | Blog.HAOYI - A coder&#39;s blog" />
-    <meta name="twitter:title" content="Upgrade gcc on Ubuntu 16.04 | Blog.HAOYI - A coder&#39;s blog" />
-    <meta name="application-name" content="Upgrade gcc on Ubuntu 16.04 | Blog.HAOYI - A coder&#39;s blog" />
+    <meta property="og:title" content="SnmpTrap | Blog.HAOYI - A coder&#39;s blog"/>
+    <meta itemprop="name" content="SnmpTrap | Blog.HAOYI - A coder&#39;s blog" />
+    <meta name="twitter:title" content="SnmpTrap | Blog.HAOYI - A coder&#39;s blog" />
+    <meta name="application-name" content="SnmpTrap | Blog.HAOYI - A coder&#39;s blog" />
 
 
     <meta name="description" content="A coder&#39;s blog" />
@@ -27,8 +27,8 @@
 
 <meta property="og:type" content="article" />
 <meta property="article:publisher" content="Jason.Fang" />
-<meta property="og:article:published_time" content=2021-09-26T17:32:51&#43;0800 />
-<meta property="article:published_time" content=2021-09-26T17:32:51&#43;0800 />
+<meta property="og:article:published_time" content=2021-10-22T17:18:51&#43;0800 />
+<meta property="article:published_time" content=2021-10-22T17:18:51&#43;0800 />
 
 
 
@@ -38,16 +38,16 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "Upgrade gcc on Ubuntu 16.04",
+    "headline": "SnmpTrap",
     "author": {
       "@type": "Person",
       "name": "Jason.Fang"
     },
-    "datePublished": "2021-09-26",
+    "datePublished": "2021-10-22",
     "description": "",
-    "wordCount":  78 ,
+    "wordCount":  33 ,
     "mainEntityOfPage": "True",
-    "dateModified": "2021-09-26",
+    "dateModified": "2021-10-22",
     "publisher": {
       "@type": "Organization",
       "name": "Jason.Fang",
@@ -118,19 +118,19 @@
         <header class="article-header">
             <div class="thumb">
                 <div>
-                    <h1>Upgrade gcc on Ubuntu 16.04</h1>
+                    <h1>SnmpTrap</h1>
                     <div class="post-meta">
                         <div>
                             
                             
                               
                             
-                            By Jason.Fang | <time>September 26, 2021</time>
+                            By Jason.Fang | <time>October 22, 2021</time>
                             | 1 minutes
                         </div>
                         <div class="tags">
                             
-                            <a href="/tags/ubuntu/">ubuntu</a>
+                            <a href="/tags/snmp/">snmp</a>
                             
                         </div>
                     </div>
@@ -140,49 +140,114 @@
     </article>
 
     <div class="article-post">
-    <h3 id="setup-apt-source">
-    <a href="#setup-apt-source" class="anchor">
+    <p>snmp网管协议较为古老，但是在服务运维界却用的比较多，这里总结snmptrap的测试步骤。</p>
+<h3 id="测试主要依赖的工具">
+    <a href="#%e6%b5%8b%e8%af%95%e4%b8%bb%e8%a6%81%e4%be%9d%e8%b5%96%e7%9a%84%e5%b7%a5%e5%85%b7" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    Setup apt source
+    测试主要依赖的工具
 </h3>
-<pre><code>sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt-get update
-sudo apt-get install gcc-snapshot
-sudo apt-get install gcc-7 g++-7
-</code></pre><h3 id="change-default-gcc-symbol-link">
-    <a href="#change-default-gcc-symbol-link" class="anchor">
+<p>ubuntu 16.04, dnsmasq，snmptrapd</p>
+<h3 id="操作步骤">
+    <a href="#%e6%93%8d%e4%bd%9c%e6%ad%a5%e9%aa%a4" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    Change default gcc symbol link
+    操作步骤
 </h3>
-<p>get into /usr/bin/ and recreate symbol links to gcc-7.</p>
-<h3 id="the-issue-you-may-get-during-apt-source-setup">
-    <a href="#the-issue-you-may-get-during-apt-source-setup" class="anchor">
+<p>首先在ubuntu上搭建snmptrapd接收Server应用，用于trap消息的接收，直接通过apt install的方式即可。</p>
+<p>其次，修改配置文件/etc/snmp/snmptrapd.conf：
+<img loading="lazy" 
+    src="/images/snmp_cfg.jpg" 
+    alt="snmp configuration file" 
+     
+    width=743 
+    height="345"  /></p>
+<p>配置好后可以在命令行上启用：</p>
+<pre><code>sudo snmptrapd -C -c /etc/snmp/snmptrapd.conf -f -Lo
+</code></pre><h4 id="关于snmp应用">
+    <a href="#%e5%85%b3%e4%ba%8esnmp%e5%ba%94%e7%94%a8" class="anchor">
         <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
             <path fill-rule="evenodd"
                 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
             </path>
         </svg>
     </a>
-    The issue you may get during apt source setup
-</h3>
-<pre><code>Traceback (most recent call last):       
-  File &quot;/usr/bin/apt-listchanges&quot;, line 28, in &lt;module&gt;
-    import apt_pkg
-ImportError: No module named apt_pkg
-</code></pre><p>If you see an error like above, Then you may need workaround this:</p>
-<pre><code>cd /usr/lib/python3/dist-packages
-sudo cp apt_pkg.cpython-36m-x86_64-linux-gnu.so apt_pkg.so
-</code></pre>
+    关于snmp应用
+</h4>
+<p>目前大部分用的是net-snmp，基于此应用程序作的二次开发，加入自定义的MIB，如何移植资料很丰富，本文不讨论。</p>
+<p>正常接收到的IPv4 Trap消息，如下图示：
+<img loading="lazy" 
+    src="/images/snmp_trap_test.jpg" 
+    alt="snmp trap test msg" 
+     
+    width=913 
+    height="218"  /></p>
+<h4 id="使用dns域名作为trap地址">
+    <a href="#%e4%bd%bf%e7%94%a8dns%e5%9f%9f%e5%90%8d%e4%bd%9c%e4%b8%batrap%e5%9c%b0%e5%9d%80" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    使用dns域名作为Trap地址
+</h4>
+<p>可参考dnsmasq的设置，开启自定义DNS域名：
+<img loading="lazy" 
+    src="/images/snmp_dns_cust.jpg" 
+    alt="snmp trap dns" 
+     
+    width=770 
+    height="277"  />
+可以看到图上配置了两个不同的域名，一个是IPv4地址，另一个是IPv6地址。</p>
+<h4 id="ipv6-trap消息的接收问题">
+    <a href="#ipv6-trap%e6%b6%88%e6%81%af%e7%9a%84%e6%8e%a5%e6%94%b6%e9%97%ae%e9%a2%98" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    IPv6 Trap消息的接收问题
+</h4>
+<p>测试发现发送的Trap没有被Snmptrap端收到，而网络又是互通的，如下图示：
+<img loading="lazy" 
+    src="/images/snmp_trap6_port_unreachable.jpg" 
+    alt="snmp trap6 unreachable" 
+     
+    width=1033 
+    height="328"  />
+上图可以看出发送snmptrap后，目的地址响应的Port Unreachable，说明snmptrapd没有开启UDP6的端口监听，需要在目的服务器上将snmptrapd开启IPv6监听，方法如下：
+修改/etc/snmp/snmptrapd.conf，加入一行：snmpTrapdAddr    udp:162,udp6:162，保存退出并重启snmptrapd服务：
+<img loading="lazy" 
+    src="/images/snmp_cfg_add_ipv6.jpg" 
+    alt="snmp trap dns" 
+     
+    width=675 
+    height="252"  />
+进一步确认snmptrapd正常监听IPv6的协议端口162，如下图示：
+<img loading="lazy" 
+    src="/images/snmp_trap6_port_listen_ok.jpg" 
+    alt="snmp trap dns" 
+     
+    width=768 
+    height="157"  /></p>
+<p>重新测试可以看到，在snmptrapd这边有正常的UDP6消息输出：
+<img loading="lazy" 
+    src="/images/snmp_trap6_pkt_ok.jpg" 
+    alt="snmp trap dns" 
+     
+    width=1095 
+    height="135"  /></p>
+
     </div>
 </div>
 
@@ -190,17 +255,12 @@ sudo cp apt_pkg.cpython-36m-x86_64-linux-gnu.so apt_pkg.so
     
     <nav class="flex container suggested">
         
-        <a rel="prev" href="/post/md_to_pdf/" title="Previous post (older)">
+        <a rel="prev" href="/post/fix_ubuntu_gcc_upgrade_err/" title="Previous post (older)">
             <span>Previous</span>
-            Markdown转换为PDF文件
+            Upgrade gcc on Ubuntu 16.04
             </a>
         
         
-        
-        <a rel="next" href="/post/snmp_trap/" title="Next post (newer)">
-            <span>Next</span>
-            SnmpTrap
-            </a> 
         
     </nav>
     
