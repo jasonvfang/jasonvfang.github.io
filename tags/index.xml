@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Blog.HAOYI - A coder&#39;s blog</title>
+    <title>Tags on Blog.HaoYi - A coder&#39;s blog</title>
     <link>https://blog.haoyi.dev/tags/</link>
-    <description>Recent content in Tags on Blog.HAOYI - A coder&#39;s blog</description>
+    <description>Recent content in Tags on Blog.HaoYi - A coder&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Oct 2021 17:18:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Nov 2021 15:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vnc</title>
+      <link>https://blog.haoyi.dev/tags/vnc/</link>
+      <pubDate>Fri, 26 Nov 2021 15:32:51 +0800</pubDate>
+      
+      <guid>https://blog.haoyi.dev/tags/vnc/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>snmp</title>
       <link>https://blog.haoyi.dev/tags/snmp/</link>

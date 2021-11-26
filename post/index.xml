@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Blog.HAOYI - A coder&#39;s blog</title>
+    <title>Posts on Blog.HaoYi - A coder&#39;s blog</title>
     <link>https://blog.haoyi.dev/post/</link>
-    <description>Recent content in Posts on Blog.HAOYI - A coder&#39;s blog</description>
+    <description>Recent content in Posts on Blog.HaoYi - A coder&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Oct 2021 17:18:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Nov 2021 15:32:51 +0800</lastBuildDate><atom:link href="https://blog.haoyi.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tab Key doesn&#39;t working when using vnc</title>
+      <link>https://blog.haoyi.dev/post/vnc_tab_not_working/</link>
+      <pubDate>Fri, 26 Nov 2021 15:32:51 +0800</pubDate>
+      
+      <guid>https://blog.haoyi.dev/post/vnc_tab_not_working/</guid>
+      <description>在VNC上发现TAB命令补全功能不可用，其实需要在窗口设置中进行设置即可： </description>
+    </item>
+    
     <item>
       <title>SnmpTrap</title>
       <link>https://blog.haoyi.dev/post/snmp_trap/</link>
